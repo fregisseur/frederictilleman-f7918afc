@@ -1,23 +1,25 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "WORK", href: "#" },
-  { label: "WORKSHOPS", href: "#", active: true },
-  { label: "ABOUT", href: "#" },
-  { label: "CONTACT", href: "mailto:hello@frederictilleman.be" },
+  { label: "WERK", href: "/" },
+  { label: "WORKSHOPS", href: "/workshops" },
+  { label: "OVER MIJ", href: "/over-mij" },
+  { label: "CONTACT", href: "/contact" },
 ];
 
 const SiteHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <header className="py-10 flex flex-col items-center">
-      <a href="#" className="mb-8">
+      <Link to="/" className="mb-8">
         <span className="text-2xl font-bold tracking-tight text-foreground">
           Frederic Tilleman
         </span>
-      </a>
+      </Link>
       
       {/* Mobile menu button */}
       <button
@@ -35,17 +37,18 @@ const SiteHeader = () => {
         }`}
       >
         {navLinks.map((link) => (
-          <a
+          <Link
             key={link.label}
-            href={link.href}
-            className={`text-sm tracking-widest transition-colors duration-300 hover:text-primary hover:animate-[wiggle_0.3s_ease-in-out] ${
-              link.active
+            to={link.href}
+            onClick={() => setMenuOpen(false)}
+            className={`text-sm tracking-widest transition-colors duration-300 hover:text-primary ${
+              location.pathname === link.href
                 ? "text-accent font-bold"
                 : "text-foreground"
             }`}
           >
             {link.label}
-          </a>
+          </Link>
         ))}
       </nav>
     </header>
