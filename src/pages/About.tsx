@@ -28,21 +28,27 @@ const About = () => {
 
             {/* Tekst */}
             <div className="lg:w-3/5 space-y-6 text-foreground/80 leading-relaxed text-lg">
-              <p>
-                Ik ben een <strong className="text-foreground">animatie- en illustratiekunstenaar</strong> met een voorliefde voor eenvoud, altijd gecombineerd met een onverwachte twist.
+              <p className="text-2xl font-bold text-foreground">
+                Hallo, ik ben Frederic.
               </p>
               <p>
-                Met een uniek perspectief, gevormd door mijn academische achtergrond, benader ik animatie en illustratie op een manier die echt de mijne is. Mijn stijl is onmiskenbaar handgemaakt: papieren knipsels, speelse lijntekeningen en stop-motion. Technieken die een tastbare, menselijke charme geven aan elk verhaal dat ik creëer.
+                <strong className="text-foreground">Animatie- en illustratiekunstenaar</strong> met een voorliefde voor <strong className="text-foreground">eenvoud</strong>.
               </p>
               <p>
-                Al meer dan tien jaar help ik merken en individuen bij het maken van animaties en illustraties die opvallen. Vertrouwd door bedrijven zoals{" "}
+                Dankzij mijn <strong className="text-foreground">academische achtergrond</strong> kijk ik op een unieke manier naar animaties en illustraties. Ik ben in staat complexe ideeën op een heel heldere manier te vertalen. Mijn werk begint vaak eenvoudig, maar blijft daar zelden. Er sluipt bijna altijd iets in dat verrast. Met een hoek af. Iets dat net dat beetje anders loopt dan je verwacht.
+              </p>
+              <p>
+                Ik werk graag met mijn <strong className="text-foreground">handen</strong>. <strong className="text-foreground">Papieren knipsels</strong>, <strong className="text-foreground">lijntekeningen</strong> en <strong className="text-foreground">stop-motion</strong> keren vaak terug. Geen gladde perfectie, maar beelden waarin je het maakproces nog voelt. Dat tastbare, die menselijke charme, is voor mij geen stijlkeuze, maar de kern.
+              </p>
+              <p>
+                Al meer dan tien jaar werk ik voor merken en organisaties zoals{" "}
                 <strong className="text-foreground">Brussels Airport</strong>,{" "}
                 <strong className="text-foreground">Lidl</strong>,{" "}
                 <strong className="text-foreground">Greenpeace</strong> en{" "}
-                <strong className="text-foreground">Vandemoortele</strong> — ik breng ideeën tot leven met creativiteit en zorg. Of het nu gaat om een kortfilm, een uitlegvideo of iets helemaal nieuws.
+                <strong className="text-foreground">Vandemoortele</strong>. Van korte films tot uitlegvideo's en projecten die nog geen naam hebben.
               </p>
               <p>
-                Benieuwd hoe mijn stijl jouw project kan transformeren? Laten we samenwerken en iets bijzonders creëren!
+                Heb je ook een idee dat nood heeft aan een <strong className="text-foreground">verfrissende stijl</strong>? Dan zit je waarschijnlijk goed.
               </p>
 
               <div className="pt-4">
