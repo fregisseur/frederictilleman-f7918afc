@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logoGif from "@/assets/images/frederic_tilleman2.gif";
 
 const navLinks = [
   { label: "WERK", href: "/" },
@@ -16,9 +17,11 @@ const SiteHeader = () => {
   return (
     <header className="py-10 flex flex-col items-center">
       <Link to="/" className="mb-8">
-        <span className="text-2xl font-bold tracking-tight text-foreground">
-          Frederic Tilleman
-        </span>
+        <img
+          src={logoGif}
+          alt="Frederic Tilleman"
+          className="h-12 md:h-16 w-auto"
+        />
       </Link>
       
       {/* Mobile menu button */}
@@ -41,7 +44,7 @@ const SiteHeader = () => {
             key={link.label}
             to={link.href}
             onClick={() => setMenuOpen(false)}
-            className={`text-sm tracking-widest transition-colors duration-300 hover:text-primary ${
+            className={`nav-wiggle text-sm tracking-widest transition-colors duration-300 hover:text-primary ${
               location.pathname === link.href
                 ? "text-accent font-bold"
                 : "text-foreground"
