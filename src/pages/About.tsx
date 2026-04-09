@@ -10,9 +10,6 @@ const About = () => {
 
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-foreground mb-12">
-            Over mij
-          </h1>
 
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
             {/* Foto */}
