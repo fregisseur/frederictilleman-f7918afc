@@ -34,7 +34,7 @@ const portfolioItems: PortfolioItem[] = [
   { client: "VVSG", title: "Wat is Blink", image: "https://frederictilleman.be/images/wat_is_blink.png", vimeoId: "1053053841" },
 ];
 
-const INITIAL_COUNT = 12;
+const INITIAL_COUNT = 6;
 const LOAD_MORE_COUNT = 6;
 
 const PortfolioGrid = () => {
@@ -91,7 +91,7 @@ const PortfolioGrid = () => {
             onClick={() => setVisibleCount((c) => Math.min(c + LOAD_MORE_COUNT, portfolioItems.length))}
             className="bg-accent text-accent-foreground px-6 py-3 text-sm font-bold uppercase tracking-wider transition-colors duration-300 hover:bg-foreground hover:text-background"
           >
-            Load more
+            Toon meer
           </button>
         </div>
       )}

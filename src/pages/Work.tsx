@@ -3,6 +3,14 @@ import SiteFooter from "@/components/SiteFooter";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import { Sparkles, Target, Award, Palette } from "lucide-react";
 
+import logoBrusselsAirport from "@/assets/logos/brussels-airport.webp";
+import logoEneco from "@/assets/logos/eneco.png";
+import logoAlpro from "@/assets/logos/alpro.png";
+import logoTrixie from "@/assets/logos/trixie.png";
+import logoUnizo from "@/assets/logos/unizo.png";
+import logoWoestijnvis from "@/assets/logos/woestijnvis.jpg";
+import logoAesaert from "@/assets/logos/aesaert.avif";
+
 const troeven = [
   {
     icon: Sparkles,
@@ -26,9 +34,14 @@ const troeven = [
   },
 ];
 
-const clients = [
-  "Woestijnvis", "Unizo", "Trixie", "Danette", "Greenpeace",
-  "JBC", "Eneco", "Brussels Airport", "Rode Kruis",
+const clientLogos = [
+  { name: "Woestijnvis", src: logoWoestijnvis },
+  { name: "Unizo", src: logoUnizo },
+  { name: "Trixie", src: logoTrixie },
+  { name: "Alpro", src: logoAlpro },
+  { name: "Eneco", src: logoEneco },
+  { name: "Brussels Airport", src: logoBrusselsAirport },
+  { name: "Aesaert", src: logoAesaert },
 ];
 
 const Work = () => {
@@ -39,20 +52,20 @@ const Work = () => {
       {/* Hero intro */}
       <section className="pt-4 pb-16 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-3xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight fade-up">
+          <h1 className="text-2xl md:text-4xl font-bold text-foreground mb-6 leading-snug fade-up tracking-tight">
             Animaties en illustraties die jouw{" "}
-            <span className="text-primary">boodschap onvergetelijk</span> maken
+            <span className="text-primary">verhaal scherpstellen</span>
           </h1>
-          <p className="text-muted-foreground text-lg mb-10 fade-up" style={{ animationDelay: "0.15s" }}>
-            Stop-motion, 2D-animatie en illustratie voor merken, bedrijven en organisaties die willen opvallen.
-          </p>
 
-          {/* Client logos as text */}
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 fade-up" style={{ animationDelay: "0.3s" }}>
-            {clients.map((name) => (
-              <span key={name} className="text-sm text-muted-foreground/70 tracking-wide uppercase">
-                {name}
-              </span>
+          {/* Client logos */}
+          <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 mt-10 fade-up" style={{ animationDelay: "0.15s" }}>
+            {clientLogos.map((client) => (
+              <img
+                key={client.name}
+                src={client.src}
+                alt={client.name}
+                className="h-8 md:h-10 w-auto object-contain grayscale opacity-60 hover:opacity-100 transition-opacity duration-300"
+              />
             ))}
           </div>
         </div>
