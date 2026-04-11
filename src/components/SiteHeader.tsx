@@ -20,7 +20,7 @@ const SiteHeader = () => {
         <img
           src={logoGif}
           alt="Frederic Tilleman"
-          className="h-12 md:h-16 w-auto"
+          className="h-8 md:h-11 w-auto"
         />
       </Link>
       
