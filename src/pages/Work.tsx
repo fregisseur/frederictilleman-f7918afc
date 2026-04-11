@@ -88,13 +88,11 @@ const Work = () => {
       {/* Hoe pak ik het aan */}
       <section className="py-16 px-6 bg-secondary">
         <div className="max-w-5xl mx-auto">
-          <h2 className="section-title text-center mb-4">
-            Hoe pak ik het aan<span className="text-primary">?</span>
+          <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
+            Hoe pak ik het aan?
           </h2>
-          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-base leading-relaxed">
-            Ik zet jouw wens of vraag om in een beeld dat helder communiceert en visueel verrast. 
-            Ik heb de ervaring en het oog voor detail dat je nodig hebt, precies wanneer je het nodig hebt. 
-            Een beeld of video is pas geslaagd als je boodschap meteen duidelijk is.
+          <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 text-base leading-relaxed">
+            Ik zet jouw wens of vraag om in een beeld dat helder communiceert en visueel verrast. Ik heb de ervaring en het oog voor detail dat je nodig hebt, precies wanneer je het nodig hebt. Een beeld of video is pas geslaagd als je boodschap meteen duidelijk is.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {aanpak.map((item) => (
@@ -120,15 +118,21 @@ const Work = () => {
             Samenwerkingen waar ik met trots aan bijdroeg
           </p>
           <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6">
-            {clientLogos.map((client) => (
-              <img
-                key={client.name}
-                src={client.src}
-                alt={client.name}
-                className="h-8 md:h-10 w-auto object-contain grayscale opacity-50 hover:opacity-90 transition-opacity duration-300"
-                loading="lazy"
-              />
-            ))}
+            {clientLogos.map((client) => {
+              const isSmallLogo = ["Woestijnvis", "Côte d'Or", "Stoffels", "UGent"].includes(client.name);
+              const isBigLogo = client.name === "Willux";
+              return (
+                <img
+                  key={client.name}
+                  src={client.src}
+                  alt={client.name}
+                  className={`w-auto object-contain grayscale opacity-50 hover:opacity-90 transition-opacity duration-300 ${
+                    isSmallLogo ? "h-12 md:h-14" : isBigLogo ? "h-6 md:h-7" : "h-8 md:h-10"
+                  }`}
+                  loading="lazy"
+                />
+              );
+            })}
           </div>
         </div>
       </section>
@@ -136,10 +140,10 @@ const Work = () => {
       {/* Portfolio grid */}
       <section className="py-20 px-6 bg-secondary">
         <div className="max-w-5xl mx-auto">
-          <h2 className="section-title text-center mb-4">
-            Eerder werk<span className="text-primary">.</span>
+          <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
+            Eerder werk
           </h2>
-          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-base leading-relaxed">
+          <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 text-base leading-relaxed">
             Een beeld zegt meer dan duizend woorden. Bekijk een greep uit mijn projecten en ontdek wat er mogelijk is.
           </p>
           <PortfolioGrid />
