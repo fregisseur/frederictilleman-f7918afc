@@ -2,9 +2,8 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import PortfolioGrid from "@/components/PortfolioGrid";
 
-import illustrationBriefing from "@/assets/illustrations/briefing.png";
-import illustrationCare from "@/assets/illustrations/care.png";
-import illustrationExperience from "@/assets/illustrations/experience.png";
+import { Headphones, Heart, Trophy } from "lucide-react";
+import heroWorkImage from "@/assets/hero-work.png";
 
 import logoBrusselsAirport from "@/assets/logos/brussels-airport.webp";
 import logoEneco from "@/assets/logos/eneco.png";
@@ -23,17 +22,17 @@ import logoVlaamseOverheid from "@/assets/logos/vlaamse-overheid.jpg";
 
 const aanpak = [
   {
-    image: illustrationBriefing,
+    icon: Headphones,
     title: "Ik luister, jij vertelt",
     description: "In een kort gesprek vat ik de kern van jouw vraag. Geen eindeloze briefings — ik begrijp snel wat je nodig hebt en denk meteen mee.",
   },
   {
-    image: illustrationCare,
+    icon: Heart,
     title: "Van A tot Z verzorgd",
     description: "Van eerste schets tot finale oplevering: ik neem het volledige traject op mij. Jij focust op je business, ik op het beeld.",
   },
   {
-    image: illustrationExperience,
+    icon: Trophy,
     title: "10+ jaar ervaring",
     description: "Professionele kwaliteit, afgewerkt tot in de puntjes. De referenties hieronder spreken voor zich.",
   },
@@ -61,18 +60,26 @@ const Work = () => {
     <div className="min-h-screen bg-background">
       <SiteHeader />
 
-      {/* Hero intro */}
-      <section className="pt-4 pb-16 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-foreground mb-2 fade-up tracking-tight">
-            <span className="block text-xl md:text-2xl font-bold leading-snug">
-              Animaties en illustraties
-            </span>
-            <span className="block text-lg md:text-xl font-medium text-muted-foreground mt-1">
-              die jouw verhaal <span className="text-primary font-bold">glashelder</span> vertellen.
-            </span>
+      {/* Hero */}
+      <section className="relative w-full h-[70vh] min-h-[500px] overflow-hidden">
+        <img
+          src={heroWorkImage}
+          alt="Illustratie Hannah en de Krokodil"
+          className="absolute inset-0 w-full h-full object-cover"
+          width={1920}
+          height={1080}
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: "var(--hero-overlay)" }}
+        />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground mb-6 leading-tight max-w-4xl fade-up">
+            Animaties en illustraties
+            <br />
+            <span className="text-primary">die jouw verhaal glashelder vertellen.</span>
           </h1>
-          <p className="text-muted-foreground text-sm italic mt-3 fade-up" style={{ animationDelay: "0.1s" }}>
+          <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mb-10 font-light fade-up" style={{ animationDelay: "0.15s" }}>
             Zelfs al is dat verhaal een hele boterham...
           </p>
         </div>
@@ -95,14 +102,9 @@ const Work = () => {
                 key={item.title}
                 className="group bg-background p-8 text-center border border-border transition-colors duration-300 hover:border-primary/30"
               >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-24 h-24 object-contain mx-auto mb-5"
-                  loading="lazy"
-                  width={512}
-                  height={512}
-                />
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/20 transition-colors">
+                  <item.icon className="w-7 h-7 text-primary" />
+                </div>
                 <h3 className="font-bold text-lg mb-2 text-foreground">{item.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
               </div>
@@ -155,7 +157,7 @@ const Work = () => {
           </p>
           <a
             href="mailto:hello@frederictilleman.be?subject=Project aanvraag"
-            className="inline-block bg-primary text-primary-foreground px-10 py-4 text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:bg-accent hover:text-accent-foreground"
+            className="inline-block bg-primary text-primary-foreground px-10 py-4 text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:bg-primary/80"
           >
             Laat ons praten
           </a>
