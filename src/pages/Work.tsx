@@ -1,7 +1,10 @@
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import PortfolioGrid from "@/components/PortfolioGrid";
-import { Sparkles, Target, Award, Palette } from "lucide-react";
+
+import illustrationBriefing from "@/assets/illustrations/briefing.png";
+import illustrationCare from "@/assets/illustrations/care.png";
+import illustrationExperience from "@/assets/illustrations/experience.png";
 
 import logoBrusselsAirport from "@/assets/logos/brussels-airport.webp";
 import logoEneco from "@/assets/logos/eneco.png";
@@ -10,27 +13,29 @@ import logoTrixie from "@/assets/logos/trixie.png";
 import logoUnizo from "@/assets/logos/unizo.png";
 import logoWoestijnvis from "@/assets/logos/woestijnvis.jpg";
 import logoAesaert from "@/assets/logos/aesaert.avif";
+import logoCoteDor from "@/assets/logos/cote-dor.png";
+import logoBlink from "@/assets/logos/blink.jpg";
+import logoVandemoortele from "@/assets/logos/vandemoortele.png";
+import logoWillux from "@/assets/logos/willux.png";
+import logoStoffels from "@/assets/logos/stoffels.jpg";
+import logoUGent from "@/assets/logos/ugent.png";
+import logoVlaamseOverheid from "@/assets/logos/vlaamse-overheid.jpg";
 
-const troeven = [
+const aanpak = [
   {
-    icon: Sparkles,
-    title: "Ontzorgen",
-    description: "Van idee tot afgewerkt product. Ik regel alles zodat jij je op je business kan focussen.",
+    image: illustrationBriefing,
+    title: "Ik luister, jij vertelt",
+    description: "In een kort gesprek vat ik de kern van jouw vraag. Geen eindeloze briefings — ik begrijp snel wat je nodig hebt en denk meteen mee.",
   },
   {
-    icon: Target,
-    title: "Op maat",
-    description: "Elk project is uniek. Geen templates, maar een aanpak die past bij jouw merk en boodschap.",
+    image: illustrationCare,
+    title: "Van A tot Z verzorgd",
+    description: "Van eerste schets tot finale oplevering: ik neem het volledige traject op mij. Jij focust op je business, ik op het beeld.",
   },
   {
-    icon: Award,
+    image: illustrationExperience,
     title: "10+ jaar ervaring",
-    description: "Professionele kwaliteit, afgewerkt tot in de puntjes. Elke keer opnieuw.",
-  },
-  {
-    icon: Palette,
-    title: "Unieke stijl",
-    description: "Herkenbaar, verfrissend en op maat van jouw merk. Geen standaard animatie.",
+    description: "Professionele kwaliteit, afgewerkt tot in de puntjes. De referenties hieronder spreken voor zich.",
   },
 ];
 
@@ -42,6 +47,13 @@ const clientLogos = [
   { name: "Eneco", src: logoEneco },
   { name: "Brussels Airport", src: logoBrusselsAirport },
   { name: "Aesaert", src: logoAesaert },
+  { name: "Côte d'Or", src: logoCoteDor },
+  { name: "Blink", src: logoBlink },
+  { name: "Vandemoortele", src: logoVandemoortele },
+  { name: "Willux", src: logoWillux },
+  { name: "Stoffels", src: logoStoffels },
+  { name: "UGent", src: logoUGent },
+  { name: "Vlaamse Overheid", src: logoVlaamseOverheid },
 ];
 
 const Work = () => {
@@ -52,57 +64,82 @@ const Work = () => {
       {/* Hero intro */}
       <section className="pt-4 pb-16 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-2xl md:text-4xl font-bold text-foreground mb-6 leading-snug fade-up tracking-tight">
-            Animaties en illustraties die jouw{" "}
-            <span className="text-primary">verhaal scherpstellen</span>
+          <h1 className="text-foreground mb-2 fade-up tracking-tight">
+            <span className="block text-xl md:text-2xl font-bold leading-snug">
+              Animaties en illustraties
+            </span>
+            <span className="block text-lg md:text-xl font-medium text-muted-foreground mt-1">
+              die jouw verhaal <span className="text-primary font-bold">glashelder</span> vertellen.
+            </span>
           </h1>
-
-          {/* Client logos */}
-          <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 mt-10 fade-up" style={{ animationDelay: "0.15s" }}>
-            {clientLogos.map((client) => (
-              <img
-                key={client.name}
-                src={client.src}
-                alt={client.name}
-                className="h-8 md:h-10 w-auto object-contain grayscale opacity-60 hover:opacity-100 transition-opacity duration-300"
-              />
-            ))}
-          </div>
+          <p className="text-muted-foreground text-sm italic mt-3 fade-up" style={{ animationDelay: "0.1s" }}>
+            Zelfs al is dat verhaal een hele boterham...
+          </p>
         </div>
       </section>
 
-      {/* Troeven */}
+      {/* Hoe pak ik het aan */}
       <section className="py-16 px-6 bg-secondary">
         <div className="max-w-5xl mx-auto">
           <h2 className="section-title text-center mb-4">
-            Waarom samenwerken<span className="text-primary">?</span>
+            Hoe pak ik het aan<span className="text-primary">?</span>
           </h2>
-          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-lg">
-            Wat je krijgt als je met mij werkt.
+          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-base leading-relaxed">
+            Ik zet jouw wens of vraag om in een beeld dat helder communiceert en visueel verrast. 
+            Ik heb de ervaring en het oog voor detail dat je nodig hebt, precies wanneer je het nodig hebt. 
+            Een beeld of video is pas geslaagd als je boodschap meteen duidelijk is.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {troeven.map((t) => (
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            {aanpak.map((item) => (
               <div
-                key={t.title}
-                className="group bg-background rounded-lg p-8 text-center transition-shadow duration-300"
-                style={{ boxShadow: "var(--shadow-card)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "var(--shadow-card-hover)")}
-                onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "var(--shadow-card)")}
+                key={item.title}
+                className="group bg-background p-8 text-center border border-border transition-colors duration-300 hover:border-primary/30"
               >
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/20 transition-colors">
-                  <t.icon className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="font-bold text-lg mb-2 text-foreground">{t.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{t.description}</p>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-24 h-24 object-contain mx-auto mb-5"
+                  loading="lazy"
+                  width={512}
+                  height={512}
+                />
+                <h3 className="font-bold text-lg mb-2 text-foreground">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Portfolio grid */}
-      <section className="py-20 px-6">
+      {/* Client logos */}
+      <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
+          <p className="text-center text-muted-foreground text-sm uppercase tracking-widest mb-8">
+            Samenwerkingen waar ik met trots aan bijdroeg
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6">
+            {clientLogos.map((client) => (
+              <img
+                key={client.name}
+                src={client.src}
+                alt={client.name}
+                className="h-8 md:h-10 w-auto object-contain grayscale opacity-50 hover:opacity-90 transition-opacity duration-300"
+                loading="lazy"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio grid */}
+      <section className="py-20 px-6 bg-secondary">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="section-title text-center mb-4">
+            Eerder werk<span className="text-primary">.</span>
+          </h2>
+          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-base leading-relaxed">
+            Een beeld zegt meer dan duizend woorden. Bekijk een greep uit mijn projecten en ontdek wat er mogelijk is.
+          </p>
           <PortfolioGrid />
         </div>
       </section>
