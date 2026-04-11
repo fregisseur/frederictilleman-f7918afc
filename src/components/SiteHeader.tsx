@@ -46,7 +46,7 @@ const SiteHeader = () => {
             onClick={() => setMenuOpen(false)}
             className={`nav-wiggle text-sm tracking-widest transition-colors duration-300 hover:text-primary ${
               location.pathname === link.href
-                ? "text-accent font-bold"
+                ? "text-primary font-bold"
                 : "text-foreground"
             }`}
           >
