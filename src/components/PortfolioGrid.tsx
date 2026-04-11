@@ -89,7 +89,7 @@ const PortfolioGrid = () => {
         <div className="flex justify-center mt-8">
           <button
             onClick={() => setVisibleCount((c) => Math.min(c + LOAD_MORE_COUNT, portfolioItems.length))}
-            className="bg-accent text-accent-foreground px-6 py-3 text-sm font-bold uppercase tracking-wider transition-colors duration-300 hover:bg-foreground hover:text-background"
+            className="bg-primary text-primary-foreground px-6 py-3 text-sm font-bold uppercase tracking-wider transition-colors duration-300 hover:bg-foreground hover:text-background"
           >
             Toon meer
           </button>
