@@ -28,7 +28,7 @@ const Index = () => {
           {/* Workshop 1: Stop-motion */}
           <WorkshopCard
             title="De wereld in stop-motion"
-            image={workshopStopmotion}
+            images={[workshopStopmotion1, workshopStopmotion2, workshopStopmotion3]}
             ctaLabel="Ik wil deze workshop"
             ctaHref="mailto:hello@frederictilleman.be?subject=Workshop stop-motion"
             description={
@@ -59,7 +59,7 @@ const Index = () => {
           {/* Workshop 2: Film */}
           <WorkshopCard
             title="De magie van film"
-            image={workshopFilm}
+            images={[workshopFilm1, workshopFilm2, workshopFilm3]}
             reversed
             ctaLabel="Ik wil deze workshop"
             ctaHref="mailto:hello@frederictilleman.be?subject=Workshop kortfilm"
@@ -91,7 +91,7 @@ const Index = () => {
           {/* Workshop 3: Teambuilding */}
           <WorkshopCard
             title="Workshop als teambuilding"
-            image={workshopTeambuilding}
+            images={[workshopTeambuilding]}
             ctaLabel="Ik wil een teambuilding"
             ctaHref="mailto:hello@frederictilleman.be?subject=Teambuilding"
             description={
