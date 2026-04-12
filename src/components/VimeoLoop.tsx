@@ -9,21 +9,22 @@ interface VimeoLoopProps {
 
 const VimeoLoop = ({ vimeoId, title, className }: VimeoLoopProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const playerRef = useRef<Player | null>(null);
 
   useEffect(() => {
     if (!containerRef.current) return;
 
-    const player = new Player(containerRef.current, {
-      id: parseInt(vimeoId),
-      background: true,
-      muted: true,
-      autoplay: true,
-      loop: false,
-      dnt: true,
-    });
+    // Create iframe manually to preserve exact sizing/positioning
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://player.vimeo.com/video/${vimeoId}?background=1&autoplay=1&muted=1&loop=0&dnt=1`;
+    iframe.allow = "autoplay; fullscreen";
+    iframe.title = title;
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+    iframe.loading = "lazy";
+    containerRef.current.appendChild(iframe);
 
-    playerRef.current = player;
+    const player = new Player(iframe);
 
     player.on("timeupdate", (data) => {
       if (data.seconds >= 5) {
@@ -34,12 +35,11 @@ const VimeoLoop = ({ vimeoId, title, className }: VimeoLoopProps) => {
     return () => {
       player.destroy();
     };
-  }, [vimeoId]);
+  }, [vimeoId, title]);
 
   return (
     <div
       ref={containerRef}
-      title={title}
       className={className}
     />
   );
