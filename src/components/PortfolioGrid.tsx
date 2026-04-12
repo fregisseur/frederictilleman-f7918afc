@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import VimeoLoop from "./VimeoLoop";
 interface PortfolioItem {
   client: string;
   title: string;
@@ -59,14 +59,12 @@ const PortfolioGrid = () => {
               loading="lazy"
             />
 
-            {/* Vimeo background video */}
+            {/* Vimeo background video – loops first 5 seconds */}
             {item.vimeoId && (
-              <iframe
-                src={`https://player.vimeo.com/video/${item.vimeoId}?background=1&autoplay=1&muted=1&loop=1&dnt=1#t=0s`}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[180%] h-[180%] pointer-events-none z-[1] transition-transform duration-[600ms] ease-out group-hover:scale-110"
-                allow="autoplay; fullscreen"
-                loading="lazy"
+              <VimeoLoop
+                vimeoId={item.vimeoId}
                 title={`${item.client} - ${item.title}`}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[180%] h-[180%] pointer-events-none z-[1] transition-transform duration-[600ms] ease-out group-hover:scale-110"
               />
             )}
 
