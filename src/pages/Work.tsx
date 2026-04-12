@@ -114,8 +114,12 @@ const Work = () => {
       {/* Client logos */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
-          <p className="text-center text-muted-foreground text-sm uppercase tracking-widest mb-8">
-            Samenwerkingen waar ik met trots aan bijdroeg
+          <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
+            In goed gezelschap
+          </h2>
+          <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 text-base leading-relaxed">
+            Van snelle opdrachten tot langdurige samenwerkingen.<br />
+            Voor klanten die hun verhaal visueel willen laten spreken.
           </p>
           <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6">
             {clientLogos.map((client) => {
