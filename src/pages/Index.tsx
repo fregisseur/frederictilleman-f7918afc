@@ -6,9 +6,13 @@ import WorkshopCard from "@/components/WorkshopCard";
 import Testimonial from "@/components/Testimonial";
 import SiteFooter from "@/components/SiteFooter";
 
-import workshopStopmotion from "@/assets/workshop-stopmotion.jpg";
-import workshopFilm from "@/assets/workshop-film.jpg";
-import workshopTeambuilding from "@/assets/workshop-teambuilding.jpg";
+import workshopStopmotion1 from "@/assets/workshop-stopmotion-1.webp";
+import workshopStopmotion2 from "@/assets/workshop-stopmotion-2.webp";
+import workshopStopmotion3 from "@/assets/workshop-stopmotion-3.webp";
+import workshopFilm1 from "@/assets/workshop-film-1.webp";
+import workshopFilm2 from "@/assets/workshop-film-2.webp";
+import workshopFilm3 from "@/assets/workshop-film-3.webp";
+import workshopTeambuilding from "@/assets/workshop-teambuilding.webp";
 
 const Index = () => {
   return (
@@ -24,7 +28,7 @@ const Index = () => {
           {/* Workshop 1: Stop-motion */}
           <WorkshopCard
             title="De wereld in stop-motion"
-            image={workshopStopmotion}
+            images={[workshopStopmotion1, workshopStopmotion2, workshopStopmotion3]}
             ctaLabel="Ik wil deze workshop"
             ctaHref="mailto:hello@frederictilleman.be?subject=Workshop stop-motion"
             description={
@@ -55,7 +59,7 @@ const Index = () => {
           {/* Workshop 2: Film */}
           <WorkshopCard
             title="De magie van film"
-            image={workshopFilm}
+            images={[workshopFilm1, workshopFilm2, workshopFilm3]}
             reversed
             ctaLabel="Ik wil deze workshop"
             ctaHref="mailto:hello@frederictilleman.be?subject=Workshop kortfilm"
@@ -87,7 +91,7 @@ const Index = () => {
           {/* Workshop 3: Teambuilding */}
           <WorkshopCard
             title="Workshop als teambuilding"
-            image={workshopTeambuilding}
+            images={[workshopTeambuilding]}
             ctaLabel="Ik wil een teambuilding"
             ctaHref="mailto:hello@frederictilleman.be?subject=Teambuilding"
             description={

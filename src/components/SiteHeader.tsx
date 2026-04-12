@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import logoGif from "@/assets/images/frederic_tilleman2.gif";
 
 const navLinks = [
-  { label: "WERK", href: "/" },
+  { label: "HOME", href: "/" },
   { label: "WORKSHOPS", href: "/workshops" },
   { label: "OVER MIJ", href: "/over-mij" },
   { label: "CONTACT", href: "/contact" },

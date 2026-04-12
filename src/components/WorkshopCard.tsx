@@ -1,29 +1,46 @@
+import { useState, useEffect } from "react";
+
 interface WorkshopCardProps {
   title: string;
-  image: string;
+  images: string[];
   description: React.ReactNode;
   ctaLabel: string;
   ctaHref: string;
   reversed?: boolean;
 }
 
-const WorkshopCard = ({ title, image, description, ctaLabel, ctaHref, reversed }: WorkshopCardProps) => {
+const WorkshopCard = ({ title, images, description, ctaLabel, ctaHref, reversed }: WorkshopCardProps) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <div
       className={`flex flex-col ${
         reversed ? "lg:flex-row-reverse" : "lg:flex-row"
       } gap-8 lg:gap-12 items-stretch`}
     >
-      {/* Image */}
-      <div className="lg:w-2/5 overflow-hidden rounded-lg">
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-72 lg:h-full object-cover transition-transform duration-500 hover:scale-105"
-          loading="lazy"
-          width={800}
-          height={1000}
-        />
+      {/* Image carousel */}
+      <div className="lg:w-2/5 overflow-hidden rounded-lg relative">
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`${title} ${index + 1}`}
+            className={`w-full h-72 lg:h-full object-cover transition-opacity duration-700 ${
+              index === 0 ? "" : "absolute inset-0"
+            } ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
+            loading="lazy"
+            width={800}
+            height={1000}
+          />
+        ))}
       </div>
 
       {/* Content */}
