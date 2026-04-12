@@ -119,15 +119,15 @@ const Work = () => {
           </p>
           <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6">
             {clientLogos.map((client) => {
-              const isSmallLogo = ["Woestijnvis", "Côte d'Or", "Stoffels", "UGent"].includes(client.name);
+              const isLargeLogo = ["Woestijnvis", "Côte d'Or", "Stoffels", "UGent", "Vlaamse Overheid"].includes(client.name);
               const isBigLogo = client.name === "Willux";
               return (
                 <img
                   key={client.name}
                   src={client.src}
                   alt={client.name}
-                  className={`w-auto object-contain grayscale opacity-50 hover:opacity-90 transition-opacity duration-300 ${
-                    isSmallLogo ? "h-12 md:h-14" : isBigLogo ? "h-6 md:h-7" : "h-8 md:h-10"
+                  className={`w-auto object-contain grayscale hover:opacity-90 transition-opacity duration-300 ${
+                    isLargeLogo ? "h-14 md:h-16 opacity-60" : isBigLogo ? "h-6 md:h-7 opacity-50" : "h-8 md:h-10 opacity-50"
                   }`}
                   loading="lazy"
                 />
