@@ -85,6 +85,31 @@ const Work = () => {
         </div>
       </section>
 
+      {/* Herken je jezelf hierin? */}
+      <section className="py-16 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
+            Herken je jezelf hierin?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-background p-8 text-center border border-border">
+              <h3 className="font-bold text-lg mb-3 text-foreground">Je zoekt iemand die het mee uitdenkt</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Je hebt een idee, briefing of half plan, maar het mag scherper, origineler, beter.
+                Je wil samenwerken met iemand die creatief meedenkt en het ook effectief uitwerkt.
+              </p>
+            </div>
+            <div className="bg-background p-8 text-center border border-border">
+              <h3 className="font-bold text-lg mb-3 text-foreground">Je wil iets maken dat opvalt én duidelijk is</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Je hebt een boodschap die moet landen: visueel sterk, maar ook helder en begrijpelijk.
+                Geen clichés maar iets tastbaar en eigen dat blijft hangen en werkt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Hoe pak ik het aan */}
       <section className="py-16 px-6 bg-secondary">
         <div className="max-w-5xl mx-auto">
