@@ -1,26 +1,152 @@
+import { useState } from "react";
+import { z } from "zod";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { useToast } from "@/hooks/use-toast";
+import postduif from "@/assets/postduif.gif";
+
+const contactSchema = z.object({
+  name: z.string().trim().nonempty({ message: "Naam is verplicht" }).max(100),
+  email: z.string().trim().email({ message: "Geen geldig e-mailadres" }).max(255),
+  phone: z.string().trim().max(30).optional().or(z.literal("")),
+  message: z.string().trim().nonempty({ message: "Bericht is verplicht" }).max(2000),
+});
+
+const ACCENT = "#1b45da";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const result = contactSchema.safeParse(form);
+    if (!result.success) {
+      const fieldErrors: Record<string, string> = {};
+      result.error.issues.forEach((issue) => {
+        if (issue.path[0]) fieldErrors[issue.path[0] as string] = issue.message;
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+    setErrors({});
+    const subject = encodeURIComponent(`Bericht via website van ${result.data.name}`);
+    const body = encodeURIComponent(
+      `Naam: ${result.data.name}\nE-mail: ${result.data.email}\nTelefoon: ${result.data.phone || "-"}\n\n${result.data.message}`
+    );
+    window.location.href = `mailto:hello@frederictilleman.be?subject=${subject}&body=${body}`;
+    toast({ title: "Bedankt!", description: "Je e-mailprogramma opent met je bericht." });
+  };
+
+  const inputBase =
+    "w-full px-4 py-3 bg-background border border-border focus:outline-none focus:border-[var(--contact-accent)] transition-colors text-base";
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background" style={{ ["--contact-accent" as never]: ACCENT }}>
       <SiteHeader />
-      <section className="py-20 px-6">
+
+      <section className="py-12 md:py-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6">
-            <span className="text-primary">Contact</span>
-          </h1>
-          <p className="text-muted-foreground text-lg max-w-2xl mb-8">
-            Neem gerust contact op voor vragen of samenwerkingen.
-          </p>
-          <a
-            href="mailto:hello@frederictilleman.be"
-            className="btn-primary"
-          >
-            Stuur een e-mail
-          </a>
+          <div className="text-center mb-12">
+            <h1
+              className="text-4xl md:text-5xl lg:text-6xl font-normal text-black mb-4"
+              style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}
+            >
+              Even <span style={{ color: ACCENT }}>contact</span> zoeken?
+            </h1>
+            <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+              Vertel me over je idee, vraag of project.
+              <br />Ik denk graag mee en antwoord meestal binnen één à twee dagen.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10 md:gap-16 items-start">
+            {/* Postduif */}
+            <div className="flex justify-center md:justify-end">
+              <img
+                src={postduif}
+                alt="Postduif met envelop"
+                className="w-48 md:w-full max-w-[280px] h-auto"
+              />
+            </div>
+
+            {/* Form */}
+            <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+              <div>
+                <label htmlFor="name" className="block text-xs uppercase tracking-wider font-bold mb-2 text-foreground">
+                  Naam
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  value={form.name}
+                  onChange={(e) => setForm({ ...form, name: e.target.value })}
+                  className={inputBase}
+                  maxLength={100}
+                  required
+                />
+                {errors.name && <p className="text-xs mt-1" style={{ color: ACCENT }}>{errors.name}</p>}
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-xs uppercase tracking-wider font-bold mb-2 text-foreground">
+                  E-mailadres
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
+                  className={inputBase}
+                  maxLength={255}
+                  required
+                />
+                {errors.email && <p className="text-xs mt-1" style={{ color: ACCENT }}>{errors.email}</p>}
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-xs uppercase tracking-wider font-bold mb-2 text-foreground">
+                  Telefoon <span className="text-muted-foreground normal-case font-normal tracking-normal">(optioneel)</span>
+                </label>
+                <input
+                  id="phone"
+                  type="tel"
+                  value={form.phone}
+                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                  className={inputBase}
+                  maxLength={30}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-xs uppercase tracking-wider font-bold mb-2 text-foreground">
+                  Bericht
+                </label>
+                <textarea
+                  id="message"
+                  rows={6}
+                  value={form.message}
+                  onChange={(e) => setForm({ ...form, message: e.target.value })}
+                  className={`${inputBase} resize-none`}
+                  maxLength={2000}
+                  required
+                />
+                {errors.message && <p className="text-xs mt-1" style={{ color: ACCENT }}>{errors.message}</p>}
+              </div>
+
+              <button
+                type="submit"
+                className="inline-block px-10 py-4 text-sm font-bold uppercase tracking-wider text-white transition-all duration-300 hover:opacity-90"
+                style={{ backgroundColor: ACCENT }}
+              >
+                Verstuur bericht
+              </button>
+            </form>
+          </div>
         </div>
       </section>
+
       <SiteFooter />
     </div>
   );
