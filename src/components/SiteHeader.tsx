@@ -32,6 +32,23 @@ const SiteHeader = () => {
           />
         </Link>
 
+        {/* Horizontal nav */}
+        <nav className="mt-4 hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              to={link.href}
+              className={`text-sm tracking-widest transition-colors duration-300 hover:text-primary ${
+                location.pathname === link.href
+                  ? "text-primary font-bold"
+                  : "text-foreground"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
         {/* Hamburger top-right */}
         <button
           className="absolute top-8 right-6 md:top-10 md:right-10 z-[60] text-foreground hover:text-primary transition-colors"
