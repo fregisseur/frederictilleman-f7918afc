@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logoGif from "@/assets/images/frederic_tilleman2.gif";
@@ -14,47 +14,66 @@ const SiteHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
-  return (
-    <header className="py-10 flex flex-col items-center">
-      <Link to="/" className="mb-8">
-        <img
-          src={logoGif}
-          alt="Frederic Tilleman"
-          className="h-8 md:h-11 w-auto"
-        />
-      </Link>
-      
-      {/* Mobile menu button */}
-      <button
-        className="md:hidden text-foreground"
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label="Menu"
-      >
-        {menuOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
-      {/* Navigation */}
-      <nav
-        className={`flex flex-col md:flex-row gap-4 md:gap-8 mt-4 md:mt-0 items-center transition-all ${
-          menuOpen ? "flex" : "hidden md:flex"
+  return (
+    <>
+      <header className="relative py-10 flex flex-col items-center">
+        <Link to="/" className="mb-2">
+          <img
+            src={logoGif}
+            alt="Frederic Tilleman"
+            className="h-8 md:h-11 w-auto"
+          />
+        </Link>
+
+        {/* Hamburger top-right */}
+        <button
+          className="absolute top-8 right-6 md:top-10 md:right-10 z-[60] text-foreground hover:text-primary transition-colors"
+          onClick={() => setMenuOpen(true)}
+          aria-label="Menu openen"
+        >
+          <Menu size={32} strokeWidth={2} />
+        </button>
+      </header>
+
+      {/* Fullscreen overlay menu */}
+      <div
+        className={`fixed inset-0 z-[100] bg-background flex items-center justify-center transition-all duration-300 ${
+          menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        {navLinks.map((link) => (
-          <Link
-            key={link.label}
-            to={link.href}
-            onClick={() => setMenuOpen(false)}
-            className={`nav-wiggle text-sm tracking-widest transition-colors duration-300 hover:text-primary ${
-              location.pathname === link.href
-                ? "text-primary font-bold"
-                : "text-foreground"
-            }`}
-          >
-            {link.label}
-          </Link>
-        ))}
-      </nav>
-    </header>
+        <button
+          className="absolute top-8 right-6 md:top-10 md:right-10 text-foreground hover:text-primary transition-colors"
+          onClick={() => setMenuOpen(false)}
+          aria-label="Menu sluiten"
+        >
+          <X size={32} strokeWidth={2} />
+        </button>
+
+        <nav className="flex flex-col items-center gap-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              to={link.href}
+              onClick={() => setMenuOpen(false)}
+              className={`text-3xl md:text-5xl tracking-widest transition-colors duration-300 hover:text-primary ${
+                location.pathname === link.href
+                  ? "text-primary font-bold"
+                  : "text-foreground"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </>
   );
 };
 
