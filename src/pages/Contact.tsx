@@ -50,12 +50,12 @@ const Contact = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-normal text-black mb-4"
+              className="text-3xl md:text-4xl font-normal text-black mb-4"
               style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}
             >
               Even <span style={{ color: ACCENT }}>contact</span> zoeken?
             </h1>
-            <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-muted-foreground text-base max-w-2xl mx-auto leading-relaxed">
               Vertel me over je idee, vraag of project.
               <br />Ik denk graag mee en antwoord meestal binnen één à twee dagen.
             </p>
