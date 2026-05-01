@@ -61,18 +61,18 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10 md:gap-16 items-start">
+          <div className="max-w-xl mx-auto flex flex-col items-center">
             {/* Postduif */}
-            <div className="flex justify-center md:justify-end">
+            <div className="flex justify-center mb-8">
               <img
                 src={postduif}
                 alt="Postduif met envelop"
-                className="w-48 md:w-full max-w-[280px] h-auto"
+                className="w-48 md:w-64 h-auto"
               />
             </div>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+            <form onSubmit={handleSubmit} className="space-y-5 w-full" noValidate>
               <div>
                 <label htmlFor="name" className="block text-xs uppercase tracking-wider font-bold mb-2 text-foreground">
                   Naam
