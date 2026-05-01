@@ -38,7 +38,7 @@ const SiteHeader = () => {
             <Link
               key={link.label}
               to={link.href}
-              className={`text-sm tracking-widest transition-colors duration-300 hover:text-primary ${
+              className={`nav-wiggle text-sm tracking-widest transition-colors duration-300 hover:text-primary ${
                 location.pathname === link.href
                   ? "text-primary font-bold"
                   : "text-foreground"

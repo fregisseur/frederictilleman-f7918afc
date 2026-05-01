@@ -84,6 +84,10 @@ const reviews = [
     name: "Liesbeth Fauconnier — Het Peloton",
     text: "Bij Het Peloton zijn we altijd op zoek naar creatieve partners die onze verhalen naar een hoger niveau tillen, en Frederic Tilleman is daar een schitterend voorbeeld van. Als specialist in stop-motion animatie brengt Frederic een unieke vorm van storytelling tot leven. Bedankt voor je consistentie, professionaliteit en het brengen van magie in elk frame.",
   },
+  {
+    name: "Liesbeth De Muynck",
+    text: "Frederic heeft een geboortekaartje gemaakt waar we heel veel complimentjes op gekregen hebben. Hij is een creatieve duizendpoot waar ik stiekem een beetje naar opkijk. Alles is mooier in het echt als op foto!",
+  },
 ];
 
 const herkenSteps = [
