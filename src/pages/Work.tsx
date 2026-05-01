@@ -2,7 +2,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import PortfolioGrid from "@/components/PortfolioGrid";
 
-import { Headphones, Heart, Trophy } from "lucide-react";
+import { Headphones, Heart, Trophy, Star, Lightbulb, Sparkles, Users, Rocket } from "lucide-react";
 import heroWorkImage from "@/assets/hero-work.png";
 
 import logoBrusselsAirport from "@/assets/logos/brussels-airport.webp";
@@ -55,6 +55,56 @@ const clientLogos = [
   { name: "Vlaamse Overheid", src: logoVlaamseOverheid },
 ];
 
+const reviews = [
+  {
+    name: "Nina Moens",
+    text: "Heel fijne samenwerking. Frederic slaagde erin om iets te creëren naar onze wensen, zonder inhoudelijk in te boeten, maar wel met heel veel creatieve input van zijn kant wat een zeer mooi eindresultaat opleverde! Absoluut de moeite.",
+  },
+  {
+    name: "Bram Blondeel",
+    text: "Altijd fijn samenwerken met Frederic! Vakman met een creatieve geest. Met al heel wat mooie projecten samen. Mijn favoriet? Julien de Flandrien, een kleien wielrenner die doorheen de stad rijdt op weg naar de start van de Ronde in stad Antwerpen.",
+  },
+  {
+    name: "Seppe Thys",
+    text: "Samenwerken met Frederic is altijd een plezier. Zijn ervaring en oog voor detail zorgen ervoor dat elk project er prachtig uitziet.",
+  },
+  {
+    name: "Nele Ostyn",
+    text: "Ik werk al jaren samen met Frederic Tilleman, en elke samenwerking bevestigt opnieuw waarom ik steeds bij hem terugkom. Frederic is een zeldzaam talent: hij weet als geen ander complexe scenario's en ideeën te vertalen naar luchtige, originele en visueel aantrekkelijke animaties. Een vaste waarde geworden in onze projecten.",
+  },
+  {
+    name: "Hilde Hautekees — Blinkweb VVSG",
+    text: "Ik heb in mijn functie al met heel wat illustratoren samengewerkt, maar Frederic springt er echt met kop en schouders bovenuit. Wat ik als boodschap wil meegeven, weet hij moeiteloos om te zetten in beelden die raken, blijven hangen én spreken. Een unieke combinatie van talent, inzicht en menselijkheid.",
+  },
+  {
+    name: "Ariane Vanderlinden",
+    text: "Als onafhankelijk strategische communicatie-adviseur heb ik meerdere keren beroep gedaan op de illustratiekunsten van Frederic om een verhaal te vertellen op een toegankelijke en originele manier. Ik apprecieer zijn snelle inzichten en zeer flexibele manier van werken.",
+  },
+  {
+    name: "Liesbeth Fauconnier — Het Peloton",
+    text: "Bij Het Peloton zijn we altijd op zoek naar creatieve partners die onze verhalen naar een hoger niveau tillen, en Frederic Tilleman is daar een schitterend voorbeeld van. Als specialist in stop-motion animatie brengt Frederic een unieke vorm van storytelling tot leven. Bedankt voor je consistentie, professionaliteit en het brengen van magie in elk frame.",
+  },
+];
+
+const herkenSteps = [
+  {
+    icon: Lightbulb,
+    text: "Je hebt een idee. Of een half. Of iets dat nog niet helemaal juist zit, maar waarvan je voelt: hier zit meer in.",
+  },
+  {
+    icon: Sparkles,
+    text: "Je wil iets maken dat opvalt zonder te schreeuwen. Iets dat mensen meteen snappen én onthouden.",
+  },
+  {
+    icon: Users,
+    text: "Je zoekt iemand die met je meedenkt, je idee scherper maakt en uitpuurt tot de essentie, en er daarna ook echt mee aan de slag gaat.",
+  },
+  {
+    icon: Rocket,
+    text: "Van eerste schets tot eindresultaat, zonder gedoe.",
+  },
+];
+
 const Work = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -91,21 +141,17 @@ const Work = () => {
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             Herken je jezelf hierin?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-background p-8 text-center border border-border">
-              <h3 className="font-bold text-lg mb-3 text-foreground">Je zoekt iemand die het mee uitdenkt</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Je hebt een idee, briefing of half plan, maar het mag scherper, origineler, beter.
-                Je wil samenwerken met iemand die creatief meedenkt en het ook effectief uitwerkt.
-              </p>
-            </div>
-            <div className="bg-background p-8 text-center border border-border">
-              <h3 className="font-bold text-lg mb-3 text-foreground">Je wil iets maken dat opvalt én duidelijk is</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Je hebt een boodschap die moet landen: visueel sterk, maar ook helder en begrijpelijk.
-                Geen clichés maar iets tastbaar en eigen dat blijft hangen en werkt.
-              </p>
-            </div>
+          <div className="max-w-3xl mx-auto mt-10 space-y-6">
+            {herkenSteps.map((step, i) => (
+              <div key={i} className="flex items-start gap-5">
+                <div className="shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <step.icon className="w-6 h-6 text-primary" />
+                </div>
+                <p className="text-foreground/80 text-base md:text-lg leading-relaxed pt-2">
+                  {step.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -143,8 +189,8 @@ const Work = () => {
             In goed gezelschap
           </h2>
           <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 text-base leading-relaxed">
-            Van snelle opdrachten tot langdurige samenwerkingen.<br />
-            Voor klanten die hun verhaal visueel willen laten spreken.
+            Van eenmalige opdrachten tot samenwerkingen op lange termijn,<br />
+            met klanten die af en toe langskomen of regelmatig blijven terugkeren.
           </p>
           <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6">
             {clientLogos.map((client) => {
@@ -173,16 +219,49 @@ const Work = () => {
             Eerder werk
           </h2>
           <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 text-base leading-relaxed">
-            Een beeld zegt meer dan duizend woorden. Bekijk een greep uit mijn projecten en ontdek wat er mogelijk is.
+            Soms zegt een beeld gewoon meer dan woorden.<br />
+            Neem gerust een kijkje tussen een aantal projecten en ontdek wat er allemaal mogelijk is.
           </p>
           <PortfolioGrid />
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section className="py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
+            Wat klanten zeggen
+          </h2>
+          <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 text-base leading-relaxed">
+            Een greep uit de Google reviews van mensen waarmee ik samenwerkte.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {reviews.map((r) => (
+              <div
+                key={r.name}
+                className="bg-background border border-border p-6 md:p-8 flex flex-col gap-4 transition-colors duration-300 hover:border-primary/30"
+              >
+                <div className="flex items-center gap-1 text-primary">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-current" />
+                  ))}
+                </div>
+                <p className="text-foreground/80 text-sm md:text-base leading-relaxed">
+                  "{r.text}"
+                </p>
+                <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-auto">
+                  — {r.name} · via Google
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-20 px-6 bg-foreground text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-background mb-4">
+          <h2 className="text-3xl md:text-4xl font-normal text-background mb-4" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             Een project in gedachten?
           </h2>
           <p className="text-background/70 text-lg mb-8">
