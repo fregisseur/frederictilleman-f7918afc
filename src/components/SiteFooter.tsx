@@ -7,7 +7,7 @@ const SiteFooter = () => {
     <footer className="py-12 border-t border-border">
       <div className="max-w-5xl mx-auto px-6 flex flex-col items-center gap-6">
         <p
-          className="text-2xl md:text-3xl text-foreground"
+          className="text-3xl md:text-4xl text-foreground"
           style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}
         >
           Einde! ;)
