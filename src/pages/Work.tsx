@@ -147,7 +147,7 @@ const Work = () => {
                 <div className="shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                   <step.icon className="w-6 h-6 text-primary" />
                 </div>
-                <p className="text-foreground/80 text-base md:text-lg leading-relaxed pt-2">
+                <p className="text-muted-foreground text-base leading-relaxed pt-2">
                   {step.text}
                 </p>
               </div>
