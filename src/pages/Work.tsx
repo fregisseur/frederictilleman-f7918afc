@@ -1,8 +1,9 @@
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import PortfolioGrid from "@/components/PortfolioGrid";
+import { Link } from "react-router-dom";
 
-import { Headphones, Heart, Trophy, Star, Lightbulb, Sparkles, Users, Rocket } from "lucide-react";
+import { Headphones, Heart, Trophy, Star } from "lucide-react";
 import heroWorkImage from "@/assets/hero-work.png";
 
 import logoBrusselsAirport from "@/assets/logos/brussels-airport.webp";
@@ -57,27 +58,27 @@ const clientLogos = [
 
 const reviews = [
   {
-    name: "Nina Moens",
+    name: "Nina Moens — Amsab-ISG",
     text: "Heel fijne samenwerking. Frederic slaagde erin om iets te creëren naar onze wensen, zonder inhoudelijk in te boeten, maar wel met heel veel creatieve input van zijn kant wat een zeer mooi eindresultaat opleverde! Absoluut de moeite.",
   },
   {
-    name: "Bram Blondeel",
+    name: "Bram Blondeel — MediaMixer",
     text: "Altijd fijn samenwerken met Frederic! Vakman met een creatieve geest. Met al heel wat mooie projecten samen. Mijn favoriet? Julien de Flandrien, een kleien wielrenner die doorheen de stad rijdt op weg naar de start van de Ronde in stad Antwerpen.",
   },
   {
-    name: "Seppe Thys",
+    name: "Seppe Thys — Foodphoto",
     text: "Samenwerken met Frederic is altijd een plezier. Zijn ervaring en oog voor detail zorgen ervoor dat elk project er prachtig uitziet.",
   },
   {
-    name: "Nele Ostyn",
+    name: "Nele Ostyn — Meerkat",
     text: "Ik werk al jaren samen met Frederic Tilleman, en elke samenwerking bevestigt opnieuw waarom ik steeds bij hem terugkom. Frederic is een zeldzaam talent: hij weet als geen ander complexe scenario's en ideeën te vertalen naar luchtige, originele en visueel aantrekkelijke animaties. Een vaste waarde geworden in onze projecten.",
   },
   {
-    name: "Hilde Hautekees — Blinkweb VVSG",
+    name: "Hilde Hautekees — VVSG",
     text: "Ik heb in mijn functie al met heel wat illustratoren samengewerkt, maar Frederic springt er echt met kop en schouders bovenuit. Wat ik als boodschap wil meegeven, weet hij moeiteloos om te zetten in beelden die raken, blijven hangen én spreken. Een unieke combinatie van talent, inzicht en menselijkheid.",
   },
   {
-    name: "Ariane Vanderlinden",
+    name: "Ariane Vanderlinden — Visualising Value",
     text: "Als onafhankelijk strategische communicatie-adviseur heb ik meerdere keren beroep gedaan op de illustratiekunsten van Frederic om een verhaal te vertellen op een toegankelijke en originele manier. Ik apprecieer zijn snelle inzichten en zeer flexibele manier van werken.",
   },
   {
@@ -86,27 +87,14 @@ const reviews = [
   },
   {
     name: "Liesbeth De Muynck",
-    text: "Frederic heeft een geboortekaartje gemaakt waar we heel veel complimentjes op gekregen hebben. Hij is een creatieve duizendpoot waar ik stiekem een beetje naar opkijk. Alles is mooier in het echt als op foto!",
+    text: "Frederic heeft een geboortekaartje gemaakt waar we heel veel complimentjes op gekregen hebben. Hij is een creatieve duizendpoot waar ik stiekem een beetje naar opkijk.",
   },
 ];
 
 const herkenSteps = [
-  {
-    icon: Lightbulb,
-    text: "Je hebt een idee. Of een half. Of iets dat nog niet helemaal juist zit, maar waarvan je voelt: hier zit meer in.",
-  },
-  {
-    icon: Sparkles,
-    text: "Je wil iets maken dat opvalt zonder te schreeuwen. Iets dat mensen meteen snappen én onthouden.",
-  },
-  {
-    icon: Users,
-    text: "Je zoekt iemand die met je meedenkt, je idee scherper maakt en uitpuurt tot de essentie, en er daarna ook echt mee aan de slag gaat.",
-  },
-  {
-    icon: Rocket,
-    text: "Van eerste schets tot eindresultaat, zonder gedoe.",
-  },
+  "Je hebt een idee. Of een half. Of iets dat nog niet helemaal juist zit, maar waarvan je voelt: hier zit meer in.",
+  "Je wil iets maken dat opvalt zonder te schreeuwen. Iets dat mensen meteen snappen én onthouden.",
+  "Je zoekt iemand die met je meedenkt, je idee scherper maakt en uitpuurt tot de essentie, en er daarna ook echt mee aan de slag gaat. Van eerste schets tot eindresultaat, zonder gedoe.",
 ];
 
 const Work = () => {
@@ -146,13 +134,13 @@ const Work = () => {
             Herken je jezelf hierin?
           </h2>
           <div className="max-w-3xl mx-auto mt-10 space-y-6">
-            {herkenSteps.map((step, i) => (
+            {herkenSteps.map((text, i) => (
               <div key={i} className="flex items-start gap-5">
                 <div className="shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <step.icon className="w-6 h-6 text-primary" />
+                  <i className="fi fi-rr-angle-small-down text-primary text-2xl leading-none flex items-center justify-center" />
                 </div>
                 <p className="text-muted-foreground text-base leading-relaxed pt-2">
-                  {step.text}
+                  {text}
                 </p>
               </div>
             ))}
@@ -271,12 +259,12 @@ const Work = () => {
           <p className="text-background/70 text-lg mb-8">
             Vertel me over je idee en ik denk graag mee.
           </p>
-          <a
-            href="mailto:hello@frederictilleman.be?subject=Project aanvraag"
+          <Link
+            to="/contact"
             className="inline-block bg-primary text-primary-foreground px-10 py-4 text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:bg-primary/80"
           >
-            Laat ons praten
-          </a>
+            Let's talk
+          </Link>
         </div>
       </section>
 

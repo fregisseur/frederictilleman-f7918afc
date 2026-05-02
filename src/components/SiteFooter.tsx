@@ -6,12 +6,6 @@ const SiteFooter = () => {
   return (
     <footer className="py-12 border-t border-border">
       <div className="max-w-5xl mx-auto px-6 flex flex-col items-center gap-6">
-        <p
-          className="text-3xl md:text-4xl text-foreground"
-          style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}
-        >
-          Einde! ;)
-        </p>
         <div className="flex gap-6">
           <a
             href="mailto:hello@frederictilleman.be"
