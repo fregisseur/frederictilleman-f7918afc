@@ -23,7 +23,7 @@ import logoVlaamseOverheid from "@/assets/logos/vlaamse-overheid.jpg";
 
 const aanpak = [
   {
-    iconClass: "fi fi-rr-bubble-discussion",
+    iconClass: "fi fi-rr-comment",
     title: "Ik luister, jij vertelt",
     description: "In een kort gesprek vat ik de kern van jouw vraag. Geen eindeloze briefings — ik begrijp snel wat je nodig hebt en denk meteen mee.",
   },
