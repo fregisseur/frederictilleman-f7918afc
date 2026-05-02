@@ -3,7 +3,7 @@ import SiteFooter from "@/components/SiteFooter";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import { Link } from "react-router-dom";
 
-import { Headphones, Heart, Trophy, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import heroWorkImage from "@/assets/hero-work.png";
 
 import logoBrusselsAirport from "@/assets/logos/brussels-airport.webp";
@@ -23,17 +23,17 @@ import logoVlaamseOverheid from "@/assets/logos/vlaamse-overheid.jpg";
 
 const aanpak = [
   {
-    icon: Headphones,
+    iconClass: "fi fi-rr-bubble-discussion",
     title: "Ik luister, jij vertelt",
     description: "In een kort gesprek vat ik de kern van jouw vraag. Geen eindeloze briefings — ik begrijp snel wat je nodig hebt en denk meteen mee.",
   },
   {
-    icon: Heart,
+    iconClass: "fi fi-rr-sofa",
     title: "Van A tot Z verzorgd",
     description: "Van eerste schets tot finale oplevering: ik neem het volledige traject op mij. Jij focust op je business, ik op het beeld.",
   },
   {
-    icon: Trophy,
+    iconClass: "fi fi-rr-crown",
     title: "10+ jaar ervaring",
     description: "Professionele kwaliteit, afgewerkt tot in de puntjes. De referenties hieronder spreken voor zich.",
   },
@@ -163,8 +163,8 @@ const Work = () => {
                 key={item.title}
                 className="group bg-background p-8 text-center border border-border transition-colors duration-300 hover:border-primary/30"
               >
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/20 transition-colors">
-                  <item.icon className="w-7 h-7 text-primary" />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/20 transition-colors">
+                  <i className={`${item.iconClass} text-primary text-2xl leading-none flex items-center justify-center`} />
                 </div>
                 <h3 className="font-bold text-lg mb-2 text-foreground">{item.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>

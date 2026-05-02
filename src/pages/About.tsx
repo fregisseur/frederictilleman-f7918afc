@@ -8,7 +8,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <SiteHeader />
 
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 fade-up">
         <div className="max-w-5xl mx-auto">
 
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
