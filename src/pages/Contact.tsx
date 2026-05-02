@@ -19,6 +19,10 @@ const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const result = contactSchema.safeParse(form);
@@ -46,7 +50,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background" style={{ ["--contact-accent" as never]: ACCENT }}>
       <SiteHeader />
 
-      <section className="py-12 md:py-20 px-6">
+      <section className="pt-6 md:pt-10 pb-12 md:pb-20 px-6 fade-up">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h1
@@ -74,7 +78,7 @@ const Contact = () => {
             {/* Form */}
             <form onSubmit={handleSubmit} className="space-y-5 w-full" noValidate>
               <div>
-                <label htmlFor="name" className="block text-xs uppercase tracking-wider font-bold mb-2 text-foreground">
+                <label htmlFor="name" className="block text-base mb-2 text-muted-foreground leading-relaxed">
                   Naam
                 </label>
                 <input
@@ -90,7 +94,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-xs uppercase tracking-wider font-bold mb-2 text-foreground">
+                <label htmlFor="email" className="block text-base mb-2 text-muted-foreground leading-relaxed">
                   E-mailadres
                 </label>
                 <input
@@ -106,8 +110,8 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-xs uppercase tracking-wider font-bold mb-2 text-foreground">
-                  Telefoon <span className="text-muted-foreground normal-case font-normal tracking-normal">(optioneel)</span>
+                <label htmlFor="phone" className="block text-base mb-2 text-muted-foreground leading-relaxed">
+                  Telefoon <span className="text-muted-foreground">(optioneel)</span>
                 </label>
                 <input
                   id="phone"
@@ -120,7 +124,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-xs uppercase tracking-wider font-bold mb-2 text-foreground">
+                <label htmlFor="message" className="block text-base mb-2 text-muted-foreground leading-relaxed">
                   Bericht
                 </label>
                 <textarea
