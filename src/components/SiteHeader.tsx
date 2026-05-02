@@ -79,7 +79,7 @@ const SiteHeader = () => {
               key={link.label}
               to={link.href}
               onClick={() => setMenuOpen(false)}
-              className={`text-3xl md:text-5xl tracking-widest transition-colors duration-300 hover:text-primary ${
+              className={`text-2xl md:text-3xl tracking-widest transition-colors duration-300 hover:text-primary ${
                 location.pathname === link.href
                   ? "text-primary font-bold"
                   : "text-foreground"

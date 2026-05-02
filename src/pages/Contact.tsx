@@ -53,11 +53,11 @@ const Contact = () => {
               className="text-3xl md:text-4xl font-normal text-black mb-4"
               style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}
             >
-              Even <span style={{ color: ACCENT }}>contact</span> zoeken?
+              Let's get <span style={{ color: ACCENT }}>started</span>
             </h1>
             <p className="text-muted-foreground text-base max-w-2xl mx-auto leading-relaxed">
               Vertel me over je idee, vraag of project.
-              <br />Ik denk graag mee en antwoord meestal binnen één à twee dagen.
+              <br />Ik denk graag met je mee en ben altijd bereikbaar.
             </p>
           </div>
 
@@ -135,13 +135,15 @@ const Contact = () => {
                 {errors.message && <p className="text-xs mt-1" style={{ color: ACCENT }}>{errors.message}</p>}
               </div>
 
-              <button
-                type="submit"
-                className="inline-block px-10 py-4 text-sm font-bold uppercase tracking-wider text-white transition-all duration-300 hover:opacity-90"
-                style={{ backgroundColor: ACCENT }}
-              >
-                Verstuur bericht
-              </button>
+              <div className="flex justify-center pt-2">
+                <button
+                  type="submit"
+                  className="inline-block px-10 py-4 text-sm font-bold uppercase tracking-wider text-white transition-all duration-300 hover:opacity-90"
+                  style={{ backgroundColor: ACCENT }}
+                >
+                  Verstuur bericht
+                </button>
+              </div>
             </form>
           </div>
         </div>

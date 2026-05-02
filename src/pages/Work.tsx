@@ -1,6 +1,7 @@
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import PortfolioGrid from "@/components/PortfolioGrid";
+import { Link } from "react-router-dom";
 
 import { Headphones, Heart, Trophy, Star } from "lucide-react";
 import heroWorkImage from "@/assets/hero-work.png";
