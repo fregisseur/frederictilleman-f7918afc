@@ -34,17 +34,16 @@ const Index = () => {
             description={
               <>
                 <p>
-                  Weet je nog hoe Wallace &amp; Gromit, Shaun the Sheep en Chicken Run je betoverden?
-                  <strong> Stop-motion</strong> is de techniek achter deze wonderlijke animatiefilms.
-                  En nu is het jouw beurt om de magie te ervaren!
+                  Weet je nog hoe Wallace &amp; Gromit, Shaun the Sheep en Chicken Run je betoverden? Stop-motion is de techniek achter deze wonderlijke animatiefilms. En nu is het jouw beurt om de magie te ervaren!
                 </p>
+                <p>Tijdens deze workshop:</p>
                 <ul className="space-y-2 list-none">
-                  <li>🎨 Laat je <strong>creativiteit</strong> de vrije loop: bouw fantastische decors en creëer kleurrijke figuren.</li>
-                  <li>🎬 Leer de <strong>kneepjes van het vak</strong>: breng personages tot leven en maak bewegingen vloeiend.</li>
-                  <li>📱 Experimenteer met een <strong>animatie app</strong>: voeg geluidseffecten toe aan je film.</li>
+                  <li><strong>Laat je je creativiteit de vrije loop:</strong> bouw fantastische decors, creëer kleurrijke figuren en vertel een uniek verhaal.</li>
+                  <li><strong>Leer je de kneepjes van het vak:</strong> ontdek hoe je personages tot leven brengt, bewegingen vloeiend maakt en je film een professionele uitstraling geeft.</li>
+                  <li><strong>Experimenteer je met een animatie app:</strong> maak gebruik van handige tools en voeg extra geluidseffecten toe aan je film.</li>
                 </ul>
-                <p className="text-muted-foreground text-sm italic">
-                  Geen ervaring nodig, enkel een flinke dosis fantasie!
+                <p>
+                  Deze workshop is perfect voor <strong>kinderen en jongeren van 7 tot 12 jaar</strong> die houden van creativiteit en knutselen en voor iedereen die meer wil leren over stop-motion animatie. Geen ervaring nodig, enkel een flinke dosis fantasie!
                 </p>
               </>
             }
@@ -66,17 +65,16 @@ const Index = () => {
             description={
               <>
                 <p>
-                  Ben je klaar om de <strong>filmwereld te bestormen met je camera</strong>?
-                  In deze workshop ontdek je hoe je verbluffende beelden maakt,
-                  een pakkend verhaal vertelt en je publiek versteld doet staan.
+                  Ben je klaar om de filmwereld te bestormen met je camera? In deze workshop ontdek je hoe je verbluffende beelden maakt, een pakkend verhaal vertelt en je publiek versteld doet staan van je talent.
                 </p>
+                <p>Stap voor stap:</p>
                 <ul className="space-y-2 list-none">
-                  <li>📝 Ontcijfer de <strong>magie van het filmmaken</strong>: leer een spannend scenario opbouwen en een creatief storyboard tekenen.</li>
-                  <li>📷 Til je films naar een <strong>hoger niveau</strong>: experimenteer met camerastandpunten en montagetechnieken.</li>
-                  <li>🎥 Word <strong>regisseur</strong>, <strong>cameraman</strong> en <strong>editor</strong>: van storyboard tot montage, jij hebt de controle.</li>
+                  <li><strong>Ontcijfer je de magie van het filmmaken:</strong> leer hoe je een spannend scenario opbouwt, een creatief storyboard tekent en een smartphone of tablet als professionele camera gebruikt.</li>
+                  <li><strong>Til je je films naar een hoger niveau:</strong> experimenteer met verschillende camerastandpunten, perspectieven en montagetechnieken.</li>
+                  <li><strong>Word je regisseur, cameraman of -vrouw en editor:</strong> van storyboard tot montage, jij hebt de controle over je eigen meesterwerk.</li>
                 </ul>
-                <p className="text-muted-foreground text-sm italic">
-                  Geen ervaring nodig, enkel een mooie portie enthousiasme!
+                <p>
+                  Deze workshop is perfect voor <strong>kinderen en jongeren van 7 tot 14 jaar</strong> die houden van verhalen vertellen, creativiteit en voor iedereen die gewoon straffe video's wil maken. Geen ervaring nodig, enkel een mooie portie enthousiasme!
                 </p>
               </>
             }
@@ -120,8 +118,8 @@ const Index = () => {
       {/* Final CTA */}
       <section className="py-20 px-6 bg-foreground text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-background mb-4">
-            Klaar om iets unieks te maken?
+          <h2 className="text-3xl md:text-4xl font-normal text-background mb-4" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
+            Klaar om iets unieks te organiseren?
           </h2>
           <p className="text-background/70 text-lg mb-8">
             Neem contact op en we plannen samen de perfecte workshop.
