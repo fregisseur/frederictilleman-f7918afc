@@ -15,8 +15,8 @@ const TargetAudience = () => {
   return (
     <section className="py-16 px-6 bg-secondary">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="section-title mb-10">
-          Voor wie werkt dit<span className="text-primary">?</span>
+        <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-10" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
+          Voor wie werkt dit?
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {audiences.map((a) => (
