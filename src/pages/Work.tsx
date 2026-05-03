@@ -241,7 +241,7 @@ const Work = () => {
                 <p className="text-foreground/80 text-sm md:text-base leading-relaxed">
                   "{r.text}"
                 </p>
-                <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-auto">
+                <p className="text-sm text-muted-foreground not-italic mt-auto">
                   — {r.name} · via Google
                 </p>
               </div>
