@@ -19,8 +19,8 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SiteHeader />
       <HeroSection />
-      <USPSection />
       <TargetAudience />
+      <USPSection />
 
       {/* Workshops */}
       <section id="workshops" className="py-20 px-6">
