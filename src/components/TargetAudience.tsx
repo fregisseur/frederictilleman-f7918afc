@@ -6,7 +6,7 @@ const paragraphs = [
 
 const TargetAudience = () => {
   return (
-    <section className="py-16 px-6 bg-secondary">
+    <section className="py-16 px-6">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
           Voor wie kinderen wil laten creëren
