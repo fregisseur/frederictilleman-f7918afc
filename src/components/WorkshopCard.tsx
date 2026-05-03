@@ -45,7 +45,7 @@ const WorkshopCard = ({ title, images, description, ctaLabel, ctaHref, reversed 
 
       {/* Content */}
       <div className="lg:w-3/5 flex flex-col justify-center">
-        <h3 className="text-2xl md:text-3xl font-bold mb-6 text-foreground">{title}</h3>
+        <h3 className="text-3xl md:text-4xl font-normal text-black mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>{title}</h3>
         <div className="text-foreground/80 leading-relaxed space-y-4 mb-8">
           {description}
         </div>

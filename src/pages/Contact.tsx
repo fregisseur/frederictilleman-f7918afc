@@ -13,17 +13,19 @@ const contactSchema = z.object({
 });
 
 const ACCENT = "#1b45da";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xbdwlqnd";
 
 const Contact = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = contactSchema.safeParse(form);
     if (!result.success) {
@@ -35,12 +37,31 @@ const Contact = () => {
       return;
     }
     setErrors({});
-    const subject = encodeURIComponent(`Bericht via website van ${result.data.name}`);
-    const body = encodeURIComponent(
-      `Naam: ${result.data.name}\nE-mail: ${result.data.email}\nTelefoon: ${result.data.phone || "-"}\n\n${result.data.message}`
-    );
-    window.location.href = `mailto:hello@frederictilleman.be?subject=${subject}&body=${body}`;
-    toast({ title: "Bedankt!", description: "Je e-mailprogramma opent met je bericht." });
+    setSubmitting(true);
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: result.data.name,
+          email: result.data.email,
+          phone: result.data.phone || "",
+          message: result.data.message,
+          _subject: `Bericht via website van ${result.data.name}`,
+        }),
+      });
+      if (!response.ok) throw new Error("Verzenden mislukt");
+      setForm({ name: "", email: "", phone: "", message: "" });
+      toast({ title: "Bedankt voor je bericht!", description: "Je hoort snel van mij." });
+    } catch {
+      toast({
+        title: "Oeps, er ging iets mis",
+        description: "Probeer het opnieuw of mail rechtstreeks naar hello@frederictilleman.be",
+        variant: "destructive",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const inputBase =
@@ -142,10 +163,11 @@ const Contact = () => {
               <div className="flex justify-center pt-2">
                 <button
                   type="submit"
-                  className="inline-block px-10 py-4 text-sm font-bold uppercase tracking-wider text-white transition-all duration-300 hover:opacity-90"
+                  disabled={submitting}
+                  className="inline-block px-10 py-4 text-sm font-bold uppercase tracking-wider text-white transition-all duration-300 hover:opacity-90 disabled:opacity-60"
                   style={{ backgroundColor: ACCENT }}
                 >
-                  Verstuur bericht
+                  {submitting ? "Versturen..." : "Verstuur bericht"}
                 </button>
               </div>
             </form>
