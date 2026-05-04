@@ -25,7 +25,7 @@ const HeroSection = () => {
         </p>
         <a
           href="#workshops"
-          className="btn-primary fade-up"
+          className="inline-block bg-primary text-primary-foreground px-8 py-3 text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:bg-accent hover:text-accent-foreground fade-up"
           style={{ animationDelay: "0.3s" }}
         >
           Bekijk de workshops
