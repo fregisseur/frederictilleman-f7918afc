@@ -164,7 +164,10 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="contact-submit inline-block px-10 py-4 text-sm font-bold uppercase tracking-wider text-white transition-colors duration-300 disabled:opacity-60"
+                  className="inline-block px-10 py-4 text-sm font-bold uppercase tracking-wider text-white transition-colors duration-300 disabled:opacity-60"
+                  style={{ backgroundColor: ACCENT }}
+                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "hsl(var(--foreground))")}
+                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = ACCENT)}
                 >
                   {submitting ? "Versturen..." : "Verstuur bericht"}
                 </button>
