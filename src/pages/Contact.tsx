@@ -78,7 +78,7 @@ const Contact = () => {
               className="text-3xl md:text-4xl font-normal text-black mb-4"
               style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}
             >
-              Let's get <span style={{ color: ACCENT }}>started</span>
+              Let's get started
             </h1>
             <p className="text-muted-foreground text-base max-w-2xl mx-auto leading-relaxed">
               Vertel me over je idee, vraag of project.
@@ -92,7 +92,7 @@ const Contact = () => {
               <img
                 src={postduif}
                 alt="Postduif met envelop"
-                className="w-48 md:w-64 h-auto"
+                className="w-32 md:w-44 h-auto"
               />
             </div>
 
