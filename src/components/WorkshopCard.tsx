@@ -27,7 +27,7 @@ const WorkshopCard = ({ title, images, description, ctaLabel, ctaHref, reversed 
       } gap-8 lg:gap-12 items-stretch`}
     >
       {/* Image carousel */}
-      <div className="lg:w-2/5 overflow-hidden rounded-lg relative">
+      <div className="lg:w-2/5 overflow-hidden relative">
         {images.map((image, index) => (
           <img
             key={index}
