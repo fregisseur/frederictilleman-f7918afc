@@ -3,18 +3,18 @@ const usps = [
     iconClass: "fi fi-rr-magic-wand",
     title: "Een ervaring die bijblijft",
     description:
-      "Eens iets anders dan een standaard creatieve workshop: een ervaring die bijblijft, zonder saaie uitleg vooraf. De kinderen gaan meteen aan de slag.",
+      "De kinderen worden vanaf het begin meegenomen in de wereld van film en animatie en gaan zelf aan de slag.",
   },
   {
     iconClass: "fi fi-rr-clapperboard-play",
     title: "Zichtbaar resultaat",
-    description: "Iedereen gaat naar huis met een eigen filmpje.",
+    description: "Iedereen gaat naar huis met een eigen filmpje. Zet de popcorn thuis maar alvast klaar.",
   },
   {
     iconClass: "fi fi-rr-crown",
     title: "Professionele begeleiding",
     description:
-      "Een meester in het vak die zijn groep moeiteloos meekrijgt.",
+      "Als meester in het vak weet ik als geen ander hoe ik de groep moet enthousiasmeren en spelenderwijs iets kan bijleren.",
   },
 ];
 
