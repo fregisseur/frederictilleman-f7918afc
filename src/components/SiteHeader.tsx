@@ -52,8 +52,12 @@ const SiteHeader = () => {
                 to={link.href}
                 style={accent ? (active ? { color: accent } : { ["--nav-hover" as never]: accent }) : undefined}
                 className={`nav-wiggle text-sm tracking-widest transition-colors duration-300 ${
-                  accent ? "[&:hover]:!text-[var(--nav-hover)]" : "hover:text-primary"
-                } ${active ? (accent ? "font-bold" : "text-primary font-bold") : "text-foreground"}`}
+                  active
+                    ? accent
+                      ? "font-bold [&:hover]:!text-[var(--nav-hover)]"
+                      : "text-primary font-bold"
+                    : `text-foreground ${accent ? "[&:hover]:!text-[var(--nav-hover)]" : "hover:text-primary"}`
+                }`}
               >
                 {link.label}
               </Link>
@@ -95,8 +99,12 @@ const SiteHeader = () => {
                 onClick={() => setMenuOpen(false)}
                 style={accent ? (active ? { color: accent } : { ["--nav-hover" as never]: accent }) : undefined}
                 className={`text-2xl md:text-3xl tracking-widest transition-colors duration-300 ${
-                  accent ? "[&:hover]:!text-[var(--nav-hover)]" : "hover:text-primary"
-                } ${active ? (accent ? "font-bold" : "text-primary font-bold") : "text-foreground"}`}
+                  active
+                    ? accent
+                      ? "font-bold [&:hover]:!text-[var(--nav-hover)]"
+                      : "text-primary font-bold"
+                    : `text-foreground ${accent ? "[&:hover]:!text-[var(--nav-hover)]" : "hover:text-primary"}`
+                }`}
               >
                 {link.label}
               </Link>
