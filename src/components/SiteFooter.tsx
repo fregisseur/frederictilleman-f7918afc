@@ -15,9 +15,10 @@ const SiteFooter = () => {
             <Mail className="w-5 h-5" />
           </a>
           <a
-            href="https://www.instagram.com/frederictilleman"
+            href="https://www.instagram.com/frederictilleman/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            referrerPolicy="no-referrer"
             className="text-foreground hover:text-primary transition-colors"
             aria-label="Instagram"
           >
