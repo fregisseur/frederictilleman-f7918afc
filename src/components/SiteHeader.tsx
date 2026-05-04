@@ -3,6 +3,15 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logoGif from "@/assets/images/frederic_tilleman2.gif";
 
+const BLUE = "#1b45da";
+const YELLOW = "hsl(47 87% 64%)";
+
+const getAccent = (pathname: string) => {
+  if (pathname === "/contact") return BLUE;
+  if (pathname === "/") return YELLOW;
+  return undefined; // default red (primary)
+};
+
 const navLinks = [
   { label: "HOME", href: "/" },
   { label: "WORKSHOPS", href: "/workshops" },
@@ -13,6 +22,7 @@ const navLinks = [
 const SiteHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const accent = getAccent(location.pathname);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
@@ -34,19 +44,21 @@ const SiteHeader = () => {
 
         {/* Horizontal nav */}
         <nav className="mt-4 hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              to={link.href}
-              className={`nav-wiggle text-sm tracking-widest transition-colors duration-300 hover:text-primary ${
-                location.pathname === link.href
-                  ? "text-primary font-bold"
-                  : "text-foreground"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const active = location.pathname === link.href;
+            return (
+              <Link
+                key={link.label}
+                to={link.href}
+                style={accent ? (active ? { color: accent } : { ["--nav-hover" as never]: accent }) : undefined}
+                className={`nav-wiggle text-sm tracking-widest transition-colors duration-300 ${
+                  accent ? "[&:hover]:!text-[var(--nav-hover)]" : "hover:text-primary"
+                } ${active ? (accent ? "font-bold" : "text-primary font-bold") : "text-foreground"}`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Hamburger top-right */}
@@ -74,20 +86,22 @@ const SiteHeader = () => {
         </button>
 
         <nav className="flex flex-col items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              to={link.href}
-              onClick={() => setMenuOpen(false)}
-              className={`text-2xl md:text-3xl tracking-widest transition-colors duration-300 hover:text-primary ${
-                location.pathname === link.href
-                  ? "text-primary font-bold"
-                  : "text-foreground"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const active = location.pathname === link.href;
+            return (
+              <Link
+                key={link.label}
+                to={link.href}
+                onClick={() => setMenuOpen(false)}
+                style={accent ? (active ? { color: accent } : { ["--nav-hover" as never]: accent }) : undefined}
+                className={`text-2xl md:text-3xl tracking-widest transition-colors duration-300 ${
+                  accent ? "[&:hover]:!text-[var(--nav-hover)]" : "hover:text-primary"
+                } ${active ? (accent ? "font-bold" : "text-primary font-bold") : "text-foreground"}`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
       </div>
     </>

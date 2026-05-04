@@ -10,6 +10,9 @@ const About = () => {
 
       <section className="py-16 px-6 fade-up">
         <div className="max-w-5xl mx-auto">
+          <h1 className="text-3xl md:text-4xl font-normal text-black text-center mb-12" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
+            Achter de schermen
+          </h1>
 
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
             {/* Foto */}
@@ -17,7 +20,7 @@ const About = () => {
               <img
                 src={aboutPhoto}
                 alt="Frederic Tilleman aan het werk"
-                className="w-full rounded-lg object-cover"
+                className="w-full object-cover"
                 width={600}
                 height={800}
               />

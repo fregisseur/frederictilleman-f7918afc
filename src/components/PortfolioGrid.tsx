@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import VimeoLoop from "./VimeoLoop";
 interface PortfolioItem {
   client: string;
@@ -37,11 +37,48 @@ const portfolioItems: PortfolioItem[] = [
 const INITIAL_COUNT = 6;
 const LOAD_MORE_COUNT = 6;
 
+const shuffle = <T,>(arr: T[]): T[] => {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+};
+
 const PortfolioGrid = () => {
   const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
 
-  const visibleItems = portfolioItems.slice(0, visibleCount);
-  const hasMore = visibleCount < portfolioItems.length;
+  // Randomize on each page load: shuffle stills among still positions,
+  // shuffle videos among video positions (parity preserved).
+  const randomizedItems = useMemo(() => {
+    const stillPositions: number[] = [];
+    const videoPositions: number[] = [];
+    const stills: PortfolioItem[] = [];
+    const videos: PortfolioItem[] = [];
+    portfolioItems.forEach((item, idx) => {
+      if (item.vimeoId) {
+        videoPositions.push(idx);
+        videos.push(item);
+      } else {
+        stillPositions.push(idx);
+        stills.push(item);
+      }
+    });
+    const shuffledStills = shuffle(stills);
+    const shuffledVideos = shuffle(videos);
+    const result = [...portfolioItems];
+    stillPositions.forEach((pos, i) => {
+      result[pos] = shuffledStills[i];
+    });
+    videoPositions.forEach((pos, i) => {
+      result[pos] = shuffledVideos[i];
+    });
+    return result;
+  }, []);
+
+  const visibleItems = randomizedItems.slice(0, visibleCount);
+  const hasMore = visibleCount < randomizedItems.length;
 
   return (
     <div>
@@ -86,8 +123,8 @@ const PortfolioGrid = () => {
       {hasMore && (
         <div className="flex justify-center mt-8">
           <button
-            onClick={() => setVisibleCount((c) => Math.min(c + LOAD_MORE_COUNT, portfolioItems.length))}
-            className="bg-primary text-primary-foreground px-6 py-3 text-sm font-bold uppercase tracking-wider transition-colors duration-300 hover:bg-foreground hover:text-background"
+            onClick={() => setVisibleCount((c) => Math.min(c + LOAD_MORE_COUNT, randomizedItems.length))}
+            className="bg-accent text-accent-foreground px-6 py-3 text-sm font-bold uppercase tracking-wider transition-colors duration-300 hover:bg-foreground hover:text-background"
           >
             Toon meer
           </button>
