@@ -28,7 +28,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <SiteHeader />
 
-      <section className="py-16 px-6 fade-up">
+      <section className="pt-6 md:pt-10 pb-16 px-6 fade-up">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-normal text-black text-center mb-12" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             Achter de schermen
@@ -74,7 +74,7 @@ const About = () => {
                 Heb je ook een idee dat nood heeft aan een verfrissende stijl? Dan zit je waarschijnlijk goed.
               </p>
 
-              <div className="pt-4">
+              <div className="pt-4 flex justify-center lg:justify-start">
                 <Link
                   to="/contact"
                   className="btn-primary"

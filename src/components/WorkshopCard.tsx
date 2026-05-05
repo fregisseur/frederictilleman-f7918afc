@@ -49,7 +49,7 @@ const WorkshopCard = ({ title, images, description, ctaLabel, ctaHref, reversed 
         <div className="text-foreground/80 leading-relaxed space-y-4 mb-8">
           {description}
         </div>
-        <div>
+        <div className="flex justify-center lg:justify-start">
           <a href={ctaHref} className="btn-primary">
             {ctaLabel}
           </a>
