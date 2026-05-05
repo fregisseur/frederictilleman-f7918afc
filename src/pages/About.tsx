@@ -1,9 +1,29 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
-import aboutPhoto from "@/assets/images/fre1.png.webp";
+import aboutPhoto1 from "@/assets/images/fre1.png.webp";
+import aboutPhoto2 from "@/assets/images/frederic-tilleman-illustrator-atelier-koffie.webp";
+import aboutPhoto3 from "@/assets/images/frederic-tilleman-motion-designer-natuur-inspiratie.webp";
+import aboutPhoto4 from "@/assets/images/frederic-tilleman-illustraties-papieren-knipsels-stopmotion.webp";
+
+const aboutImages = [
+  { src: aboutPhoto1, alt: "Frederic Tilleman, animatie- en illustratiekunstenaar uit België" },
+  { src: aboutPhoto2, alt: "Frederic Tilleman, illustrator en motion designer in zijn atelier" },
+  { src: aboutPhoto3, alt: "Frederic Tilleman, motion designer op zoek naar inspiratie in de natuur" },
+  { src: aboutPhoto4, alt: "Frederic Tilleman aan het werk met papieren knipsels en stop-motion illustraties" },
+];
 
 const About = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % aboutImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
@@ -16,14 +36,20 @@ const About = () => {
 
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
             {/* Foto */}
-            <div className="lg:w-2/5 shrink-0">
-              <img
-                src={aboutPhoto}
-                alt="Frederic Tilleman aan het werk"
-                className="w-full object-cover"
-                width={600}
-                height={800}
-              />
+            <div className="lg:w-2/5 shrink-0 relative overflow-hidden">
+              {aboutImages.map((img, index) => (
+                <img
+                  key={index}
+                  src={img.src}
+                  alt={img.alt}
+                  className={`w-full object-cover transition-opacity duration-700 ${
+                    index === 0 ? "" : "absolute inset-0 h-full"
+                  } ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
+                  width={600}
+                  height={800}
+                  loading={index === 0 ? "eager" : "lazy"}
+                />
+              ))}
             </div>
 
             {/* Tekst */}

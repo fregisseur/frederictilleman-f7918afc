@@ -50,7 +50,7 @@ const SiteHeader = () => {
               <Link
                 key={link.label}
                 to={link.href}
-                style={accent ? (active ? { color: accent } : { ["--nav-hover" as never]: accent }) : undefined}
+                style={accent ? (active ? { color: accent, ["--nav-hover" as never]: accent } : { ["--nav-hover" as never]: accent }) : undefined}
                 className={`nav-wiggle text-sm tracking-widest transition-colors duration-300 ${
                   active
                     ? accent
@@ -97,7 +97,7 @@ const SiteHeader = () => {
                 key={link.label}
                 to={link.href}
                 onClick={() => setMenuOpen(false)}
-                style={accent ? (active ? { color: accent } : { ["--nav-hover" as never]: accent }) : undefined}
+                style={accent ? (active ? { color: accent, ["--nav-hover" as never]: accent } : { ["--nav-hover" as never]: accent }) : undefined}
                 className={`text-2xl md:text-3xl tracking-widest transition-colors duration-300 ${
                   active
                     ? accent
