@@ -6,12 +6,18 @@ import aboutPhoto1 from "@/assets/images/fre1.png.webp";
 import aboutPhoto2 from "@/assets/images/frederic-tilleman-illustrator-atelier-koffie.webp";
 import aboutPhoto3 from "@/assets/images/frederic-tilleman-motion-designer-natuur-inspiratie.webp";
 import aboutPhoto4 from "@/assets/images/frederic-tilleman-illustraties-papieren-knipsels-stopmotion.webp";
+import aboutPhoto5 from "@/assets/images/frederic-tilleman-stopmotion-animatie-peperkoek-winterscene.webp";
+import aboutPhoto6 from "@/assets/images/frederic-tilleman-papieren-knipsels-kustlandschap-vuurtoren.webp";
+import aboutPhoto7 from "@/assets/images/frederic-tilleman-stopmotion-food-photography-hamburger.webp";
 
 const aboutImages = [
   { src: aboutPhoto1, alt: "Frederic Tilleman, animatie- en illustratiekunstenaar uit België" },
   { src: aboutPhoto2, alt: "Frederic Tilleman, illustrator en motion designer in zijn atelier" },
   { src: aboutPhoto3, alt: "Frederic Tilleman, motion designer op zoek naar inspiratie in de natuur" },
   { src: aboutPhoto4, alt: "Frederic Tilleman aan het werk met papieren knipsels en stop-motion illustraties" },
+  { src: aboutPhoto5, alt: "Frederic Tilleman maakt stop-motion animatie met peperkoekmannetjes in een winterscène" },
+  { src: aboutPhoto6, alt: "Frederic Tilleman filmt een papieren knipsel kustlandschap met vuurtoren" },
+  { src: aboutPhoto7, alt: "Frederic Tilleman creëert stop-motion food photography met zwevende hamburger" },
 ];
 
 const About = () => {
