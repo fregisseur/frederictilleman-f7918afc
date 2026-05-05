@@ -67,7 +67,7 @@ const SiteHeader = () => {
 
         {/* Hamburger top-right */}
         <button
-          className="absolute top-8 right-6 md:top-10 md:right-10 z-[60] text-foreground hover:text-primary transition-colors"
+          className="fixed top-6 right-6 md:absolute md:top-10 md:right-10 z-[60] text-foreground hover:text-primary transition-colors"
           onClick={() => setMenuOpen(true)}
           aria-label="Menu openen"
         >
