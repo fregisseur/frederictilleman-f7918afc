@@ -22,6 +22,7 @@ const aboutImages = [
 
 const About = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const touchStartX = useState<{ x: number | null }>({ x: null })[0];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,6 +30,21 @@ const About = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.x = e.touches[0].clientX;
+  };
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.x === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX.x;
+    const threshold = 40;
+    if (dx > threshold) {
+      setCurrentIndex((i) => (i - 1 + aboutImages.length) % aboutImages.length);
+    } else if (dx < -threshold) {
+      setCurrentIndex((i) => (i + 1) % aboutImages.length);
+    }
+    touchStartX.x = null;
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -42,7 +58,11 @@ const About = () => {
 
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
             {/* Foto */}
-            <div className="lg:w-2/5 shrink-0 relative overflow-hidden">
+            <div
+              className="lg:w-2/5 shrink-0 relative overflow-hidden touch-pan-y"
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+            >
               {aboutImages.map((img, index) => (
                 <img
                   key={index}
