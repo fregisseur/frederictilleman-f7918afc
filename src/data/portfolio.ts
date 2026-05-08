@@ -31,7 +31,7 @@ export const portfolioItems: PortfolioItem[] = [
       "https://frederictilleman.be/images/jack_SQ.jpg",
     ],
     description:
-      "Ontwerp van een geboortekaartje voor mijn enige neefje Jack. Een uniek verhaal verdient een uniek kaartje. Met de hand getekend en ingekleurd op mijn iPad. En aangezien Jack na amper drie jaar al sprekend op mij begint te lijken, is hij sowieso een geweldige aanwinst voor de familie 😅.",
+      "Ontwerp van een geboortekaartje voor mijn enige echte neefje Jack. Een uniek verhaal verdient een uniek kaartje. Met de hand getekend en ingekleurd op de iPad. En aangezien Jack na amper drie jaar al sprekend op mij begint te lijken, is hij sowieso een geweldige aanwinst voor de familie 😅.",
     tags: ["Illustratie", "Geboortekaartje", "iPad-tekening"],
     credits: [
       { label: "Gemaakt voor", value: "Aline & Frederik" },

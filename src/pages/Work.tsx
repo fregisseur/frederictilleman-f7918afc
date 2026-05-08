@@ -1,7 +1,8 @@
+import { useEffect } from "react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import PortfolioGrid from "@/components/PortfolioGrid";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { Star } from "lucide-react";
 import heroWorkImage from "@/assets/hero-work.png";
@@ -98,6 +99,16 @@ const herkenSteps = [
 ];
 
 const Work = () => {
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash === "#eerder-werk") {
+      const el = document.getElementById("eerder-werk");
+      if (el) {
+        // small delay so layout/images settle
+        setTimeout(() => el.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" }), 0);
+      }
+    }
+  }, [location]);
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
@@ -205,7 +216,7 @@ const Work = () => {
       </section>
 
       {/* Portfolio grid */}
-      <section className="py-20 px-6 bg-secondary">
+      <section id="eerder-werk" className="py-20 px-6 bg-secondary scroll-mt-24">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             Eerder werk

@@ -112,9 +112,6 @@ const WorkDetail = () => {
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
-            <p className="text-sm uppercase tracking-widest text-muted-foreground mb-2">
-              {item.client}
-            </p>
             <h1
               className="text-3xl md:text-5xl font-normal text-foreground mb-8"
               style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}
@@ -170,20 +167,22 @@ const WorkDetail = () => {
                 </ul>
               </div>
             )}
-
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 mt-8 text-sm font-bold uppercase tracking-widest text-foreground hover:text-primary transition-colors"
-            >
-              <ArrowLeft size={16} /> Terug naar werk
-            </Link>
           </aside>
         </div>
       </section>
 
       {/* Prev / Next */}
       <section className="px-6 pb-20">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 gap-4 border-t border-border pt-8">
+        <div className="max-w-5xl mx-auto border-t border-border pt-8">
+          <div className="flex justify-center mb-8">
+            <Link
+              to="/#eerder-werk"
+              className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-foreground hover:text-primary transition-colors"
+            >
+              <ArrowLeft size={16} /> Terug naar home
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
           <Link
             to={`/werk/${prev.slug}`}
             className="group flex items-center gap-3 text-left"
@@ -218,6 +217,7 @@ const WorkDetail = () => {
               className="text-muted-foreground group-hover:text-primary transition-colors"
             />
           </Link>
+          </div>
         </div>
       </section>
 
