@@ -99,6 +99,16 @@ const herkenSteps = [
 ];
 
 const Work = () => {
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash === "#eerder-werk") {
+      const el = document.getElementById("eerder-werk");
+      if (el) {
+        // small delay so layout/images settle
+        setTimeout(() => el.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" }), 0);
+      }
+    }
+  }, [location]);
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
