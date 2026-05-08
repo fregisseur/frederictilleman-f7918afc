@@ -205,7 +205,7 @@ const Work = () => {
       </section>
 
       {/* Portfolio grid */}
-      <section className="py-20 px-6 bg-secondary">
+      <section id="eerder-werk" className="py-20 px-6 bg-secondary scroll-mt-24">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             Eerder werk
