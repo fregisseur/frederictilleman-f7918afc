@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
@@ -22,7 +22,7 @@ const aboutImages = [
 
 const About = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const touchStartX = useState<{ x: number | null }>({ x: null })[0];
+  const touchStartX = useRef<number | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,18 +32,18 @@ const About = () => {
   }, []);
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.x = e.touches[0].clientX;
+    touchStartX.current = e.touches[0].clientX;
   };
   const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.x === null) return;
-    const dx = e.changedTouches[0].clientX - touchStartX.x;
+    if (touchStartX.current === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX.current;
     const threshold = 40;
     if (dx > threshold) {
       setCurrentIndex((i) => (i - 1 + aboutImages.length) % aboutImages.length);
     } else if (dx < -threshold) {
       setCurrentIndex((i) => (i + 1) % aboutImages.length);
     }
-    touchStartX.x = null;
+    touchStartX.current = null;
   };
 
   return (
