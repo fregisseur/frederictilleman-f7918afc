@@ -25,7 +25,7 @@ export const portfolioItems: PortfolioItem[] = [
     slug: "jack",
     client: "Birth Card",
     title: "Jack",
-    image: "https://frederictilleman.be/images/jack_SQ.jpg",
+    image: "https://frederictilleman.be/images/jack_SQ.webp",
     images: [
       "https://frederictilleman.be/images/jack1.jpg",
       "https://frederictilleman.be/images/jack_SQ.jpg",
@@ -41,7 +41,7 @@ export const portfolioItems: PortfolioItem[] = [
     slug: "doenizo-met-unizo",
     client: "Unizo",
     title: "Doenizo met Unizo",
-    image: "https://frederictilleman.be/images/doenizo_met_unizo.png",
+    image: "https://frederictilleman.be/images/doenizo_met_unizo.webp",
     vimeoId: "691830931",
     description:
       "Een reeks vrolijke animatievideo's voor Unizo waarin ondernemers stap voor stap meegenomen worden in het opstartproces van hun zaak. Van het eerste idee tot de officiële opstart, telkens helder uitgelegd in een korte, herkenbare animatie.",
@@ -54,7 +54,7 @@ export const portfolioItems: PortfolioItem[] = [
     slug: "urban-nature",
     client: "Ars Musica",
     title: "Urban Nature",
-    image: "https://frederictilleman.be/images/urban_nature.png",
+    image: "https://frederictilleman.be/images/urban_nature.webp",
     description:
       "Beeldend werk gemaakt in opdracht van Ars Musica rond het thema 'Urban Nature' — de spanning tussen stad en natuur, vertaald in een eigen visuele taal.",
     tags: ["Illustratie", "Editorial"],
