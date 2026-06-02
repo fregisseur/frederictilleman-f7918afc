@@ -1,10 +1,8 @@
-import heroImage from "@/assets/hero-workshop.jpg";
-
 const HeroSection = () => {
   return (
     <section className="relative w-full h-[70vh] min-h-[500px] overflow-hidden">
       <img
-        src={heroImage}
+        src="/images/hero/hero-workshop.jpg"
         alt="Workshop stop-motion animatie met kinderen"
         className="absolute inset-0 w-full h-full object-cover"
         width={1920}

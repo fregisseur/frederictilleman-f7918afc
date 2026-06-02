@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logoGif from "@/assets/images/frederic_tilleman2.gif";
+const logoGif = "/images/site/frederic_tilleman2.gif";
 
 const BLUE = "#1b45da";
 const YELLOW = "hsl(47 87% 64%)";

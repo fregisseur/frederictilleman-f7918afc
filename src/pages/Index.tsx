@@ -6,13 +6,13 @@ import WorkshopCard from "@/components/WorkshopCard";
 import Testimonial from "@/components/Testimonial";
 import SiteFooter from "@/components/SiteFooter";
 
-import workshopStopmotion1 from "@/assets/workshop-stopmotion-1.webp";
-import workshopStopmotion2 from "@/assets/workshop-stopmotion-2.webp";
-import workshopStopmotion3 from "@/assets/workshop-stopmotion-3.webp";
-import workshopFilm1 from "@/assets/workshop-film-1.webp";
-import workshopFilm2 from "@/assets/workshop-film-2.webp";
-import workshopFilm3 from "@/assets/workshop-film-3.webp";
-import workshopTeambuilding from "@/assets/workshop-teambuilding.webp";
+const workshopStopmotion1 = "/images/workshops/workshop-stopmotion-1.webp";
+const workshopStopmotion2 = "/images/workshops/workshop-stopmotion-2.webp";
+const workshopStopmotion3 = "/images/workshops/workshop-stopmotion-3.webp";
+const workshopFilm1 = "/images/workshops/workshop-film-1.webp";
+const workshopFilm2 = "/images/workshops/workshop-film-2.webp";
+const workshopFilm3 = "/images/workshops/workshop-film-3.webp";
+const workshopTeambuilding = "/images/workshops/workshop-teambuilding.webp";
 
 const Index = () => {
   return (

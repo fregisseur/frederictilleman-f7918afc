@@ -5,22 +5,22 @@ import PortfolioGrid from "@/components/PortfolioGrid";
 import { Link, useLocation } from "react-router-dom";
 
 import { Star } from "lucide-react";
-import heroWorkImage from "@/assets/hero-work.png";
+const heroWorkImage = "/images/hero/hero-work.png";
 
-import logoBrusselsAirport from "@/assets/logos/brussels-airport.webp";
-import logoEneco from "@/assets/logos/eneco.png";
-import logoAlpro from "@/assets/logos/alpro.png";
-import logoTrixie from "@/assets/logos/trixie.png";
-import logoUnizo from "@/assets/logos/unizo.png";
-import logoWoestijnvis from "@/assets/logos/woestijnvis.jpg";
-import logoAesaert from "@/assets/logos/aesaert.avif";
-import logoCoteDor from "@/assets/logos/cote-dor.png";
-import logoBlink from "@/assets/logos/blink.jpg";
-import logoVandemoortele from "@/assets/logos/vandemoortele.png";
-import logoWillux from "@/assets/logos/willux.png";
-import logoStoffels from "@/assets/logos/stoffels.jpg";
-import logoUGent from "@/assets/logos/ugent.png";
-import logoVlaamseOverheid from "@/assets/logos/vlaamse-overheid.jpg";
+const logoBrusselsAirport = "/images/logos/brussels-airport.webp";
+const logoEneco = "/images/logos/eneco.png";
+const logoAlpro = "/images/logos/alpro.png";
+const logoTrixie = "/images/logos/trixie.png";
+const logoUnizo = "/images/logos/unizo.png";
+const logoWoestijnvis = "/images/logos/woestijnvis.jpg";
+const logoAesaert = "/images/logos/aesaert.avif";
+const logoCoteDor = "/images/logos/cote-dor.png";
+const logoBlink = "/images/logos/blink.jpg";
+const logoVandemoortele = "/images/logos/vandemoortele.png";
+const logoWillux = "/images/logos/willux.png";
+const logoStoffels = "/images/logos/stoffels.jpg";
+const logoUGent = "/images/logos/ugent.png";
+const logoVlaamseOverheid = "/images/logos/vlaamse-overheid.jpg";
 
 const aanpak = [
   {
