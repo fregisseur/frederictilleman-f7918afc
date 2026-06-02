@@ -3,7 +3,7 @@ import { z } from "zod";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { useToast } from "@/hooks/use-toast";
-import postduif from "@/assets/postduif.gif";
+const postduif = "/images/site/postduif.gif";
 
 const contactSchema = z.object({
   name: z.string().trim().nonempty({ message: "Naam is verplicht" }).max(100),
