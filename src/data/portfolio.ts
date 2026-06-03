@@ -272,6 +272,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Zonen09",
     title: "Stoffen en Patronen",
     image: "/images/portfolio/stoffen_en_patronen.webp",
+    vimeoId: "691719647",
     description:
       "Beeldend werk rond stoffen en patronen, gemaakt in samenwerking met Zonen09. Een viering van textuur, kleur en herhaling.",
     tags: ["Illustratie", "Pattern Design"],
