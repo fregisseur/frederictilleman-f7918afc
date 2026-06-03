@@ -100,6 +100,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Ket & Doc",
     title: "Hannah & de Krokodil",
     image: "/images/portfolio/hannah_en_de_krokodil.webp",
+    vimeoId: "897115103",
     description:
       "Illustraties voor het kinderboek- en docuproject 'Hannah & de Krokodil' van Ket & Doc. Een verhaal vol verbeelding, vertaald in kleurrijke prenten.",
     tags: ["Illustratie", "Kinderboek"],
