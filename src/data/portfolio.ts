@@ -55,6 +55,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Ars Musica",
     title: "Urban Nature",
     image: "/images/portfolio/urban_nature.webp",
+    vimeoId: "998824600",
     description:
       "Beeldend werk gemaakt in opdracht van Ars Musica rond het thema 'Urban Nature' — de spanning tussen stad en natuur, vertaald in een eigen visuele taal.",
     tags: ["Illustratie", "Editorial"],
