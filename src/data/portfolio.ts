@@ -183,6 +183,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Aesaert",
     title: "Lederworkshop",
     image: "/images/portfolio/lederworkshop.webp",
+    vimeoId: "923653734",
     description:
       "Beeld- en communicatiemateriaal voor de lederworkshops van Aesaert. Ambachtelijk vakwerk verdient een ambachtelijk beeld.",
     tags: ["Illustratie", "Branding"],
