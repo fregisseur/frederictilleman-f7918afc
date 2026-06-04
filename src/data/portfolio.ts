@@ -78,7 +78,7 @@ export const portfolioItems: PortfolioItem[] = [
     slug: "behoeften-van-kinderen",
     client: "Blink",
     title: "Behoeften van Kinderen",
-    image: "/images/portfolio/behoeften_SQ.webp",
+    image: "/__l5e/assets-v1/8e27daa8-8192-4314-97f3-b6909116125b/behoeften-van-kinderen.jpg",
     description:
       "Illustratiereeks rond de basisbehoeften van kinderen, gemaakt voor Blink. Warme, toegankelijke beelden die complexe thema's bespreekbaar maken voor ouders en hulpverleners.",
     tags: ["Illustratie", "Educatief"],
