@@ -257,8 +257,8 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Raamtekening",
     image: "/__l5e/assets-v1/f630a976-2fbe-4081-8489-55e6ee8fd559/raamtekening.webp",
     description:
-      "Tijdens de lockdown ontstond Quarantekening: kleurrijke raamtekeningen die een glimlach op het gezicht van voorbijgangers brachten.",
-    tags: ["Illustratie", "Persoonlijk werk"],
+      "Tijdens de lockdown ontstond Quarantekening: kleurrijke raamtekeningen die hier en daar voor een glimlach zorgden bij mensen die passeerden.\n\nOok vandaag maak ik nog steeds raamtekeningen op maat. Wil je iets aankondigen, iemand verrassen, een verjaardag vieren of gewoon je etalage of raam wat extra uitstraling geven? Laat het gerust weten. Ik denk graag mee en kom met plezier langs om jouw idee op het raam tot leven te brengen.",
+    tags: ["Illustratie", "Persoonlijk werk", "Raamtekening"],
     credits: [{ label: "Project", value: "Quarantekening" }],
   },
   {
