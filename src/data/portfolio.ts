@@ -122,6 +122,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Vandemoortele",
     title: "Mother's Day",
     image: "/images/portfolio/mothers_day.webp",
+    vimeoId: "413926153",
     description:
       "Visuele campagne voor Vandemoortele rond Moederdag. Een warm eerbetoon, vertaald in een eigen handgemaakte stijl.",
     tags: ["Illustratie", "Campagne"],
@@ -164,6 +165,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Eneco",
     title: "Comfort Bonus",
     image: "/images/portfolio/comfort_bonus.webp",
+    vimeoId: "298996682",
     description:
       "Visuele uitwerking van de 'Comfort Bonus' van Eneco. Een complex aanbod helder en aanstekelijk in beeld gebracht.",
     tags: ["Illustratie", "Campagne"],
@@ -207,6 +209,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Libelle",
     title: "Winterfair",
     image: "/images/portfolio/winterfair.webp",
+    vimeoId: "686763113",
     description:
       "Sfeervolle illustraties voor de Libelle Winterfair. Warme winterbeelden om bezoekers in de juiste sfeer te brengen.",
     tags: ["Illustratie", "Event"],
@@ -231,6 +234,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Brussels Airport",
     title: "Routes World 2018",
     image: "/images/portfolio/routes_world_2018.webp",
+    vimeoId: "294089955",
     description:
       "Illustratiewerk voor Brussels Airport ter gelegenheid van Routes World 2018. Een visueel verhaal over connecties, reizen en ontmoetingen.",
     tags: ["Illustratie", "Event"],
