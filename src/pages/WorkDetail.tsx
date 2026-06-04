@@ -77,13 +77,13 @@ const WorkDetail = () => {
               />
             </div>
           ) : (
-            <div className="relative w-full overflow-hidden" style={{ paddingBottom: "62%" }}>
+            <div className="relative w-full overflow-hidden bg-background" style={{ paddingBottom: "100%" }}>
               {gallery.map((src, i) => (
                 <img
                   key={i}
                   src={src}
                   alt={`${item.client} – ${item.title} ${i + 1}`}
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+                  className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
                     i === carouselIndex ? "opacity-100" : "opacity-0"
                   }`}
                   loading={i === 0 ? "eager" : "lazy"}
