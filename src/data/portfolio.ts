@@ -255,7 +255,7 @@ export const portfolioItems: PortfolioItem[] = [
     slug: "raamtekening",
     client: "Quarantekening",
     title: "Raamtekening",
-    image: "/images/portfolio/raamtekening.webp",
+    image: "/__l5e/assets-v1/f630a976-2fbe-4081-8489-55e6ee8fd559/raamtekening.webp",
     description:
       "Tijdens de lockdown ontstond Quarantekening: kleurrijke raamtekeningen die een glimlach op het gezicht van voorbijgangers brachten.",
     tags: ["Illustratie", "Persoonlijk werk"],
