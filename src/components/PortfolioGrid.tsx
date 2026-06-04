@@ -18,31 +18,31 @@ const shuffle = <T,>(arr: T[]): T[] => {
 const PortfolioGrid = () => {
   const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
 
-  // Randomize on each page load: shuffle stills among still positions,
-  // shuffle videos among video positions (parity preserved).
+  // Randomize on each page load. Enforce strict alternation:
+  // odd-numbered cells (1,3,5,...) show a still, even-numbered cells (2,4,6,...) show a Vimeo loop.
   const randomizedItems = useMemo(() => {
-    const stillPositions: number[] = [];
-    const videoPositions: number[] = [];
-    const stills: PortfolioItem[] = [];
-    const videos: PortfolioItem[] = [];
-    portfolioItems.forEach((item, idx) => {
-      if (item.vimeoId) {
-        videoPositions.push(idx);
-        videos.push(item);
+    const stillsPool = shuffle(portfolioItems.filter((i) => !i.vimeoId));
+    const videosPool = shuffle(portfolioItems.filter((i) => !!i.vimeoId));
+    const result: { item: PortfolioItem; showVideo: boolean }[] = [];
+    let s = 0;
+    let v = 0;
+    for (let i = 0; i < portfolioItems.length; i++) {
+      const wantVideo = i % 2 === 1; // 0-indexed: slots 2,4,6,... → video
+      if (wantVideo) {
+        if (v < videosPool.length) {
+          result.push({ item: videosPool[v++], showVideo: true });
+        } else if (s < stillsPool.length) {
+          result.push({ item: stillsPool[s++], showVideo: false });
+        }
       } else {
-        stillPositions.push(idx);
-        stills.push(item);
+        if (s < stillsPool.length) {
+          result.push({ item: stillsPool[s++], showVideo: false });
+        } else if (v < videosPool.length) {
+          // Overflow video item, but render as still to keep the pattern.
+          result.push({ item: videosPool[v++], showVideo: false });
+        }
       }
-    });
-    const shuffledStills = shuffle(stills);
-    const shuffledVideos = shuffle(videos);
-    const result = [...portfolioItems];
-    stillPositions.forEach((pos, i) => {
-      result[pos] = shuffledStills[i];
-    });
-    videoPositions.forEach((pos, i) => {
-      result[pos] = shuffledVideos[i];
-    });
+    }
     return result;
   }, []);
 
@@ -52,7 +52,7 @@ const PortfolioGrid = () => {
   return (
     <div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {visibleItems.map((item, index) => (
+        {visibleItems.map(({ item, showVideo }, index) => (
           <Link
             key={index}
             to={`/werk/${item.slug}`}
@@ -68,7 +68,7 @@ const PortfolioGrid = () => {
             />
 
             {/* Vimeo background video – loops first 5 seconds */}
-            {item.vimeoId && (
+            {showVideo && item.vimeoId && (
               <VimeoLoop
                 vimeoId={item.vimeoId}
                 title={`${item.client} - ${item.title}`}
