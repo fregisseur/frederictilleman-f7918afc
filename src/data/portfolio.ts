@@ -10,6 +10,8 @@ export interface PortfolioItem {
   title: string;
   image: string;
   vimeoId?: string;
+  /** Large hero image used on the detail page only. Falls back to `image`. */
+  heroImage?: string;
   /** Extra images for the detail-page carousel (first one is hero if no vimeoId) */
   images?: string[];
   /** Short Dutch description shown on the detail page */
@@ -78,7 +80,8 @@ export const portfolioItems: PortfolioItem[] = [
     slug: "behoeften-van-kinderen",
     client: "Blink",
     title: "Behoeften van Kinderen",
-    image: "/__l5e/assets-v1/8e27daa8-8192-4314-97f3-b6909116125b/behoeften-van-kinderen.jpg",
+    image: "/images/portfolio/behoeften_SQ.webp",
+    heroImage: "/__l5e/assets-v1/8e27daa8-8192-4314-97f3-b6909116125b/behoeften-van-kinderen.jpg",
     description:
       "Illustratiereeks rond de basisbehoeften van kinderen, gemaakt voor Blink. Warme, toegankelijke beelden die complexe thema's bespreekbaar maken voor ouders en hulpverleners.",
     tags: ["Illustratie", "Educatief"],
@@ -255,7 +258,8 @@ export const portfolioItems: PortfolioItem[] = [
     slug: "raamtekening",
     client: "Quarantekening",
     title: "Raamtekening",
-    image: "/__l5e/assets-v1/f630a976-2fbe-4081-8489-55e6ee8fd559/raamtekening.webp",
+    image: "/images/portfolio/raamtekening.webp",
+    heroImage: "/__l5e/assets-v1/f630a976-2fbe-4081-8489-55e6ee8fd559/raamtekening.webp",
     description:
       "Tijdens de lockdown ontstond Quarantekening: kleurrijke raamtekeningen die hier en daar voor een glimlach zorgden bij mensen die passeerden.\n\nOok vandaag maak ik nog steeds raamtekeningen op maat. Wil je iets aankondigen, iemand verrassen, een verjaardag vieren of gewoon je etalage of raam wat extra uitstraling geven? Laat het gerust weten. Ik denk graag mee en kom met plezier langs om jouw idee op het raam tot leven te brengen.",
     tags: ["Illustratie", "Persoonlijk werk", "Raamtekening"],
