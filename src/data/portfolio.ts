@@ -61,7 +61,10 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Beeldend werk gemaakt in opdracht van Ars Musica rond het thema 'Urban Nature' — de spanning tussen stad en natuur, vertaald in een eigen visuele taal.",
     tags: ["Illustratie", "Editorial"],
-    credits: [{ label: "Klant", value: "Ars Musica" }],
+    credits: [
+      { label: "Klant", value: "Ars Musica" },
+      { label: "Productie", value: "Het Peloton", href: "https://hetpeloton.be/" },
+    ],
   },
   {
     slug: "de-slimste-mens-ter-wereld",
@@ -85,7 +88,10 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Illustratiereeks rond de basisbehoeften van kinderen, gemaakt voor Blink. Warme, toegankelijke beelden die complexe thema's bespreekbaar maken voor ouders en hulpverleners.",
     tags: ["Illustratie", "Educatief"],
-    credits: [{ label: "Klant", value: "Blink" }],
+    credits: [
+      { label: "Klant", value: "Blink", href: "https://www.blinkweb.be/" },
+      { label: "VVSG", value: "VVSG", href: "https://www.vvsg.be/" },
+    ],
   },
   {
     slug: "mealtime-mr-shark",
@@ -96,7 +102,10 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Een speelse productvideo voor Trixie waarin Mr. Shark de show steelt tijdens het etensuurtje van je huisdier. Stop-motion en animatie hand in hand.",
     tags: ["Stop-motion", "Productvideo"],
-    credits: [{ label: "Klant", value: "Trixie", href: "https://www.trixie.de" }],
+    credits: [
+      { label: "Klant", value: "Trixie", href: "https://www.trixie-baby.com/" },
+      { label: "Productie", value: "Het Peloton", href: "https://hetpeloton.be/" },
+    ],
   },
   {
     slug: "hannah-en-de-krokodil",
@@ -107,7 +116,10 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Illustraties voor het kinderboek- en docuproject 'Hannah & de Krokodil' van Ket & Doc. Een verhaal vol verbeelding, vertaald in kleurrijke prenten.",
     tags: ["Illustratie", "Kinderboek"],
-    credits: [{ label: "Klant", value: "Ket & Doc" }],
+    credits: [
+      { label: "Klant", value: "Ket & Doc" },
+      { label: "Productie", value: "Het Peloton", href: "https://hetpeloton.be/" },
+    ],
   },
   {
     slug: "fruit-ninja",
@@ -118,7 +130,10 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Energieke food-animatie voor Danette waarin vers fruit door de lucht vliegt. Stop-motion en snelle montage zorgen voor een ninja-tempo.",
     tags: ["Stop-motion", "Food", "Reclame"],
-    credits: [{ label: "Klant", value: "Danette" }],
+    credits: [
+      { label: "Klant", value: "Danette" },
+      { label: "Productie", value: "Foodphoto", href: "https://www.foodphoto.be/en/" },
+    ],
   },
   {
     slug: "mothers-day",
@@ -129,7 +144,10 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Visuele campagne voor Vandemoortele rond Moederdag. Een warm eerbetoon, vertaald in een eigen handgemaakte stijl.",
     tags: ["Illustratie", "Campagne"],
-    credits: [{ label: "Klant", value: "Vandemoortele", href: "https://www.vandemoortele.com" }],
+    credits: [
+      { label: "Klant", value: "Vandemoortele", href: "https://www.vandemoortele.com" },
+      { label: "Productie", value: "Foodphoto", href: "https://www.foodphoto.be/en/" },
+    ],
   },
   {
     slug: "save-the-arctic",
@@ -151,7 +169,7 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Illustratiewerk in opdracht van Willux rond het thema 'monniken'. Strakke beeldtaal met een knipoog naar het kloosterleven.",
     tags: ["Illustratie"],
-    credits: [{ label: "Klant", value: "Willux" }],
+    credits: [{ label: "Klant", value: "Willux", href: "https://willux.be/" }],
   },
   {
     slug: "mr-lion",
@@ -162,7 +180,10 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Productvideo voor Trixie waarin Mr. Lion brullend in beeld komt. Een speelse mix van stop-motion en animatie.",
     tags: ["Stop-motion", "Productvideo"],
-    credits: [{ label: "Klant", value: "Trixie", href: "https://www.trixie.de" }],
+    credits: [
+      { label: "Klant", value: "Trixie", href: "https://www.trixie-baby.com/" },
+      { label: "Productie", value: "Het Peloton", href: "https://hetpeloton.be/" },
+    ],
   },
   {
     slug: "comfort-bonus",
@@ -173,7 +194,10 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Visuele uitwerking van de 'Comfort Bonus' van Eneco. Een complex aanbod helder en aanstekelijk in beeld gebracht.",
     tags: ["Illustratie", "Campagne"],
-    credits: [{ label: "Klant", value: "Eneco", href: "https://www.eneco.be" }],
+    credits: [
+      { label: "Klant", value: "Eneco", href: "https://www.eneco.be" },
+      { label: "Productie", value: "Mediamixer", href: "https://www.mediamixer.be/" },
+    ],
   },
   {
     slug: "tomashake",
@@ -206,7 +230,10 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Speelse productvideo voor Joris Sweets met de Freestyle-snoepjes in de hoofdrol. Kleurrijk, swingend en lekker.",
     tags: ["Stop-motion", "Food", "Reclame"],
-    credits: [{ label: "Klant", value: "Joris Sweets" }],
+    credits: [
+      { label: "Klant", value: "Joris Sweets" },
+      { label: "Productie", value: "Foodphoto", href: "https://www.foodphoto.be/en/" },
+    ],
   },
   {
     slug: "winterfair",
@@ -217,7 +244,10 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Sfeervolle illustraties voor de Libelle Winterfair. Warme winterbeelden om bezoekers in de juiste sfeer te brengen.",
     tags: ["Illustratie", "Event"],
-    credits: [{ label: "Klant", value: "Libelle", href: "https://www.libelle.be" }],
+    credits: [
+      { label: "Klant", value: "Libelle", href: "https://www.libelle.be" },
+      { label: "Productie", value: "Het Peloton", href: "https://hetpeloton.be/" },
+    ],
   },
   {
     slug: "ronde-van-vlaanderen",
@@ -230,7 +260,7 @@ export const portfolioItems: PortfolioItem[] = [
     tags: ["Stop-motion", "Klei", "Sport"],
     credits: [
       { label: "Klant", value: "Stad Antwerpen", href: "https://www.antwerpen.be" },
-      { label: "Productie", value: "MediaMixer" },
+      { label: "Productie", value: "Mediamixer", href: "https://www.mediamixer.be/" },
     ],
   },
   {
@@ -242,7 +272,10 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Illustratiewerk voor Brussels Airport ter gelegenheid van Routes World 2018. Een visueel verhaal over connecties, reizen en ontmoetingen.",
     tags: ["Illustratie", "Event"],
-    credits: [{ label: "Klant", value: "Brussels Airport", href: "https://www.brusselsairport.be" }],
+    credits: [
+      { label: "Klant", value: "Brussels Airport", href: "https://www.brusselsairport.be" },
+      { label: "Productie", value: "Mediamixer", href: "https://www.mediamixer.be/" },
+    ],
   },
   {
     slug: "ooit-was-ik-een-fles",
@@ -253,7 +286,10 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Animatie voor JBC rond de duurzame collectie 'Ooit was ik een fles'. Een PET-fles vertelt zijn eigen reis tot kledingstuk.",
     tags: ["2D Animatie", "Duurzaamheid"],
-    credits: [{ label: "Klant", value: "JBC", href: "https://www.jbc.be" }],
+    credits: [
+      { label: "Klant", value: "JBC", href: "https://www.jbc.be" },
+      { label: "Productie", value: "Het Peloton", href: "https://hetpeloton.be/" },
+    ],
   },
   {
     slug: "raamtekening",
@@ -275,7 +311,10 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Animatiereeks met praktische eerstehulp-tips voor het Rode Kruis Vlaanderen. Heldere instructies, vlot in beeld gebracht.",
     tags: ["2D Animatie", "Educatief", "Non-profit"],
-    credits: [{ label: "Klant", value: "Rode Kruis Vlaanderen", href: "https://www.rodekruis.be" }],
+    credits: [
+      { label: "Klant", value: "Rode Kruis Vlaanderen", href: "https://www.rodekruis.be" },
+      { label: "Productie", value: "GoPlay", href: "https://www.play.tv/" },
+    ],
   },
   {
     slug: "stoffen-en-patronen",
@@ -286,7 +325,7 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Beeldend werk rond stoffen en patronen, gemaakt in samenwerking met Zonen09. Een viering van textuur, kleur en herhaling.",
     tags: ["Illustratie", "Pattern Design"],
-    credits: [{ label: "Klant", value: "Zonen09", href: "https://www.zonen09.be" }],
+    credits: [{ label: "Klant", value: "Zonen09" }],
   },
   {
     slug: "wat-is-blink",
