@@ -90,7 +90,7 @@ export const portfolioItems: PortfolioItem[] = [
     tags: ["Illustratie", "Educatief"],
     credits: [
       { label: "Klant", value: "Blink", href: "https://www.blinkweb.be/" },
-      { label: "VVSG", value: "VVSG", href: "https://www.vvsg.be/" },
+      { label: "Partner", value: "VVSG", href: "https://www.vvsg.be/" },
     ],
   },
   {
