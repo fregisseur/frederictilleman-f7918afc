@@ -20,7 +20,7 @@ const WorkDetail = () => {
   const gallery = useMemo(() => {
     if (!item) return [] as string[];
     if (item.images && item.images.length > 0) return item.images;
-    return [item.image];
+    return [item.heroImage ?? item.image];
   }, [item]);
 
   const [carouselIndex, setCarouselIndex] = useState(0);
