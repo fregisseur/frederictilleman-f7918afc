@@ -147,6 +147,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Willux",
     title: "Monniken",
     image: "/images/portfolio/monniken_SQ.webp",
+    heroImage: "/__l5e/assets-v1/c215174d-aeef-40ae-b245-0b9cc273693a/monniken.jpg",
     description:
       "Illustratiewerk in opdracht van Willux rond het thema 'monniken'. Strakke beeldtaal met een knipoog naar het kloosterleven.",
     tags: ["Illustratie"],
