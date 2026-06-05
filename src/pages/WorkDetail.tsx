@@ -77,18 +77,14 @@ const WorkDetail = () => {
               />
             </div>
           ) : (
-            <div className="relative w-full overflow-hidden bg-background" style={{ paddingBottom: "100%" }}>
-              {gallery.map((src, i) => (
-                <img
-                  key={i}
-                  src={src}
-                  alt={`${item.client} – ${item.title} ${i + 1}`}
-                  className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
-                    i === carouselIndex ? "opacity-100" : "opacity-0"
-                  }`}
-                  loading={i === 0 ? "eager" : "lazy"}
-                />
-              ))}
+            <div className="relative w-full bg-background">
+              <img
+                key={carouselIndex}
+                src={gallery[carouselIndex]}
+                alt={`${item.client} – ${item.title} ${carouselIndex + 1}`}
+                className="block w-full h-auto"
+                loading="eager"
+              />
               {gallery.length > 1 && (
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
                   {gallery.map((_, i) => (
