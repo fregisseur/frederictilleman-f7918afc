@@ -8,18 +8,18 @@ import { Star } from "lucide-react";
 const heroWorkImage = "/images/hero/hero-work.png";
 
 const logoBrusselsAirport = "/images/logos/brussels-airport.webp";
-const logoEneco = "/images/logos/eneco.png";
-const logoAlpro = "/images/logos/alpro.png";
-const logoTrixie = "/images/logos/trixie.png";
-const logoUnizo = "/images/logos/unizo.png";
+const logoEneco = "/images/logos/eneco.webp";
+const logoAlpro = "/images/logos/alpro.webp";
+const logoTrixie = "/images/logos/trixie.webp";
+const logoUnizo = "/images/logos/unizo.webp";
 const logoWoestijnvis = "/images/logos/woestijnvis.jpg";
-const logoAesaert = "/images/logos/aesaert.avif";
-const logoCoteDor = "/images/logos/cote-dor.png";
-const logoBlink = "/images/logos/blink.jpg";
+const logoAesaert = "/images/logos/aesaert.webp";
+const logoCoteDor = "/images/logos/cote-dor.webp";
+const logoBlink = "/images/logos/blink.webp";
 const logoVandemoortele = "/images/logos/vandemoortele.png";
 const logoWillux = "/images/logos/willux.png";
-const logoStoffels = "/images/logos/stoffels.jpg";
-const logoUGent = "/images/logos/ugent.png";
+const logoStoffels = "/images/logos/stoffels.webp";
+const logoUGent = "/images/logos/ugent.webp";
 const logoVlaamseOverheid = "/images/logos/vlaamse-overheid.jpg";
 
 const aanpak = [
