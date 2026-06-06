@@ -12,15 +12,15 @@ const logoEneco = "/images/logos/eneco.webp";
 const logoAlpro = "/images/logos/alpro.webp";
 const logoTrixie = "/images/logos/trixie.webp";
 const logoUnizo = "/images/logos/unizo.webp";
-const logoWoestijnvis = "/images/logos/woestijnvis.jpg";
+const logoWoestijnvis = "/images/logos/woestijnvis.webp";
 const logoAesaert = "/images/logos/aesaert.webp";
 const logoCoteDor = "/images/logos/cote-dor.webp";
 const logoBlink = "/images/logos/blink.webp";
-const logoVandemoortele = "/images/logos/vandemoortele.png";
-const logoWillux = "/images/logos/willux.png";
+const logoVandemoortele = "/images/logos/vandemoortele.webp";
+const logoWillux = "/images/logos/willux.webp";
 const logoStoffels = "/images/logos/stoffels.webp";
 const logoUGent = "/images/logos/ugent.webp";
-const logoVlaamseOverheid = "/images/logos/vlaamse-overheid.jpg";
+const logoVlaamseOverheid = "/images/logos/vlaamse-overheid.webp";
 
 const aanpak = [
   {
