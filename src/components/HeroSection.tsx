@@ -2,7 +2,7 @@ const HeroSection = () => {
   return (
     <section className="relative w-full h-[70vh] min-h-[500px] overflow-hidden">
       <img
-        src="/images/hero/hero-workshop.jpg"
+        src="/images/hero/hero-workshop.webp"
         alt="Workshop stop-motion animatie met kinderen"
         className="absolute inset-0 w-full h-full object-cover"
         width={1920}
