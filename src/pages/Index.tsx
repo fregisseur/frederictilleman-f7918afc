@@ -30,7 +30,7 @@ const Index = () => {
             title="De wereld in stop-motion"
             images={[workshopStopmotion1, workshopStopmotion2, workshopStopmotion3]}
             ctaLabel="Ik wil deze workshop"
-            ctaHref="mailto:hello@frederictilleman.be?subject=Workshop stop-motion"
+            ctaHref="/contact"
             description={
               <>
                 <p>
@@ -61,7 +61,7 @@ const Index = () => {
             images={[workshopFilm1, workshopFilm2, workshopFilm3]}
             reversed
             ctaLabel="Ik wil deze workshop"
-            ctaHref="mailto:hello@frederictilleman.be?subject=Workshop kortfilm"
+            ctaHref="/contact"
             description={
               <>
                 <p>
@@ -91,7 +91,7 @@ const Index = () => {
             title="Workshop als teambuilding"
             images={[workshopTeambuilding]}
             ctaLabel="Ik wil een teambuilding"
-            ctaHref="mailto:hello@frederictilleman.be?subject=Teambuilding"
+            ctaHref="/contact"
             description={
               <>
                 <p>
@@ -125,7 +125,7 @@ const Index = () => {
             Neem contact op en we plannen samen de perfecte workshop.
           </p>
           <a
-            href="mailto:hello@frederictilleman.be?subject=Workshop aanvraag"
+            href="/contact"
             className="inline-block bg-primary text-primary-foreground px-10 py-4 text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:bg-accent hover:text-accent-foreground"
           >
             Contacteer mij
