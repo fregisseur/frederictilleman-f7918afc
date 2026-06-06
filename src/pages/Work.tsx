@@ -5,7 +5,7 @@ import PortfolioGrid from "@/components/PortfolioGrid";
 import { Link, useLocation } from "react-router-dom";
 
 import { Star } from "lucide-react";
-const heroWorkImage = "/images/hero/hero-work.png";
+const heroWorkImage = "/images/hero/hero-work.webp";
 
 const logoBrusselsAirport = "/images/logos/brussels-airport.webp";
 const logoEneco = "/images/logos/eneco.webp";
@@ -205,7 +205,7 @@ const Work = () => {
                   src={client.src}
                   alt={client.name}
                   className={`w-auto object-contain grayscale hover:opacity-90 transition-opacity duration-300 ${
-                    isLargeLogo ? "h-14 md:h-16 opacity-60" : isBigLogo ? "h-6 md:h-7 opacity-50" : "h-8 md:h-10 opacity-50"
+                    isLargeLogo ? "h-[42px] md:h-12 opacity-60" : isBigLogo ? "h-[18px] md:h-[21px] opacity-50" : "h-6 md:h-[30px] opacity-50"
                   }`}
                   loading="lazy"
                 />
