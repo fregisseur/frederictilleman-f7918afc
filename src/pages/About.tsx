@@ -2,13 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
-const aboutPhoto1 = "/images/about/fre1.webp";
-const aboutPhoto2 = "/images/about/frederic-tilleman-illustrator-atelier-koffie.webp";
+const aboutPhoto1 = "/images/about/frederic-tilleman-illustraties-papieren-knipsels-animatie-stopmotion.webp";
+const aboutPhoto2 = "/images/about/frederic-tilleman-illustrator-atelier-animaties-stopmotion.webp";
 const aboutPhoto3 = "/images/about/frederic-tilleman-motion-designer-natuur-inspiratie.webp";
-const aboutPhoto4 = "/images/about/frederic-tilleman-illustraties-papieren-knipsels-stopmotion.webp";
-const aboutPhoto5 = "/images/about/frederic-tilleman-stopmotion-animatie-peperkoek-winterscene.webp";
-const aboutPhoto6 = "/images/about/frederic-tilleman-papieren-knipsels-kustlandschap-vuurtoren.webp";
-const aboutPhoto7 = "/images/about/frederic-tilleman-stopmotion-food-photography-hamburger.webp";
+const aboutPhoto4 = "/images/about/frederic-tilleman-studio-cutout-stopmotion-animatie.webp";
+const aboutPhoto5 = "/images/about/frederic-tilleman-stopmotion-animatie-papier-cut-out.webp";
+const aboutPhoto6 = "/images/about/frederic-tilleman-papieren-knipsels-cut-out-stop-motion-animatie.webp";
+const aboutPhoto7 = "/images/about/frederic-tilleman-stopmotion-animatie-food-photography-hamburger.webp";
 
 const aboutImages = [
   { src: aboutPhoto1, alt: "Frederic Tilleman, animatie- en illustratiekunstenaar uit België" },
