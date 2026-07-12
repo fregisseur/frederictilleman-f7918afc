@@ -169,7 +169,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: "/images/portfolio/monniken_SQ.webp",
     heroImage: "/images/portfolio/work/monniken.webp",
     description:
-      "Illustratiewerk in opdracht van Willux rond het thema 'monniken'. Strakke beeldtaal met een knipoog naar het kloosterleven.",
+      "Voor Willux, een team van IT-professionals, maakte ik een reeks illustraties met monniken in de hoofdrol. Zij helpen bedrijven met digitalisering op maat en zorgen ervoor dat alles vlot en zonder gedoe verloopt. Of anders gezegd: ze maken IT helemaal 'zen'.\n\nWillux had zelf al het idee om met monniken te werken. Van daaruit ging ik verder aan de slag met hun huisstijl, kleuren en uitstraling. Zo ontstond een speelse reeks illustraties die hun website mee kleur geeft en hun verhaal op een luchtige manier vertelt.\n\nElke illustratie werd eerst met de hand getekend en daarna digitaal verder uitgewerkt.",
     tags: ["Illustratie"],
     credits: [{ label: "Klant", value: "Willux", href: "https://willux.be/" }],
   },
