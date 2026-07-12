@@ -112,7 +112,7 @@ const WorkDetail = () => {
               className="text-3xl md:text-5xl font-normal text-foreground mb-8"
               style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}
             >
-              {item.title}
+              {item.detailTitle ?? item.title}
             </h1>
             {item.description && (
               <p className="text-foreground/80 text-base md:text-lg leading-relaxed whitespace-pre-line">

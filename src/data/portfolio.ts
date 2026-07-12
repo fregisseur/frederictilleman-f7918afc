@@ -8,6 +8,8 @@ export interface PortfolioItem {
   slug: string;
   client: string;
   title: string;
+  /** Optional override for the detail page H1. Falls back to `title`. */
+  detailTitle?: string;
   image: string;
   vimeoId?: string;
   /** Large hero image used on the detail page only. Falls back to `image`. */
@@ -25,12 +27,12 @@ export interface PortfolioItem {
 export const portfolioItems: PortfolioItem[] = [
   {
     slug: "jack",
-    client: "Birth Card",
+    client: "Geboortekaartje",
     title: "Jack",
+    detailTitle: "Geboortekaartje Jack",
     image: "/images/portfolio/jack_SQ.webp",
     images: [
-      "/images/portfolio/jack1.jpg",
-      "/images/portfolio/jack_SQ.jpg",
+      "/images/portfolio/work/jack.webp",
     ],
     description:
       "Ontwerp van een geboortekaartje voor mijn enige echte neefje Jack. Een uniek verhaal verdient een uniek kaartje. Met de hand getekend en ingekleurd op de iPad. En aangezien Jack na amper drie jaar al sprekend op mij begint te lijken, is hij sowieso een geweldige aanwinst voor de familie 😅.",
@@ -84,7 +86,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Blink",
     title: "Behoeften van Kinderen",
     image: "/images/portfolio/behoeften_SQ.webp",
-    heroImage: "/__l5e/assets-v1/8e27daa8-8192-4314-97f3-b6909116125b/behoeften-van-kinderen.jpg",
+    heroImage: "/images/portfolio/work/behoeften-van-kinderen.webp",
     description:
       "Illustratiereeks rond de basisbehoeften van kinderen, gemaakt voor Blink. Warme, toegankelijke beelden die complexe thema's bespreekbaar maken voor ouders en hulpverleners.",
     tags: ["Illustratie", "Educatief"],
@@ -165,7 +167,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Willux",
     title: "Monniken",
     image: "/images/portfolio/monniken_SQ.webp",
-    heroImage: "/__l5e/assets-v1/c215174d-aeef-40ae-b245-0b9cc273693a/monniken.jpg",
+    heroImage: "/images/portfolio/work/monniken.webp",
     description:
       "Illustratiewerk in opdracht van Willux rond het thema 'monniken'. Strakke beeldtaal met een knipoog naar het kloosterleven.",
     tags: ["Illustratie"],
@@ -296,7 +298,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Quarantekening",
     title: "Raamtekening",
     image: "/images/portfolio/raamtekening.webp",
-    heroImage: "/__l5e/assets-v1/f630a976-2fbe-4081-8489-55e6ee8fd559/raamtekening.webp",
+    heroImage: "/images/portfolio/work/raamtekening.webp",
     description:
       "Tijdens de lockdown ontstond Quarantekening: kleurrijke raamtekeningen die hier en daar voor een glimlach zorgden bij mensen die passeerden.\n\nOok vandaag maak ik nog steeds raamtekeningen op maat. Wil je iets aankondigen, iemand verrassen, een verjaardag vieren of gewoon je etalage of raam wat extra uitstraling geven? Laat het gerust weten. Ik denk graag mee en kom met plezier langs om jouw idee op het raam tot leven te brengen.",
     tags: ["Illustratie", "Persoonlijk werk", "Raamtekening"],
