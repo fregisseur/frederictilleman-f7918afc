@@ -26,17 +26,17 @@ const aanpak = [
   {
     iconClass: "fi fi-rr-comment",
     title: "Eerst luisteren",
-    description: "Jij vertelt wat er speelt. Ik stel enkele vragen, zoek de kern en denk meteen mee. Daar hebben we doorgaans geen ellenlange briefing voor nodig.",
+    description: "Jij vertelt, ik stel vragen, zoek de kern en denk mee. Daar hebben we doorgaans geen ellenlange briefing voor nodig.",
   },
   {
     iconClass: "fi fi-rr-sofa",
-    title: "Daarna van A tot Z maken",
-    description: "Van eerste schets tot finale oplevering: ik neem het hele traject op mij. Jij hoeft dus halverwege geen tekeningen in te kleuren. Tenzij je daar toevallig zin in hebt.",
+    title: "Van A tot Z verzorgd",
+    description: "Van eerste schets tot finale oplevering: ik neem het hele traject op mij. Zelf tekeningen inkleuren hoeft dus niet.",
   },
   {
     iconClass: "fi fi-rr-crown",
     title: "Al een tijdje bezig",
-    description: "Ik maak al meer dan tien jaar animaties en illustraties voor grote merken, kleine organisaties en alles daartussen. Genoeg ervaring om te weten wat ik doe. Nog meer dan genoeg goesting om elk project spannend te vinden.",
+    description: "Ik maak al meer dan tien jaar animaties en illustraties. Genoeg ervaring én nog meer dan genoeg goesting.",
   },
 ];
 
