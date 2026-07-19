@@ -93,9 +93,9 @@ const reviews = [
 ];
 
 const herkenSteps = [
-  "Je hebt een idee. Of een half. Of iets dat nog niet helemaal juist zit, maar waarvan je voelt: hier zit meer in.",
-  "Je wil iets maken dat opvalt zonder te schreeuwen. Iets dat mensen meteen snappen én onthouden.",
-  "Je zoekt iemand die met je meedenkt, je idee scherper maakt en uitpuurt tot de essentie, en er daarna ook echt mee aan de slag gaat. Van eerste schets tot eindresultaat, zonder gedoe.",
+  "Je hebt een idee. Of een half. Of iets waarvan je voelt: hier zit meer in. Alleen… waar begin je?",
+  "Je wil iets maken dat opvalt zonder schreeuwerig te zijn. Iets dat mensen meteen snappen en onthouden.",
+  "Je zoekt iemand die meedenkt, schrapt, tekent, schuift en het idee uiteindelijk ook echt maakt. Van eerste krabbel tot afgewerkt beeld. Zonder onnodig gedoe.",
 ];
 
 const Work = () => {
