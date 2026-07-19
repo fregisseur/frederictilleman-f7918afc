@@ -138,7 +138,7 @@ const Work = () => {
         </div>
       </section>
 
-      {/* Herken je jezelf hierin? */}
+      {/* Misschien klinkt dit bekend? */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
