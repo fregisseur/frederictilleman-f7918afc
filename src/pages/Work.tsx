@@ -25,18 +25,18 @@ const logoVlaamseOverheid = "/images/logos/vlaamse-overheid.webp";
 const aanpak = [
   {
     iconClass: "fi fi-rr-comment",
-    title: "Ik luister, jij vertelt",
-    description: "In een kort gesprek vat ik de kern van jouw vraag. Geen eindeloze briefings — ik begrijp snel wat je nodig hebt en denk meteen mee.",
+    title: "Eerst luisteren",
+    description: "Jij vertelt wat er speelt. Ik stel enkele vragen, zoek de kern en denk meteen mee. Daar hebben we doorgaans geen ellenlange briefing voor nodig.",
   },
   {
     iconClass: "fi fi-rr-sofa",
-    title: "Van A tot Z verzorgd",
-    description: "Van eerste schets tot finale oplevering: ik neem het volledige traject op mij. Jij focust op je business, ik op het beeld.",
+    title: "Daarna van A tot Z maken",
+    description: "Van eerste schets tot finale oplevering: ik neem het hele traject op mij. Jij hoeft dus halverwege geen tekeningen in te kleuren. Tenzij je daar toevallig zin in hebt.",
   },
   {
     iconClass: "fi fi-rr-crown",
-    title: "10+ jaar ervaring",
-    description: "Professionele kwaliteit, afgewerkt tot in de puntjes. De referenties hieronder spreken voor zich.",
+    title: "Al een tijdje bezig",
+    description: "Ik maak al meer dan tien jaar animaties en illustraties voor grote merken, kleine organisaties en alles daartussen. Genoeg ervaring om te weten wat ik doe. Nog meer dan genoeg goesting om elk project spannend te vinden.",
   },
 ];
 
