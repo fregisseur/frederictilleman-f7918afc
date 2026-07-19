@@ -192,8 +192,8 @@ const Work = () => {
             In goed gezelschap
           </h2>
           <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 text-base leading-relaxed">
-            Van eenmalige opdrachten tot samenwerkingen op lange termijn,<br />
-            met klanten die af en toe langskomen of regelmatig blijven terugkeren.
+            Van eenmalige projecten tot samenwerkingen die al jaren meegaan.<br />
+            Soms met grote namen, soms met kleine teams, steeds met fijne mensen achter de logo’s.
           </p>
           <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6">
             {clientLogos.map((client) => {
