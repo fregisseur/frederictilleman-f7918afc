@@ -192,7 +192,7 @@ const WorkDetail = () => {
                 Vorig project
               </p>
               <p className="font-bold text-foreground group-hover:text-primary transition-colors">
-                {prev.client} — {prev.title}
+                {prev.client} - {prev.title}
               </p>
             </div>
           </Link>
@@ -205,7 +205,7 @@ const WorkDetail = () => {
                 Volgend project
               </p>
               <p className="font-bold text-foreground group-hover:text-primary transition-colors">
-                {next.client} — {next.title}
+                {next.client} - {next.title}
               </p>
             </div>
             <ArrowRight
