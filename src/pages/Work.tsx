@@ -93,9 +93,9 @@ const reviews = [
 ];
 
 const herkenSteps = [
-  "Je hebt een idee. Of een half. Of iets dat nog niet helemaal juist zit, maar waarvan je voelt: hier zit meer in.",
-  "Je wil iets maken dat opvalt zonder te schreeuwen. Iets dat mensen meteen snappen én onthouden.",
-  "Je zoekt iemand die met je meedenkt, je idee scherper maakt en uitpuurt tot de essentie, en er daarna ook echt mee aan de slag gaat. Van eerste schets tot eindresultaat, zonder gedoe.",
+  "Je hebt een idee. Of een half. Of iets waarvan je voelt: hier zit meer in. Alleen… waar begin je?",
+  "Je wil iets maken dat opvalt zonder schreeuwerig te zijn. Iets dat mensen meteen snappen en onthouden.",
+  "Je zoekt iemand die meedenkt, schrapt, tekent, schuift en het idee uiteindelijk ook echt maakt. Van eerste krabbel tot afgewerkt beeld. Zonder onnodig gedoe.",
 ];
 
 const Work = () => {
@@ -138,11 +138,11 @@ const Work = () => {
         </div>
       </section>
 
-      {/* Herken je jezelf hierin? */}
+      {/* Misschien klinkt dit bekend? */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
-            Herken je jezelf hierin?
+            Misschien klinkt dit bekend?
           </h2>
           <div className="max-w-3xl mx-auto mt-10 space-y-6">
             {herkenSteps.map((text, i) => (
