@@ -233,10 +233,10 @@ const Work = () => {
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
-            Wat klanten zeggen
+            Wat anderen ervan vonden
           </h2>
           <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 text-base leading-relaxed">
-            Een greep uit de Google reviews van mensen waarmee ik samenwerkte.
+            Gelukkig hoef je me niet alleen op mijn woord te geloven. Dit zeggen enkele klanten over onze samenwerking.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {reviews.map((r) => (
