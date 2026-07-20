@@ -274,7 +274,7 @@ const Work = () => {
             to="/contact"
             className="inline-block bg-primary text-primary-foreground px-10 py-4 text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:bg-primary/80"
           >
-            Contacteer me
+            Contacteer mij
           </Link>
         </div>
       </section>
