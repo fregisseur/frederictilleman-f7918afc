@@ -222,8 +222,8 @@ const Work = () => {
             Eerder werk
           </h2>
           <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 text-base leading-relaxed">
-            Soms zegt een beeld gewoon meer dan woorden.<br />
-            Neem gerust een kijkje tussen een aantal projecten en ontdek wat er allemaal mogelijk is.
+            Een krokodil op je dak, een wielrenner tussen je benen of een haai in je lunchbox?<br />
+            Beelden zeggen meer dan woorden. Duik even in mijn eerdere werk en misschien brengt het je op ideeën.
           </p>
           <PortfolioGrid />
         </div>
