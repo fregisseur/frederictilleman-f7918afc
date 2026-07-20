@@ -8,7 +8,7 @@ const usps = [
   {
     iconClass: "fi fi-rr-clapperboard-play",
     title: "Zichtbaar resultaat",
-    description: "Iedereen gaat naar huis met een eigen filmpje. Zet de popcorn thuis maar alvast klaar.",
+    description: "Iedereen gaat naar huis met een eigen filmpje. Zet de popcorn thuis alvast maar klaar.",
   },
   {
     iconClass: "fi fi-rr-crown",
