@@ -1,0 +1,26 @@
+# Frederic Tilleman
+
+> Portfolio van Frederic Tilleman, een Belgische animatie- en illustratiekunstenaar met meer dan tien jaar ervaring in stop-motion, cut-out animatie, motion design en illustratie voor merken, organisaties en particulieren.
+
+## Pages
+
+- [/](/): Home — creatieve workshops (stop-motion, film, teambuilding) en een korte introductie.
+- [/werk](/werk): Portfolio met geselecteerd animatie- en illustratiewerk voor klanten zoals Brussels Airport, Lidl, Greenpeace, Unizo, Trixie, Côte d'Or en Vandemoortele.
+- [/workshops](/workshops): Overzicht van creatieve workshops voor kinderen, jongeren en teams.
+- [/over](/over): Achter de schermen — wie Frederic Tilleman is, zijn aanpak en achtergrond.
+- [/contact](/contact): Contactformulier en mogelijkheid om een project aan te kaarten.
+
+## Work examples
+
+- [/werk/jack](/werk/jack): Geboortekaartje Jack — handgetekend en ingekleurd geboortekaartje.
+- [/werk/monniken](/werk/monniken): Illustratiereeks voor Willux over IT-professionals als monniken.
+- [/werk/mealtime-mr-shark](/werk/mealtime-mr-shark): Stop-motion productvideo voor Trixie.
+- [/werk/raamtekening](/werk/raamtekening): Raamtekening project.
+- [/werk/de-slimste-mens-ter-wereld](/werk/de-slimste-mens-ter-wereld): Animaties voor Woestijnvis.
+- [/werk/urban-nature](/werk/urban-nature): Beeldend werk voor Ars Musica.
+
+## Services
+
+- Animatie: 2D animatie, stop-motion, cut-out animatie en motion design.
+- Illustratie: Editoriale illustratie, geboortekaartjes, campagnebeelden en huisstijlondersteuning.
+- Workshops: Stop-motion, filmmaken en creatieve teambuilding voor scholen, jeugdorganisaties en bedrijven.
