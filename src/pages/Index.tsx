@@ -5,6 +5,7 @@ import TargetAudience from "@/components/TargetAudience";
 import WorkshopCard from "@/components/WorkshopCard";
 import Testimonial from "@/components/Testimonial";
 import SiteFooter from "@/components/SiteFooter";
+import JsonLd from "@/components/JsonLd";
 
 const workshopStopmotion1 = "/images/workshops/workshop-stopmotion-1.webp";
 const workshopStopmotion2 = "/images/workshops/workshop-stopmotion-2.webp";
@@ -15,9 +16,61 @@ const workshopFilm3 = "/images/workshops/workshop-film-3.webp";
 const workshopTeambuilding = "/images/workshops/workshop-teambuilding.webp";
 
 const Index = () => {
+  const workshopServices = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "Stop-motion workshop",
+      serviceType: "Creatieve workshop",
+      description:
+        "Stop-motion workshop voor kinderen en jongeren van 7 tot 12 jaar. Geen ervaring nodig, enkel een flinke dosis fantasie.",
+      areaServed: "BE",
+      provider: {
+        "@type": "Person",
+        name: "Frederic Tilleman",
+        url: "https://www.frederictilleman.be/",
+      },
+      url: "https://www.frederictilleman.be/workshops#workshops",
+      audience: { "@type": "Audience", audienceType: "Kinderen en jongeren 7-12" },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "Film workshop",
+      serviceType: "Creatieve workshop",
+      description:
+        "Film- en videoworkshop voor kinderen en jongeren van 7 tot 14 jaar. Verhalen vertellen, filmen en monteren.",
+      areaServed: "BE",
+      provider: {
+        "@type": "Person",
+        name: "Frederic Tilleman",
+        url: "https://www.frederictilleman.be/",
+      },
+      url: "https://www.frederictilleman.be/workshops#workshops",
+      audience: { "@type": "Audience", audienceType: "Kinderen en jongeren 7-14" },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "Teambuilding workshop",
+      serviceType: "Teambuilding",
+      description:
+        "Teambuilding rond stop-motion of kortfilm: samen een film maken en het resultaat mee naar huis nemen.",
+      areaServed: "BE",
+      provider: {
+        "@type": "Person",
+        name: "Frederic Tilleman",
+        url: "https://www.frederictilleman.be/",
+      },
+      url: "https://www.frederictilleman.be/workshops#workshops",
+      audience: { "@type": "Audience", audienceType: "Bedrijven en teams" },
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
+      <JsonLd id="ld-workshops" data={workshopServices} />
       <HeroSection />
       <TargetAudience />
       <USPSection />

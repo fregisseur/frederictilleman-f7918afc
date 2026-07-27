@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import JsonLd from "@/components/JsonLd";
 import NotFound from "./NotFound";
 import { portfolioItems, getPortfolioItem } from "@/data/portfolio";
 
@@ -58,9 +59,38 @@ const WorkDetail = () => {
 
   if (!item) return <NotFound />;
 
+  const origin =
+    typeof window !== "undefined" ? window.location.origin : "https://www.frederictilleman.be";
+  const imageUrl = `${origin}${item.heroImage ?? item.image}`;
+  const detailUrl = `${origin}/werk/${item.slug}`;
+  const schema: Record<string, unknown> = item.vimeoId
+    ? {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        name: item.detailTitle ?? `${item.client} - ${item.title}`,
+        description: item.description ?? `${item.client} - ${item.title}`,
+        thumbnailUrl: imageUrl,
+        embedUrl: `https://player.vimeo.com/video/${item.vimeoId}`,
+        uploadDate: "2024-01-01",
+        url: detailUrl,
+        creator: { "@type": "Person", name: "Frederic Tilleman" },
+        keywords: item.tags?.join(", "),
+      }
+    : {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        name: item.detailTitle ?? `${item.client} - ${item.title}`,
+        description: item.description ?? `${item.client} - ${item.title}`,
+        image: imageUrl,
+        url: detailUrl,
+        creator: { "@type": "Person", name: "Frederic Tilleman" },
+        keywords: item.tags?.join(", "),
+      };
+
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
+      <JsonLd id={`ld-work-${item.slug}`} data={schema} />
 
       {/* Hero: video or carousel */}
       <section className="px-6 pt-4">
