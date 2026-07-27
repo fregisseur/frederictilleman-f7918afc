@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import PortfolioGrid from "@/components/PortfolioGrid";
+import JsonLd from "@/components/JsonLd";
 import { Link, useLocation } from "react-router-dom";
 
 import { Star } from "lucide-react";
@@ -112,6 +113,21 @@ const Work = () => {
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
+      <JsonLd
+        id="ld-person"
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Frederic Tilleman",
+          jobTitle: "Illustrator & stop-motion animator",
+          url: "https://www.frederictilleman.be/",
+          sameAs: [],
+          worksFor: {
+            "@type": "Organization",
+            name: "Frederic Tilleman",
+          },
+        }}
+      />
 
       {/* Hero */}
       <section className="relative w-full h-[70vh] min-h-[500px] overflow-hidden">
