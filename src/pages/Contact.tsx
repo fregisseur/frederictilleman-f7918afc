@@ -3,6 +3,7 @@ import { z } from "zod";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { useToast } from "@/hooks/use-toast";
+import { usePageMeta } from "@/hooks/usePageMeta";
 const postduif = "/images/site/postduif.gif";
 
 const contactSchema = z.object({
@@ -16,6 +17,10 @@ const ACCENT = "#1b45da";
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xbdwlqnd";
 
 const Contact = () => {
+  usePageMeta(
+    "Contact | Frederic Tilleman - Animator & Illustrator",
+    "Zin in een samenwerking, workshop of teambuilding? Neem contact op met Frederic Tilleman voor stop-motion, illustratie en animatie op maat.",
+  );
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
