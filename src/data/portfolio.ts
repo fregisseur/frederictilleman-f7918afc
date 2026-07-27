@@ -102,7 +102,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: "/images/portfolio/mealtime.webp",
     vimeoId: "1095973996",
     description:
-      "Een speelse productvideo voor Trixie waarin Mr. Shark de show steelt tijdens het etensuurtje van je huisdier. Stop-motion en animatie hand in hand.",
+      "Voor Trixie maakte ik samen met Het Peloton een speelse productvideo waarin Mr. Shark de hoofdrol kreeg. Geen echte haai gelukkig, maar een vrolijke collectie met bordje, beker en bestek voor kleine eters. Ideaal om gezonde snacks nét dat beetje aantrekkelijker te maken.\n\nIn deze stop-motion komen de producten van Trixie één na één tot leven in een gezonde en kleurrijke onderwaterwereld. Ze zwemmen, bewegen en spelen samen de hoofdrol.\n\nDe video werd opgenomen in de studio van Het Peloton. Van eerste idee en uitwerking van concept tot de opnames, animatie en het toevoegen van de geluidseffecten... het volledige traject werd door ons voor de klant verzorgd. Zo simpel kan het zijn.",
     tags: ["Stop-motion", "Productvideo"],
     credits: [
       { label: "Klant", value: "Trixie", href: "https://www.trixie-baby.com/" },
