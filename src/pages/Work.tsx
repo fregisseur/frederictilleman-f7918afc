@@ -4,6 +4,7 @@ import SiteFooter from "@/components/SiteFooter";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import JsonLd from "@/components/JsonLd";
 import { Link, useLocation } from "react-router-dom";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 import { Star } from "lucide-react";
 const heroWorkImage = "/images/hero/hero-work.webp";
@@ -100,6 +101,10 @@ const herkenSteps = [
 ];
 
 const Work = () => {
+  usePageMeta(
+    "Frederic Tilleman | Animator, Illustrator & Stop-motion",
+    "Portfolio van Frederic Tilleman: stop-motion animaties, illustraties en handgetekende beelden voor merken, uitgevers en teams in België.",
+  );
   const location = useLocation();
   useEffect(() => {
     if (location.hash === "#eerder-werk") {

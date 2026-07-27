@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { usePageMeta } from "@/hooks/usePageMeta";
 const aboutPhoto1 = "/images/about/frederic-tilleman-illustraties-papieren-knipsels-animatie-stopmotion.webp";
 const aboutPhoto2 = "/images/about/frederic-tilleman-illustrator-atelier-animaties-stopmotion.webp";
 const aboutPhoto3 = "/images/about/frederic-tilleman-motion-designer-natuur-inspiratie.webp";
@@ -21,6 +22,10 @@ const aboutImages = [
 ];
 
 const About = () => {
+  usePageMeta(
+    "Over Frederic Tilleman | Animator & Illustrator",
+    "Maak kennis met Frederic Tilleman, Belgische animator en illustrator gespecialiseerd in stop-motion, cut-out en handgetekende beelden.",
+  );
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartX = useRef<number | null>(null);
 
