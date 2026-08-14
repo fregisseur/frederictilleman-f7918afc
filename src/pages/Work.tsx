@@ -154,7 +154,7 @@ const Work = () => {
             <span className="text-primary">die jouw verhaal glashelder vertellen.</span>
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mb-10 font-light fade-up" style={{ animationDelay: "0.15s" }}>
-            Zelfs al is dat verhaal een hele boterham...
+            Want niemand zit te wachten op vaag gedoe.
           </p>
         </div>
       </section>
