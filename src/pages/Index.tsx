@@ -22,6 +22,7 @@ const Index = () => {
     "Workshops Stop-motion & Film | Frederic Tilleman",
     "Creatieve stop-motion en filmworkshops voor kinderen, jongeren en teams. Iedereen gaat naar huis met een eigen filmpje. Boek jouw workshop of teambuilding.",
   );
+  useSenderForm();
   const workshopServices = [
     {
       "@context": "https://schema.org",
