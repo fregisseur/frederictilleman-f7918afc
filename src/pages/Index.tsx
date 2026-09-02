@@ -7,6 +7,7 @@ import Testimonial from "@/components/Testimonial";
 import SiteFooter from "@/components/SiteFooter";
 import JsonLd from "@/components/JsonLd";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { useSenderForm } from "@/hooks/useSenderForm";
 
 const workshopStopmotion1 = "/images/workshops/workshop-stopmotion-1.webp";
 const workshopStopmotion2 = "/images/workshops/workshop-stopmotion-2.webp";
@@ -21,6 +22,7 @@ const Index = () => {
     "Workshops Stop-motion & Film | Frederic Tilleman",
     "Creatieve stop-motion en filmworkshops voor kinderen, jongeren en teams. Iedereen gaat naar huis met een eigen filmpje. Boek jouw workshop of teambuilding.",
   );
+  useSenderForm();
   const workshopServices = [
     {
       "@context": "https://schema.org",
