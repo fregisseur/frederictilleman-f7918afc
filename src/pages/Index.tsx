@@ -173,21 +173,22 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* Newsletter signup */}
       <section className="py-20 px-6 bg-foreground text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-background mb-4" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
-            Klaar om iets unieks te organiseren?
+            Blijf op de hoogte van nieuwe workshops
           </h2>
-          <p className="text-background/70 text-lg mb-8">
-            Neem contact op en we plannen samen de perfecte workshop.
+          <p className="text-background/70 text-lg mb-10">
+            Schrijf je in voor de nieuwsbrief en weet als eerste wanneer er nieuwe workshops en data gepland worden.
           </p>
-          <a
-            href="/contact"
-            className="inline-block bg-primary text-primary-foreground px-10 py-4 text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:bg-accent hover:text-accent-foreground"
-          >
-            Contacteer mij
-          </a>
+          <div className="max-w-xl mx-auto">
+            <div
+              style={{ textAlign: "left" }}
+              className="sender-form-field"
+              data-sender-form-id="bkR3x6"
+            />
+          </div>
         </div>
       </section>
 
