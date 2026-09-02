@@ -7,6 +7,7 @@ import Testimonial from "@/components/Testimonial";
 import SiteFooter from "@/components/SiteFooter";
 import JsonLd from "@/components/JsonLd";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { useSenderForm } from "@/hooks/useSenderForm";
 
 const workshopStopmotion1 = "/images/workshops/workshop-stopmotion-1.webp";
 const workshopStopmotion2 = "/images/workshops/workshop-stopmotion-2.webp";
