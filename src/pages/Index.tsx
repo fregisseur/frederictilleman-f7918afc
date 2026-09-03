@@ -186,7 +186,7 @@ const Index = () => {
           </p>
           <div className="max-w-xl mx-auto">
             <div
-              style={{ textAlign: "left" }}
+              style={{ textAlign: "center" }}
               className="sender-form-field"
               data-sender-form-id="bkR3x6"
             />
