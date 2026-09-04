@@ -28,7 +28,7 @@ const aanpak = [
   {
     iconClass: "fi fi-rr-comment",
     title: "Jouw verhaal",
-    description: "Jij vertelt, ik stel vragen, zoek de kern en denk mee. Daar hebben we doorgaans geen ellenlange briefing voor nodig.",
+    description: "Jij vertelt jouw verhaal, ik zoek en denk met je mee. Met of zonder uitgewerkte briefing of krabbel op een bierviltje.",
   },
   {
     iconClass: "fi fi-rr-sofa",
