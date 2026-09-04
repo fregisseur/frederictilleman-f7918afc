@@ -27,17 +27,17 @@ const logoVlaamseOverheid = "/images/logos/vlaamse-overheid.webp";
 const aanpak = [
   {
     iconClass: "fi fi-rr-comment",
-    title: "Wat moet dat hier worden?",
+    title: "Jouw verhaal",
     description: "Jij vertelt, ik stel vragen, zoek de kern en denk mee. Daar hebben we doorgaans geen ellenlange briefing voor nodig.",
   },
   {
     iconClass: "fi fi-rr-sofa",
-    title: "Laat de rest maar aan mij",
+    title: "Leun maar achterover",
     description: "Van eerste schets tot finale oplevering: ik neem het hele traject op mij. Zelf tekeningen inkleuren hoeft dus niet.",
   },
   {
     iconClass: "fi fi-rr-crown",
-    title: "Ik heb dat nog gedaan",
+    title: "Met plezier",
     description: "Ik maak al meer dan tien jaar animaties en illustraties. Genoeg ervaring én nog meer dan genoeg goesting.",
   },
 ];
