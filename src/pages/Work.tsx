@@ -38,7 +38,7 @@ const aanpak = [
   {
     iconClass: "fi fi-rr-crown",
     title: "Met plezier",
-    description: "Animaas en illustraties maken doe ik al meer dan tien jaar. Ik heb dus al een en ander zien passeren. Saai is het gelukkig nog nooit geworden.",
+    description: "Animaties en illustraties maken doe ik al meer dan tien jaar. Ik heb dus al een en ander zien passeren. Saai is het gelukkig nog nooit geworden.",
   },
 ];
 
