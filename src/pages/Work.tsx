@@ -28,17 +28,17 @@ const aanpak = [
   {
     iconClass: "fi fi-rr-comment",
     title: "Eerst luisteren",
-    description: "Jij vertelt, ik stel vragen, zoek de kern en denk mee. Daar hebben we doorgaans geen ellenlange briefing voor nodig.",
+    description: "Wat moet dat hier worden?",
   },
   {
     iconClass: "fi fi-rr-sofa",
     title: "Van A tot Z verzorgd",
-    description: "Van eerste schets tot finale oplevering: ik neem het hele traject op mij. Zelf tekeningen inkleuren hoeft dus niet.",
+    description: "Laat de rest maar aan mij",
   },
   {
     iconClass: "fi fi-rr-crown",
     title: "Al een tijdje bezig",
-    description: "Ik maak al meer dan tien jaar animaties en illustraties. Genoeg ervaring én nog meer dan genoeg goesting.",
+    description: "Ik heb dat nog gedaan",
   },
 ];
 
