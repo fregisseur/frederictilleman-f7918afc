@@ -33,7 +33,7 @@ const aanpak = [
   {
     iconClass: "fi fi-rr-sofa",
     title: "Leun maar achterover",
-    description: "Van eerste schets tot finale oplevering: ik neem het hele traject op mij. Zelf tekeningen inkleuren hoeft dus niet.",
+    description: "Daarna ga ik ermee aan de slag. Van de eerste schets tot alles helemaal af is. Jij volgt mee en stuurt bij waar nodig, zonder dat je dus zelf je tekeningen moet inkleuren.",
   },
   {
     iconClass: "fi fi-rr-crown",
