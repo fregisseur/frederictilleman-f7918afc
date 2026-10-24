@@ -12,6 +12,7 @@ import { useSenderForm } from "@/hooks/useSenderForm";
 const workshopStopmotion1 = "/images/workshops/workshop-stopmotion-1.webp";
 const workshopStopmotion2 = "/images/workshops/workshop-stopmotion-2.webp";
 const workshopStopmotion3 = "/images/workshops/workshop-stopmotion-3.webp";
+const workshopStopmotion4 = "/images/workshops/workshop-stopmotion-4.webp";
 const workshopFilm1 = "/images/workshops/workshop-film-1.webp";
 const workshopFilm2 = "/images/workshops/workshop-film-2.webp";
 const workshopFilm3 = "/images/workshops/workshop-film-3.webp";
@@ -88,7 +89,13 @@ const Index = () => {
           {/* Workshop 1: Stop-motion */}
           <WorkshopCard
             title="De wereld in stop-motion"
-            images={[workshopStopmotion1, workshopStopmotion2, workshopStopmotion3]}
+            images={[workshopStopmotion1, workshopStopmotion2, workshopStopmotion3, workshopStopmotion4]}
+            imageAlts={[
+              "Stop-motion workshop: kinderen bouwen een decor",
+              "Stop-motion workshop: figuren klaar om te animeren",
+              "Stop-motion workshop: opname met tablet",
+              "Stop-motion workshop: resultaat van de animatie",
+            ]}
             ctaLabel="Ik wil deze workshop"
             ctaHref="/contact"
             description={
@@ -119,6 +126,11 @@ const Index = () => {
           <WorkshopCard
             title="De magie van film"
             images={[workshopFilm1, workshopFilm2, workshopFilm3]}
+            imageAlts={[
+              "Filmworkshop: kinderen aan het filmen",
+              "Filmworkshop: camerapositie uitproberen",
+              "Filmworkshop: monteren van de kortfilm",
+            ]}
             reversed
             ctaLabel="Ik wil deze workshop"
             ctaHref="/contact"
@@ -150,6 +162,7 @@ const Index = () => {
           <WorkshopCard
             title="Workshop als teambuilding"
             images={[workshopTeambuilding]}
+            imageAlts={["Teambuilding workshop: samen een film maken"]}
             ctaLabel="Ik wil een teambuilding"
             ctaHref="/contact"
             description={

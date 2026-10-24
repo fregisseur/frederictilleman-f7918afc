@@ -3,13 +3,14 @@ import { useState, useEffect } from "react";
 interface WorkshopCardProps {
   title: string;
   images: string[];
+  imageAlts?: string[];
   description: React.ReactNode;
   ctaLabel: string;
   ctaHref: string;
   reversed?: boolean;
 }
 
-const WorkshopCard = ({ title, images, description, ctaLabel, ctaHref, reversed }: WorkshopCardProps) => {
+const WorkshopCard = ({ title, images, imageAlts, description, ctaLabel, ctaHref, reversed }: WorkshopCardProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -32,7 +33,7 @@ const WorkshopCard = ({ title, images, description, ctaLabel, ctaHref, reversed 
           <img
             key={index}
             src={image}
-            alt={`${title} ${index + 1}`}
+            alt={imageAlts?.[index] ?? `${title} ${index + 1}`}
             className={`w-full h-72 lg:h-full object-cover transition-opacity duration-700 ${
               index === 0 ? "" : "absolute inset-0"
             } ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
