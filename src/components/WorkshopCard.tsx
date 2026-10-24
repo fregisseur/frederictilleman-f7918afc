@@ -33,7 +33,7 @@ const WorkshopCard = ({ title, images, imageAlts, description, ctaLabel, ctaHref
           <img
             key={index}
             src={image}
-            alt={`${title} ${index + 1}`}
+            alt={imageAlts?.[index] ?? `${title} ${index + 1}`}
             className={`w-full h-72 lg:h-full object-cover transition-opacity duration-700 ${
               index === 0 ? "" : "absolute inset-0"
             } ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
