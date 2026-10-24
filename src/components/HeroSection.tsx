@@ -16,10 +16,10 @@ const HeroSection = () => {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground mb-6 leading-tight max-w-4xl fade-up">
           Workshops voor kleine bazen
           <br />
-          <span className="text-primary">met wilde ideëen</span>
+          <span className="text-primary">met wilde ideeën</span>
         </h1>
         <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mb-10 font-light fade-up" style={{ animationDelay: "0.15s" }}>
-          In een paar uur maken deelnemers hun eigen animatie- of kortfilm. Van nul. Met hun eigen handen.
+          In een paar uur maken deelnemers hun eigen animatievideo of kortfilm. Helemaal van nul en met hun eigen handen.
         </p>
         <a
           href="#workshops"
