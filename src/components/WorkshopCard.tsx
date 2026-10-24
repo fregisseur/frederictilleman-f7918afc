@@ -3,13 +3,14 @@ import { useState, useEffect } from "react";
 interface WorkshopCardProps {
   title: string;
   images: string[];
+  imageAlts?: string[];
   description: React.ReactNode;
   ctaLabel: string;
   ctaHref: string;
   reversed?: boolean;
 }
 
-const WorkshopCard = ({ title, images, description, ctaLabel, ctaHref, reversed }: WorkshopCardProps) => {
+const WorkshopCard = ({ title, images, imageAlts, description, ctaLabel, ctaHref, reversed }: WorkshopCardProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {

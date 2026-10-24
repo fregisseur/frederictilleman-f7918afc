@@ -12,6 +12,7 @@ import { useSenderForm } from "@/hooks/useSenderForm";
 const workshopStopmotion1 = "/images/workshops/workshop-stopmotion-1.webp";
 const workshopStopmotion2 = "/images/workshops/workshop-stopmotion-2.webp";
 const workshopStopmotion3 = "/images/workshops/workshop-stopmotion-3.webp";
+const workshopStopmotion4 = "/images/workshops/workshop-stopmotion-4.webp";
 const workshopFilm1 = "/images/workshops/workshop-film-1.webp";
 const workshopFilm2 = "/images/workshops/workshop-film-2.webp";
 const workshopFilm3 = "/images/workshops/workshop-film-3.webp";
