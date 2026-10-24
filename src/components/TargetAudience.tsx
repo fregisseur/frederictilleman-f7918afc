@@ -1,5 +1,5 @@
 const paragraphs = [
-  "Je werkt in een bibliotheek, cultuurhuis, gemeenschapscentrum of ... en zoekt een workshop voor kinderen of jongeren die vlot in je werking past?",
+  "Je werkt in een bibliotheek, cultuurhuis, gemeenschapscentrum of gewoon thuis en zoekt een workshop voor kinderen of jongeren die vlot in je werking past of van de dag een filmisch avontuur maakt?",
   "Je wil een activiteit die meer doet dan bezighouden. Deelnemers bedenken, maken en vertellen hun eigen verhaal, en leren spelenderwijs omgaan met beeld, timing en samenwerking.",
   "Je wil kunnen vertrouwen op een vlot verloop. Jij beheert de inschrijvingen, ik breng al het materiaal mee en neem de volledige begeleiding op mij, zodat alles op de dag zelf gestructureerd verloopt.",
 ];
