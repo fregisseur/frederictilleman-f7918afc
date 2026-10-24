@@ -89,7 +89,13 @@ const Index = () => {
           {/* Workshop 1: Stop-motion */}
           <WorkshopCard
             title="De wereld in stop-motion"
-            images={[workshopStopmotion1, workshopStopmotion2, workshopStopmotion3]}
+            images={[workshopStopmotion1, workshopStopmotion2, workshopStopmotion3, workshopStopmotion4]}
+            imageAlts={[
+              "Stop-motion workshop: kinderen bouwen een decor",
+              "Stop-motion workshop: figuren klaar om te animeren",
+              "Stop-motion workshop: opname met tablet",
+              "Stop-motion workshop: resultaat van de animatie",
+            ]}
             ctaLabel="Ik wil deze workshop"
             ctaHref="/contact"
             description={
