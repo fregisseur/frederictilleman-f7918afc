@@ -14,7 +14,8 @@ const HeroSection = () => {
       />
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground mb-6 leading-tight max-w-4xl fade-up">
-          Workshops voor kleine bazen
+          Workshops voor{" "}
+          <span className="whitespace-nowrap">kleine bazen</span>
           <br />
           <span className="text-primary">met wilde ideeën</span>
         </h1>
