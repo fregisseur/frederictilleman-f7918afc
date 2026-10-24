@@ -126,6 +126,11 @@ const Index = () => {
           <WorkshopCard
             title="De magie van film"
             images={[workshopFilm1, workshopFilm2, workshopFilm3]}
+            imageAlts={[
+              "Filmworkshop: kinderen aan het filmen",
+              "Filmworkshop: camerapositie uitproberen",
+              "Filmworkshop: monteren van de kortfilm",
+            ]}
             reversed
             ctaLabel="Ik wil deze workshop"
             ctaHref="/contact"
@@ -157,6 +162,7 @@ const Index = () => {
           <WorkshopCard
             title="Workshop als teambuilding"
             images={[workshopTeambuilding]}
+            imageAlts={["Teambuilding workshop: samen een film maken"]}
             ctaLabel="Ik wil een teambuilding"
             ctaHref="/contact"
             description={
