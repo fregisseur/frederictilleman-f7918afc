@@ -151,7 +151,7 @@ const Work = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground mb-6 leading-tight max-w-4xl fade-up">
             Animaties en illustraties
             <br />
-            <span className="text-primary">die jouw verhaal glashelder vertellen.</span>
+            <span className="text-primary">die jouw verhaal knalhelder vertellen.</span>
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mb-10 font-light fade-up" style={{ animationDelay: "0.15s" }}>
             Want niemand zit te wachten op vaag gedoe.
