@@ -163,7 +163,17 @@ const Work = () => {
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
-            Misschien klinkt dit bekend?
+            Misschien klinkt dit{" "}
+            <span className="relative inline-block px-[0.1em] py-[0.06em]">
+              <span className="relative z-10">bekend?</span>
+              <img
+                src="/images/scribbles/cirkel.png"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                className="pointer-events-none absolute left-[-0.164em] top-[-0.343em] z-0 h-[1.913em] w-[5.079em] max-w-none object-fill select-none"
+              />
+            </span>
           </h2>
           <div className="max-w-3xl mx-auto mt-10 space-y-6">
             {herkenSteps.map((text, i) => (
