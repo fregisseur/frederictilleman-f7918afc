@@ -171,7 +171,7 @@ const Work = () => {
                 alt=""
                 aria-hidden="true"
                 loading="lazy"
-                className="pointer-events-none absolute inset-y-0 left-[-2%] z-0 h-full w-[124%] object-fill select-none"
+                className="pointer-events-none absolute inset-y-0 left-[-14%] z-0 h-full w-[150%] object-fill select-none"
               />
             </span>
           </h2>
