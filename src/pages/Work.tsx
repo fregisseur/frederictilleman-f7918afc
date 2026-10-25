@@ -164,14 +164,14 @@ const Work = () => {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             Misschien klinkt dit{" "}
-            <span className="relative inline-block px-[0.3em] py-[0.22em]">
+            <span className="relative inline-block px-[0.1em] py-[0.06em]">
               <span className="relative z-10">bekend?</span>
               <img
                 src="/images/scribbles/cirkel.png"
                 alt=""
                 aria-hidden="true"
                 loading="lazy"
-                className="pointer-events-none absolute inset-0 z-0 h-full w-full object-fill select-none"
+                className="pointer-events-none absolute inset-y-0 left-[-2%] z-0 h-full w-[124%] object-fill select-none"
               />
             </span>
           </h2>
