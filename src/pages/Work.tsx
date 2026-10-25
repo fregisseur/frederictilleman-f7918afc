@@ -254,7 +254,7 @@ const Work = () => {
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
-            Wat anderen ervan vonden
+            Wat anderen ervan vinden
           </h2>
           <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 text-base leading-relaxed">
             Gelukkig hoef je me niet alleen op mijn woord te geloven. Dit zeggen enkele klanten over onze samenwerking.
