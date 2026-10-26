@@ -26,17 +26,17 @@ const logoVlaamseOverheid = "/images/logos/vlaamse-overheid.webp";
 
 const aanpak = [
   {
-    iconClass: "fi fi-rr-comment",
+    doodle: "/images/scribbles/tekstballon.png",
     title: "Jouw verhaal",
     description: "Jij vertelt wat je voor ogen hebt. Ik denk met je mee en probeer snel te snappen waar het echt om draait. Een uitgebreide briefing mag, maar een krabbel op papier vind ik even goed.",
   },
   {
-    iconClass: "fi fi-rr-sofa",
+    doodle: "/images/scribbles/zetel.png",
     title: "Leun maar achterover",
     description: "Daarna ga ik ermee aan de slag. Van de eerste schets tot alles helemaal af is. Jij volgt mee en stuurt bij waar nodig, zonder dat je dus zelf je tekeningen moet inkleuren.",
   },
   {
-    iconClass: "fi fi-rr-crown",
+    doodle: "/images/scribbles/kroon.png",
     title: "Met plezier",
     description: "Animaties en illustraties maken doe ik al meer dan tien jaar. Ik heb dus al een en ander zien passeren. Saai is het gelukkig nog nooit geworden.",
   },
@@ -211,9 +211,13 @@ const Work = () => {
                 key={item.title}
                 className="group bg-background p-8 text-center border border-border transition-colors duration-300 hover:border-primary/30"
               >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/20 transition-colors">
-                  <i className={`${item.iconClass} text-primary text-2xl leading-none flex items-center justify-center`} />
-                </div>
+                <img
+                  src={item.doodle}
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  className="mx-auto mb-5 h-auto w-auto max-h-none max-w-none"
+                />
                 <h3 className="font-bold text-lg mb-2 text-foreground">{item.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
               </div>
