@@ -181,7 +181,7 @@ const Work = () => {
               alt=""
               aria-hidden="true"
               loading="lazy"
-              className="pointer-events-none absolute right-[calc(100%+24px)] top-[26px] hidden h-auto w-auto max-w-none select-none lg:block"
+              className="pointer-events-none absolute right-[calc(100%+24px)] top-[26px] hidden h-auto w-[min(338px,calc((100vw_-_768px)/2_-_24px))] max-w-none select-none lg:block"
             />
             {herkenSteps.map((text, i) => (
               <div key={i} className="flex items-start gap-5">
