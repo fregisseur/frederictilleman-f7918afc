@@ -26,17 +26,17 @@ const logoVlaamseOverheid = "/images/logos/vlaamse-overheid.webp";
 
 const aanpak = [
   {
-    iconClass: "fi fi-rr-comment",
+    doodle: "/images/scribbles/tekstballon.png",
     title: "Jouw verhaal",
     description: "Jij vertelt wat je voor ogen hebt. Ik denk met je mee en probeer snel te snappen waar het echt om draait. Een uitgebreide briefing mag, maar een krabbel op papier vind ik even goed.",
   },
   {
-    iconClass: "fi fi-rr-sofa",
+    doodle: "/images/scribbles/zetel.png",
     title: "Leun maar achterover",
     description: "Daarna ga ik ermee aan de slag. Van de eerste schets tot alles helemaal af is. Jij volgt mee en stuurt bij waar nodig, zonder dat je dus zelf je tekeningen moet inkleuren.",
   },
   {
-    iconClass: "fi fi-rr-crown",
+    doodle: "/images/scribbles/kroon.png",
     title: "Met plezier",
     description: "Animaties en illustraties maken doe ik al meer dan tien jaar. Ik heb dus al een en ander zien passeren. Saai is het gelukkig nog nooit geworden.",
   },
@@ -160,7 +160,7 @@ const Work = () => {
       </section>
 
       {/* Misschien klinkt dit bekend? */}
-      <section className="py-16 px-6">
+      <section className="relative overflow-x-clip py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             Misschien klinkt dit{" "}
@@ -175,7 +175,14 @@ const Work = () => {
               />
             </span>
           </h2>
-          <div className="max-w-3xl mx-auto mt-10 space-y-6">
+          <div className="relative mx-auto mt-10 max-w-3xl space-y-6">
+            <img
+              src="/images/scribbles/krul-1.png"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              className="pointer-events-none absolute right-[calc(100%+24px)] top-[26px] hidden h-auto w-[min(338px,calc((100vw_-_768px)/2_-_24px))] max-w-none select-none lg:block"
+            />
             {herkenSteps.map((text, i) => (
               <div key={i} className="flex items-start gap-5">
                 <div className="mt-2 flex h-[26px] w-12 shrink-0 items-center justify-center">
@@ -197,10 +204,19 @@ const Work = () => {
       </section>
 
       {/* Hoe pak ik het aan */}
-      <section className="py-16 px-6 bg-secondary">
+      <section className="relative overflow-x-clip bg-secondary py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
-            Hoe pak ik het aan?
+            <span className="relative inline-block">
+              Hoe pak ik het aan?
+              <img
+                src="/images/scribbles/potlood.png"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                className="pointer-events-none absolute left-[calc(100%+28px)] top-[-40px] hidden h-auto w-auto max-w-none select-none md:block"
+              />
+            </span>
           </h2>
           <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 text-base leading-relaxed">
             Ik zet jouw wens of vraag om in een beeld dat helder communiceert en visueel verrast. Ik heb de ervaring en het oog voor detail dat je nodig hebt, precies wanneer je het nodig hebt. Een beeld of video is pas geslaagd als je boodschap meteen duidelijk is.
@@ -211,9 +227,13 @@ const Work = () => {
                 key={item.title}
                 className="group bg-background p-8 text-center border border-border transition-colors duration-300 hover:border-primary/30"
               >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/20 transition-colors">
-                  <i className={`${item.iconClass} text-primary text-2xl leading-none flex items-center justify-center`} />
-                </div>
+                <img
+                  src={item.doodle}
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  className="mx-auto mb-5 h-auto w-auto max-h-none max-w-none"
+                />
                 <h3 className="font-bold text-lg mb-2 text-foreground">{item.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
               </div>
