@@ -161,6 +161,13 @@ const Work = () => {
 
       {/* Misschien klinkt dit bekend? */}
       <section className="relative overflow-x-clip py-16 px-6">
+        <img
+          src="/images/scribbles/krul-1.png"
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          className="pointer-events-none absolute left-[min(0px,calc(50%_-_786px))] top-[174px] hidden h-auto w-[338px] max-w-none select-none lg:block"
+        />
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             Misschien klinkt dit{" "}
@@ -176,13 +183,6 @@ const Work = () => {
             </span>
           </h2>
           <div className="relative mx-auto mt-10 max-w-3xl space-y-6">
-            <img
-              src="/images/scribbles/krul-1.png"
-              alt=""
-              aria-hidden="true"
-              loading="lazy"
-              className="pointer-events-none absolute right-[calc(100%+24px)] top-[26px] hidden h-auto w-[min(338px,calc((100vw_-_768px)/2_-_24px))] max-w-none select-none lg:block"
-            />
             {herkenSteps.map((text, i) => (
               <div key={i} className="flex items-start gap-5">
                 <div className="mt-2 flex h-[26px] w-12 shrink-0 items-center justify-center">
@@ -205,17 +205,17 @@ const Work = () => {
 
       {/* Hoe pak ik het aan */}
       <section className="relative overflow-x-clip bg-secondary py-16 px-6">
+        <img
+          src="/images/scribbles/potlood.png"
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          className="pointer-events-none absolute left-[calc(50%+400px)] top-[32px] hidden h-auto w-[120px] max-w-none select-none lg:block"
+        />
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             <span className="relative inline-block">
               Hoe pak ik het aan?
-              <img
-                src="/images/scribbles/potlood.png"
-                alt=""
-                aria-hidden="true"
-                loading="lazy"
-                className="pointer-events-none absolute left-[calc(100%+28px)] top-[-40px] hidden h-auto w-auto max-w-none select-none md:block"
-              />
             </span>
           </h2>
           <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 text-base leading-relaxed">
