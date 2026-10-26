@@ -178,8 +178,14 @@ const Work = () => {
           <div className="max-w-3xl mx-auto mt-10 space-y-6">
             {herkenSteps.map((text, i) => (
               <div key={i} className="flex items-start gap-5">
-                <div className="shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <i className="fi fi-rr-angle-small-down text-primary text-2xl leading-none flex items-center justify-center" />
+                <div className="mt-2 flex h-[26px] w-12 shrink-0 items-center justify-center">
+                  <img
+                    src={`/images/scribbles/check-${i + 1}.png`}
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    className="h-auto w-auto max-h-none max-w-none"
+                  />
                 </div>
                 <p className="text-muted-foreground text-base leading-relaxed pt-2">
                   {text}
