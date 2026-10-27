@@ -94,7 +94,7 @@ const Index = () => {
               "Stop-motion workshop: kinderen bouwen een decor",
               "Stop-motion workshop: figuren klaar om te animeren",
               "Stop-motion workshop: opname met tablet",
-              "Stop-motion workshop: resultaat van de animatie",
+              "Stop-motion workshop: kinderen poseren met papieren gezichten",
             ]}
             ctaLabel="Ik wil deze workshop"
             ctaHref="/contact"

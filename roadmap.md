@@ -5,3 +5,4 @@
 
 - [x] Vijf nieuwe tekeningetjes (kroon, tekstballon, zetel, potlood, krul-1) in public/images/scribbles en op de juiste plaats op de homepagina
 - [x] Krul tegen de linkerrand met vaste grootte en cropping; potlood kleiner en verder opzij, beide verdwijnen op smalle schermen
+- [x] Vierde stop-motion workshopfoto vervangen door de nieuwe upload (workshop-stopmotion-4.webp)
