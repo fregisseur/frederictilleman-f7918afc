@@ -223,7 +223,7 @@ const Work = () => {
                   alt=""
                   aria-hidden="true"
                   loading="lazy"
-                  className="pointer-events-none absolute bottom-[-8px] left-1/2 w-[137px] max-w-none -translate-x-1/2 select-none"
+                  className="pointer-events-none absolute bottom-[-8px] left-[-4px] w-[110px] max-w-none select-none"
                 />
               </span>
             </span>
