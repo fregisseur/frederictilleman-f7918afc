@@ -204,7 +204,7 @@ const Work = () => {
       </section>
 
       {/* Hoe pak ik het aan */}
-      <section className="relative overflow-x-clip bg-secondary py-16 px-6">
+      <section className="relative overflow-x-clip bg-surface-warm py-16 px-6">
         <img
           src="/images/scribbles/potlood.png"
           alt=""
@@ -215,7 +215,17 @@ const Work = () => {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             <span className="relative inline-block">
-              Hoe pak ik het aan?
+              Hoe pak ik het{" "}
+              <span className="relative">
+                aan?
+                <img
+                  src="/images/scribbles/streep-1.png"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  className="pointer-events-none absolute bottom-[-8px] left-1/2 w-[137px] max-w-none -translate-x-1/2 select-none"
+                />
+              </span>
             </span>
           </h2>
           <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 text-base leading-relaxed">
@@ -273,7 +283,7 @@ const Work = () => {
       </section>
 
       {/* Portfolio grid */}
-      <section id="eerder-werk" className="py-20 px-6 bg-secondary scroll-mt-24">
+      <section id="eerder-werk" className="py-20 px-6 bg-surface-blush scroll-mt-24">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             Eerder werk
