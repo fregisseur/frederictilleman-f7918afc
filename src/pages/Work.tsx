@@ -204,7 +204,7 @@ const Work = () => {
       </section>
 
       {/* Hoe pak ik het aan */}
-      <section className="relative overflow-x-clip bg-secondary py-16 px-6">
+      <section className="relative overflow-x-clip bg-surface-warm py-16 px-6">
         <img
           src="/images/scribbles/potlood.png"
           alt=""
@@ -273,7 +273,7 @@ const Work = () => {
       </section>
 
       {/* Portfolio grid */}
-      <section id="eerder-werk" className="py-20 px-6 bg-secondary scroll-mt-24">
+      <section id="eerder-werk" className="py-20 px-6 bg-surface-blush scroll-mt-24">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             Eerder werk
