@@ -50,6 +50,9 @@
     --hero-overlay: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.3), hsla(0, 0%, 0%, 0.6));
     --shadow-card: 0 4px 24px -4px hsla(0, 0%, 0%, 0.08);
     --shadow-card-hover: 0 8px 32px -4px hsla(0, 0%, 0%, 0.14);
+    /* Section surfaces */
+    --surface-warm: #f9f7f2;
+    --surface-blush: #fef3ee;
   }
 
   .dark {
