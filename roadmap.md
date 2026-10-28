@@ -9,3 +9,6 @@
 - [x] Streep1.png onder "aan?" in de titel "Hoe pak ik het aan?"; blokkleuren f9f7f2 (aanpak) en fef3ee (eerder werk)
 - [x] Streep onder "aan?" korter en rechts geplaatst zodat hij niet onder de "t" van "het" schuift (110px, links -4px)
 - [x] Zetel-tekening vervangen door de nieuwe upload (Zetel-2.png, zelfde afmetingen 105×91)
+- [x] Kroon en tekstballon vervangen; drie aanpak-tekeningen horizontaal uitgelijnd
+- [x] Koffie en croissant naast de reviews geplaatst zoals de referentie
+- [x] Eerder werk naar f9f7f2; krul verticaal verplaatst naar In goed gezelschap

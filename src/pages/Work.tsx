@@ -7,6 +7,9 @@ import { Link, useLocation } from "react-router-dom";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
 import { Star } from "lucide-react";
+import kroonAsset from "@/assets/scribbles/kroon.png.asset.json";
+import tekstballonAsset from "@/assets/scribbles/tekstballon.png.asset.json";
+import koffieAsset from "@/assets/scribbles/koffie.png.asset.json";
 const heroWorkImage = "/images/hero/hero-work.webp";
 
 const logoBrusselsAirport = "/images/logos/brussels-airport.webp";
@@ -26,7 +29,7 @@ const logoVlaamseOverheid = "/images/logos/vlaamse-overheid.webp";
 
 const aanpak = [
   {
-    doodle: "/images/scribbles/tekstballon.png",
+    doodle: tekstballonAsset.url,
     title: "Jouw verhaal",
     description: "Jij vertelt wat je voor ogen hebt. Ik denk met je mee en probeer snel te snappen waar het echt om draait. Een uitgebreide briefing mag, maar een krabbel op papier vind ik even goed.",
   },
@@ -36,7 +39,7 @@ const aanpak = [
     description: "Daarna ga ik ermee aan de slag. Van de eerste schets tot alles helemaal af is. Jij volgt mee en stuurt bij waar nodig, zonder dat je dus zelf je tekeningen moet inkleuren.",
   },
   {
-    doodle: "/images/scribbles/kroon.png",
+    doodle: kroonAsset.url,
     title: "Met plezier",
     description: "Animaties en illustraties maken doe ik al meer dan tien jaar. Ik heb dus al een en ander zien passeren. Saai is het gelukkig nog nooit geworden.",
   },
@@ -161,13 +164,6 @@ const Work = () => {
 
       {/* Misschien klinkt dit bekend? */}
       <section className="relative overflow-x-clip py-16 px-6">
-        <img
-          src="/images/scribbles/krul-1.png"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          className="pointer-events-none absolute left-[min(0px,calc(50%_-_786px))] top-[174px] hidden h-auto w-[338px] max-w-none select-none lg:block"
-        />
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             Misschien klinkt dit{" "}
@@ -237,13 +233,15 @@ const Work = () => {
                 key={item.title}
                 className="group bg-background p-8 text-center border border-border transition-colors duration-300 hover:border-primary/30"
               >
-                <img
-                  src={item.doodle}
-                  alt=""
-                  aria-hidden="true"
-                  loading="lazy"
-                  className="mx-auto mb-5 h-auto w-auto max-h-none max-w-none"
-                />
+                <div className="mb-5 flex h-[91px] items-center justify-center">
+                  <img
+                    src={item.doodle}
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    className="h-auto w-auto max-h-none max-w-none"
+                  />
+                </div>
                 <h3 className="font-bold text-lg mb-2 text-foreground">{item.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
               </div>
@@ -253,7 +251,14 @@ const Work = () => {
       </section>
 
       {/* Client logos */}
-      <section className="py-16 px-6">
+      <section className="relative overflow-x-clip py-16 px-6">
+        <img
+          src="/images/scribbles/krul-1.png"
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          className="pointer-events-none absolute left-[min(0px,calc(50%_-_786px))] top-[174px] hidden h-auto w-[338px] max-w-none select-none lg:block"
+        />
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             In goed gezelschap
@@ -283,7 +288,7 @@ const Work = () => {
       </section>
 
       {/* Portfolio grid */}
-      <section id="eerder-werk" className="py-20 px-6 bg-surface-blush scroll-mt-24">
+      <section id="eerder-werk" className="py-20 px-6 bg-surface-warm scroll-mt-24">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             Eerder werk
@@ -298,7 +303,14 @@ const Work = () => {
 
       {/* Reviews */}
       <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto">
+        <div className="relative max-w-5xl mx-auto">
+          <img
+            src={koffieAsset.url}
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            className="pointer-events-none absolute right-0 top-[36px] hidden h-[107px] w-[160px] max-w-none select-none lg:block xl:right-[-56px]"
+          />
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             Wat anderen ervan vinden
           </h2>
