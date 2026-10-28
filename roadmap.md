@@ -12,3 +12,5 @@
 - [x] Kroon en tekstballon vervangen; drie aanpak-tekeningen horizontaal uitgelijnd
 - [x] Koffie en croissant naast de reviews geplaatst zoals de referentie
 - [x] Eerder werk naar f9f7f2; krul verticaal verplaatst naar In goed gezelschap
+- [x] Review-ondertitel licht aangepast en in twee regels gesplitst voor meer witruimte tot de illustratie
+- [x] Alle png's van vandaag (kroon-2, tekstballon-2, koffie) in public/images/scribbles gezet en CDN-pointers verwijderd
