@@ -7,9 +7,6 @@ import { Link, useLocation } from "react-router-dom";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
 import { Star } from "lucide-react";
-import kroonAsset from "@/assets/scribbles/kroon.png.asset.json";
-import tekstballonAsset from "@/assets/scribbles/tekstballon.png.asset.json";
-import koffieAsset from "@/assets/scribbles/koffie.png.asset.json";
 const heroWorkImage = "/images/hero/hero-work.webp";
 
 const logoBrusselsAirport = "/images/logos/brussels-airport.webp";
@@ -29,7 +26,7 @@ const logoVlaamseOverheid = "/images/logos/vlaamse-overheid.webp";
 
 const aanpak = [
   {
-    doodle: tekstballonAsset.url,
+    doodle: "/images/scribbles/tekstballon.png",
     title: "Jouw verhaal",
     description: "Jij vertelt wat je voor ogen hebt. Ik denk met je mee en probeer snel te snappen waar het echt om draait. Een uitgebreide briefing mag, maar een krabbel op papier vind ik even goed.",
   },
@@ -39,7 +36,7 @@ const aanpak = [
     description: "Daarna ga ik ermee aan de slag. Van de eerste schets tot alles helemaal af is. Jij volgt mee en stuurt bij waar nodig, zonder dat je dus zelf je tekeningen moet inkleuren.",
   },
   {
-    doodle: kroonAsset.url,
+    doodle: "/images/scribbles/kroon.png",
     title: "Met plezier",
     description: "Animaties en illustraties maken doe ik al meer dan tien jaar. Ik heb dus al een en ander zien passeren. Saai is het gelukkig nog nooit geworden.",
   },
@@ -305,7 +302,7 @@ const Work = () => {
       <section className="py-20 px-6">
         <div className="relative max-w-5xl mx-auto">
           <img
-            src={koffieAsset.url}
+            src="/images/scribbles/koffie.png"
             alt=""
             aria-hidden="true"
             loading="lazy"
