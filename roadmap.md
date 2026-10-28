@@ -7,3 +7,5 @@
 - [x] Krul tegen de linkerrand met vaste grootte en cropping; potlood kleiner en verder opzij, beide verdwijnen op smalle schermen
 - [x] Vierde stop-motion workshopfoto vervangen door de nieuwe upload (workshop-stopmotion-4.webp)
 - [x] Streep1.png onder "aan?" in de titel "Hoe pak ik het aan?"; blokkleuren f9f7f2 (aanpak) en fef3ee (eerder werk)
+- [x] Streep onder "aan?" korter en rechts geplaatst zodat hij niet onder de "t" van "het" schuift (110px, links -4px)
+- [x] Zetel-tekening vervangen door de nieuwe upload (Zetel-2.png, zelfde afmetingen 105×91)
