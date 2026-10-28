@@ -315,7 +315,9 @@ const Work = () => {
             Wat anderen ervan vinden
           </h2>
           <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 text-base leading-relaxed">
-            Gelukkig hoef je me niet alleen op mijn woord te geloven. Dit zeggen enkele klanten over onze samenwerking.
+            Gelukkig hoef je me niet alleen op mijn woord te geloven.
+            <br />
+            Dit is wat enkele klanten vertellen over samenwerken met mij.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {reviews.map((r) => (
