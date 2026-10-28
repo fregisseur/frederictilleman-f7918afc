@@ -309,7 +309,7 @@ const Work = () => {
             alt=""
             aria-hidden="true"
             loading="lazy"
-            className="pointer-events-none absolute right-[-56px] top-[36px] hidden h-[107px] w-[160px] max-w-none select-none xl:block"
+            className="pointer-events-none absolute right-0 top-[36px] hidden h-[107px] w-[160px] max-w-none select-none lg:block xl:right-[-56px]"
           />
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             Wat anderen ervan vinden
