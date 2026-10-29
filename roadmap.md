@@ -16,3 +16,4 @@
 - [x] Alle png's van vandaag (kroon-2, tekstballon-2, koffie) in public/images/scribbles gezet en CDN-pointers verwijderd
 - [x] Oogjes.png boven het eerste vierkant van 'Eerder werk' gezet (natural 82px, rust op de bovenrand)
 - [x] Checks op de workshops-pagina ('Wil je kinderen laten creëren?') vervangen door dezelfde check-png's als op de homepage
+- [x] Streep2.png onder 'stop-motion' in de workshopkaart 'De wereld in stop-motion' (onderstreping op woordbreedte, accentstreepjes rechts)
