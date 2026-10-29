@@ -15,3 +15,4 @@
 - [x] Review-ondertitel licht aangepast en in twee regels gesplitst voor meer witruimte tot de illustratie
 - [x] Alle png's van vandaag (kroon-2, tekstballon-2, koffie) in public/images/scribbles gezet en CDN-pointers verwijderd
 - [x] Oogjes.png boven het eerste vierkant van 'Eerder werk' gezet (natural 82px, rust op de bovenrand)
+- [x] Checks op de workshops-pagina ('Wil je kinderen laten creëren?') vervangen door dezelfde check-png's als op de homepage
