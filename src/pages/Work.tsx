@@ -294,7 +294,16 @@ const Work = () => {
             Een krokodil op je dak, een wielrenner tussen je benen of een haai in je lunchbox?<br />
             Beelden zeggen meer dan woorden. Duik even in mijn eerdere werk en misschien brengt het je op ideeën.
           </p>
-          <PortfolioGrid />
+          <div className="relative">
+            <img
+              src="/images/scribbles/oogjes.png"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              className="pointer-events-none absolute bottom-full left-[15px] hidden w-[82px] max-w-none select-none lg:block"
+            />
+            <PortfolioGrid />
+          </div>
         </div>
       </section>
 
