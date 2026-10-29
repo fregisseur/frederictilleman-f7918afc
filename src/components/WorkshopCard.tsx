@@ -8,9 +8,10 @@ interface WorkshopCardProps {
   ctaLabel: string;
   ctaHref: string;
   reversed?: boolean;
+  underline?: string;
 }
 
-const WorkshopCard = ({ title, images, imageAlts, description, ctaLabel, ctaHref, reversed }: WorkshopCardProps) => {
+const WorkshopCard = ({ title, images, imageAlts, description, ctaLabel, ctaHref, reversed, underline }: WorkshopCardProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -20,6 +21,10 @@ const WorkshopCard = ({ title, images, imageAlts, description, ctaLabel, ctaHref
     }, 4000);
     return () => clearInterval(interval);
   }, [images.length]);
+
+  const titleWords = title.split(" ");
+  const lastTitleWord = titleWords.length > 1 ? titleWords.pop() : title;
+  const firstTitleWords = titleWords.join(" ");
 
   return (
     <div
@@ -46,7 +51,25 @@ const WorkshopCard = ({ title, images, imageAlts, description, ctaLabel, ctaHref
 
       {/* Content */}
       <div className="lg:w-3/5 flex flex-col justify-center">
-        <h3 className="text-3xl md:text-4xl font-normal text-black mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>{title}</h3>
+        <h3 className="text-3xl md:text-4xl font-normal text-black mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
+          {underline ? (
+            <>
+              {firstTitleWords}{" "}
+              <span className="relative inline-block">
+                {lastTitleWord}
+                <img
+                  src={underline}
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  className="pointer-events-none absolute left-0 top-full w-[122.5%] max-w-none select-none -translate-y-[83.6%]"
+                />
+              </span>
+            </>
+          ) : (
+            title
+          )}
+        </h3>
         <div className="text-foreground/80 leading-relaxed space-y-4 mb-8">
           {description}
         </div>

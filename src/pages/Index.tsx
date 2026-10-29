@@ -89,6 +89,7 @@ const Index = () => {
           {/* Workshop 1: Stop-motion */}
           <WorkshopCard
             title="De wereld in stop-motion"
+            underline="/images/scribbles/streep-2.png"
             images={[workshopStopmotion1, workshopStopmotion2, workshopStopmotion3, workshopStopmotion4]}
             imageAlts={[
               "Stop-motion workshop: kinderen bouwen een decor",
