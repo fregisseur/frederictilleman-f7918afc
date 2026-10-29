@@ -9,9 +9,10 @@ interface WorkshopCardProps {
   ctaHref: string;
   reversed?: boolean;
   underline?: string;
+  sparkle?: string;
 }
 
-const WorkshopCard = ({ title, images, imageAlts, description, ctaLabel, ctaHref, reversed, underline }: WorkshopCardProps) => {
+const WorkshopCard = ({ title, images, imageAlts, description, ctaLabel, ctaHref, reversed, underline, sparkle }: WorkshopCardProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -25,6 +26,8 @@ const WorkshopCard = ({ title, images, imageAlts, description, ctaLabel, ctaHref
   const titleWords = title.split(" ");
   const lastTitleWord = titleWords.length > 1 ? titleWords.pop() : title;
   const firstTitleWords = titleWords.join(" ");
+  const hasTitleDecor = Boolean(underline || sparkle);
+
 
   return (
     <div
@@ -52,18 +55,29 @@ const WorkshopCard = ({ title, images, imageAlts, description, ctaLabel, ctaHref
       {/* Content */}
       <div className="lg:w-3/5 flex flex-col justify-center">
         <h3 className="text-3xl md:text-4xl font-normal text-black mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
-          {underline ? (
+          {hasTitleDecor ? (
             <>
               {firstTitleWords}{" "}
               <span className="relative inline-block">
                 {lastTitleWord}
-                <img
-                  src={underline}
-                  alt=""
-                  aria-hidden="true"
-                  loading="lazy"
-                  className="pointer-events-none absolute left-0 top-full w-[122.5%] max-w-none select-none -translate-y-[83.6%]"
-                />
+                {underline && (
+                  <img
+                    src={underline}
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    className="pointer-events-none absolute left-0 top-full w-[122.5%] max-w-none select-none -translate-y-[83.6%]"
+                  />
+                )}
+                {sparkle && (
+                  <img
+                    src={sparkle}
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    className="pointer-events-none absolute left-[50px] top-[-26px] w-[60px] max-w-none select-none"
+                  />
+                )}
               </span>
             </>
           ) : (

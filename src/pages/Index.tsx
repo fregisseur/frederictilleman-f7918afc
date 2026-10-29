@@ -126,6 +126,7 @@ const Index = () => {
           {/* Workshop 2: Film */}
           <WorkshopCard
             title="De magie van film"
+            sparkle="/images/scribbles/streepjes-1.png"
             images={[workshopFilm1, workshopFilm2, workshopFilm3]}
             imageAlts={[
               "Filmworkshop: kinderen aan het filmen",
