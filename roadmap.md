@@ -17,3 +17,4 @@
 - [x] Oogjes.png boven het eerste vierkant van 'Eerder werk' gezet (natural 82px, rust op de bovenrand)
 - [x] Checks op de workshops-pagina ('Wil je kinderen laten creëren?') vervangen door dezelfde check-png's als op de homepage
 - [x] Streep2.png onder 'stop-motion' in de workshopkaart 'De wereld in stop-motion' (onderstreping op woordbreedte, accentstreepjes rechts)
+- [x] Streepjes1.png rechts boven 'film' in de workshopkaart 'De magie van film' (60px breed, 50px vanaf woordrand, 29px boven de woordbox); both streepjes-1 and streep-2 in public/images/scribbles
