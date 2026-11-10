@@ -4,7 +4,6 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { useToast } from "@/hooks/use-toast";
 import { usePageMeta } from "@/hooks/usePageMeta";
-const postduif = "/images/site/postduif.gif";
 
 const contactSchema = z.object({
   name: z.string().trim().nonempty({ message: "Naam is verplicht" }).max(100),
@@ -92,12 +91,12 @@ const Contact = () => {
           </div>
 
           <div className="max-w-xl mx-auto flex flex-col items-center">
-            {/* Postduif */}
+            {/* Koffie en croissant */}
             <div className="flex justify-center mb-8">
               <img
-                src={postduif}
-                alt="Postduif met envelop"
-                className="w-32 md:w-44 h-auto"
+                src="/images/scribbles/koffie.png"
+                alt="Koffie en croissant"
+                className="w-40 h-auto"
               />
             </div>
 
