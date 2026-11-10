@@ -18,3 +18,4 @@
 - [x] Checks op de workshops-pagina ('Wil je kinderen laten creëren?') vervangen door dezelfde check-png's als op de homepage
 - [x] Streep2.png onder 'stop-motion' in de workshopkaart 'De wereld in stop-motion' (onderstreping op woordbreedte, accentstreepjes rechts)
 - [x] Streepjes1.png rechts boven 'film' in de workshopkaart 'De magie van film' (60px breed, 50px vanaf de woordrand, 29px boven de woordbox); streepjes-1 en streep-2 staan allebei in public/images/scribbles
+- [x] Tekstballon-2 en popcorn op de workshoppagina kleiner gemaakt tot de schaal van de kroon (127px en 89px breed), wrapper terug op h-[91px] zoals de homepage
