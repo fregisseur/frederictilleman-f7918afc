@@ -1,12 +1,14 @@
 const usps = [
   {
     doodle: "/images/scribbles/tekstballon-2.png",
+    doodleClass: "w-[127px]",
     title: "Een ervaring die bijblijft",
     description:
       "De kinderen worden vanaf het begin meegenomen in de wereld van film en animatie en gaan zelf aan de slag.",
   },
   {
     doodle: "/images/scribbles/popcorn.png",
+    doodleClass: "w-[89px]",
     title: "Zichtbaar resultaat",
     description: "Iedereen gaat naar huis met een eigen filmpje. Zet de popcorn thuis alvast maar klaar.",
   },
