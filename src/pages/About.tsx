@@ -63,8 +63,15 @@ const About = () => {
 
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
             {/* Foto */}
+            <div className="lg:w-2/5 shrink-0 relative w-full">
+            <img
+              src="/images/scribbles/ster.png"
+              alt=""
+              aria-hidden="true"
+              className="pointer-events-none absolute z-10 w-[120px] md:w-[160px] max-w-none select-none -left-[20px] md:-left-[66px] -bottom-[22px]"
+            />
             <div
-              className="lg:w-2/5 shrink-0 relative overflow-hidden touch-pan-y"
+              className="relative overflow-hidden touch-pan-y"
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
             >
@@ -81,6 +88,7 @@ const About = () => {
                   loading={index === 0 ? "eager" : "lazy"}
                 />
               ))}
+            </div>
             </div>
 
             {/* Tekst */}
