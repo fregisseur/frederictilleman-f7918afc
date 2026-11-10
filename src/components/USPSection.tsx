@@ -31,7 +31,7 @@ const USPSection = () => {
               key={item.title}
               className="group bg-background p-8 text-center border border-border transition-colors duration-300 hover:border-primary/30"
             >
-              <div className="mb-5 flex h-[91px] items-center justify-center">
+              <div className="mb-5 flex h-[151px] items-center justify-center">
                 <img src={item.doodle} alt="" aria-hidden="true" loading="lazy" className="h-auto w-auto max-h-none max-w-none" />
               </div>
               <h3 className="font-bold text-lg mb-2 text-foreground">{item.title}</h3>
