@@ -75,7 +75,7 @@ const WorkshopCard = ({ title, images, imageAlts, description, ctaLabel, ctaHref
                     alt=""
                     aria-hidden="true"
                     loading="lazy"
-                    className="pointer-events-none absolute left-[50px] top-[-29px] w-[60px] max-w-none select-none"
+                    className="pointer-events-none absolute left-full top-[-24px] ml-2 w-[42px] max-w-none rotate-[35deg] select-none"
                   />
                 )}
               </span>
