@@ -10,7 +10,7 @@ const TargetAudience = () => {
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
           Wil je kinderen laten{" "}
-          <span className="relative inline-block whitespace-nowrap">
+          <span className="relative mt-6 inline-block whitespace-nowrap md:mt-0">
             creëren?
             <img
               src="/images/scribbles/hoofdje.png"
