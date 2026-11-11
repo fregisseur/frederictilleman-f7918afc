@@ -9,7 +9,22 @@ const TargetAudience = () => {
     <section className="py-16 px-6">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
-          Wil je kinderen laten creëren?
+          Wil je kinderen laten{" "}
+          <span className="relative mt-6 inline-block whitespace-nowrap md:mt-0">
+            creëren?
+            <img
+              src="/images/scribbles/hoofdje.png"
+              alt=""
+              aria-hidden="true"
+              className="pointer-events-none absolute bottom-full left-[43%] w-[31px] max-w-none translate-y-[8px] -translate-x-1/2 select-none md:w-[37px]"
+            />
+            <img
+              src="/images/scribbles/streep-3.png"
+              alt=""
+              aria-hidden="true"
+              className="pointer-events-none absolute bottom-[-8px] left-0 h-auto w-full max-w-none select-none"
+            />
+          </span>
         </h2>
         <div className="max-w-3xl mx-auto mt-10 space-y-6">
           {paragraphs.map((p, i) => (
