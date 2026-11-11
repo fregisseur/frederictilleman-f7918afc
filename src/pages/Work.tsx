@@ -311,11 +311,11 @@ const Work = () => {
       <section className="py-20 px-6">
         <div className="relative max-w-5xl mx-auto">
           <img
-            src="/images/scribbles/koffie.png"
+            src="/images/scribbles/krokodil.png"
             alt=""
             aria-hidden="true"
             loading="lazy"
-            className="pointer-events-none absolute right-0 top-[36px] hidden h-[107px] w-[160px] max-w-none select-none lg:block xl:right-[-56px]"
+            className="pointer-events-none absolute right-0 top-[36px] hidden h-auto w-[212px] max-w-none select-none lg:block xl:right-[-56px]"
           />
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
             Wat anderen ervan vinden
