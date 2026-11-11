@@ -11,13 +11,12 @@ const TargetAudience = () => {
         <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
           Wil je kinderen laten{" "}
           <span className="relative mt-6 inline-block whitespace-nowrap md:mt-0">
-            creëren?
-            <img
-              src="/images/scribbles/hoofdje.png"
-              alt=""
-              aria-hidden="true"
-              className="pointer-events-none absolute bottom-full left-[43%] w-[31px] max-w-none translate-y-[8px] -translate-x-1/2 select-none md:w-[37px]"
-            />
+            cre<span className="relative inline-block">ë<img
+                src="/images/scribbles/hoofdje.png"
+                alt=""
+                aria-hidden="true"
+                className="pointer-events-none absolute bottom-full left-1/2 w-[31px] max-w-none translate-y-[13px] -translate-x-1/2 select-none md:w-[37px] md:translate-y-[16px]"
+              /></span>ren?
             <img
               src="/images/scribbles/streep-3.png"
               alt=""
