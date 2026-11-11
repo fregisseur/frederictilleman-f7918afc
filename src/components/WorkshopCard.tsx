@@ -10,9 +10,10 @@ interface WorkshopCardProps {
   reversed?: boolean;
   underline?: string;
   sparkle?: string;
+  splash?: string;
 }
 
-const WorkshopCard = ({ title, images, imageAlts, description, ctaLabel, ctaHref, reversed, underline, sparkle }: WorkshopCardProps) => {
+const WorkshopCard = ({ title, images, imageAlts, description, ctaLabel, ctaHref, reversed, underline, sparkle, splash }: WorkshopCardProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
