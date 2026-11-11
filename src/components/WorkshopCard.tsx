@@ -10,9 +10,10 @@ interface WorkshopCardProps {
   reversed?: boolean;
   underline?: string;
   sparkle?: string;
+  splash?: string;
 }
 
-const WorkshopCard = ({ title, images, imageAlts, description, ctaLabel, ctaHref, reversed, underline, sparkle }: WorkshopCardProps) => {
+const WorkshopCard = ({ title, images, imageAlts, description, ctaLabel, ctaHref, reversed, underline, sparkle, splash }: WorkshopCardProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -36,20 +37,31 @@ const WorkshopCard = ({ title, images, imageAlts, description, ctaLabel, ctaHref
       } gap-8 lg:gap-12 items-stretch`}
     >
       {/* Image carousel */}
-      <div className="lg:w-2/5 overflow-hidden relative">
-        {images.map((image, index) => (
+      <div className="lg:w-2/5 relative">
+        <div className="overflow-hidden h-full">
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={imageAlts?.[index] ?? `${title} ${index + 1}`}
+              className={`w-full h-72 lg:h-full object-cover transition-opacity duration-700 ${
+                index === 0 ? "" : "absolute inset-0"
+              } ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
+              loading="lazy"
+              width={800}
+              height={1000}
+            />
+          ))}
+        </div>
+        {splash && (
           <img
-            key={index}
-            src={image}
-            alt={imageAlts?.[index] ?? `${title} ${index + 1}`}
-            className={`w-full h-72 lg:h-full object-cover transition-opacity duration-700 ${
-              index === 0 ? "" : "absolute inset-0"
-            } ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
+            src={splash}
+            alt=""
+            aria-hidden="true"
             loading="lazy"
-            width={800}
-            height={1000}
+            className="pointer-events-none absolute -bottom-3 -right-3 w-[90px] max-w-none select-none lg:-bottom-4 lg:-right-4 lg:w-[112px]"
           />
-        ))}
+        )}
       </div>
 
       {/* Content */}
