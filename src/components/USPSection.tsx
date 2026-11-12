@@ -8,7 +8,7 @@ const usps = [
   },
   {
     doodle: "/images/scribbles/popcorn.png",
-    doodleClass: "w-[89px]",
+    doodleClass: "w-[89px] -mt-[5px]",
     title: "Zichtbaar resultaat",
     description: "Iedereen gaat naar huis met een eigen filmpje. Zet de popcorn thuis alvast maar klaar.",
   },
