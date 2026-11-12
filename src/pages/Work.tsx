@@ -239,7 +239,7 @@ const Work = () => {
                     alt=""
                     aria-hidden="true"
                     loading="lazy"
-                    className="h-auto w-auto max-h-none max-w-none"
+                    className={`h-auto max-h-none max-w-none select-none ${item.doodleClass}`}
                   />
                 </div>
                 <h3 className="font-bold text-lg mb-2 text-foreground">{item.title}</h3>
