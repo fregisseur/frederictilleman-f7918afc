@@ -27,16 +27,19 @@ const logoVlaamseOverheid = "/images/logos/vlaamse-overheid.webp";
 const aanpak = [
   {
     doodle: "/images/scribbles/tekstballon.png",
+    doodleClass: "w-[129px]",
     title: "Jouw verhaal",
     description: "Jij vertelt wat je voor ogen hebt. Ik denk met je mee en probeer snel te snappen waar het echt om draait. Een uitgebreide briefing mag, maar een krabbel op papier vind ik even goed.",
   },
   {
     doodle: "/images/scribbles/zetel.png",
+    doodleClass: "w-[105px]",
     title: "Leun maar achterover",
     description: "Daarna ga ik ermee aan de slag. Van de eerste schets tot alles helemaal af is. Jij volgt mee en stuurt bij waar nodig, zonder dat je dus zelf je tekeningen moet inkleuren.",
   },
   {
     doodle: "/images/scribbles/kroon.png",
+    doodleClass: "w-[123px]",
     title: "Met plezier",
     description: "Animaties en illustraties maken doe ik al meer dan tien jaar. Ik heb dus al een en ander zien passeren. Saai is het gelukkig nog nooit geworden.",
   },
@@ -236,7 +239,7 @@ const Work = () => {
                     alt=""
                     aria-hidden="true"
                     loading="lazy"
-                    className="h-auto w-auto max-h-none max-w-none"
+                    className={`h-auto max-h-none max-w-none select-none ${item.doodleClass}`}
                   />
                 </div>
                 <h3 className="font-bold text-lg mb-2 text-foreground">{item.title}</h3>
