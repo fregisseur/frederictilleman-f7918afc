@@ -33,13 +33,13 @@ const aanpak = [
   },
   {
     doodle: "/images/scribbles/zetel.png",
-    doodleClass: "w-[105px]",
+    doodleClass: "w-[94px]",
     title: "Leun maar achterover",
     description: "Daarna ga ik ermee aan de slag. Van de eerste schets tot alles helemaal af is. Jij volgt mee en stuurt bij waar nodig, zonder dat je dus zelf je tekeningen moet inkleuren.",
   },
   {
     doodle: "/images/scribbles/kroon.png",
-    doodleClass: "w-[123px]",
+    doodleClass: "w-[135px]",
     title: "Met plezier",
     description: "Animaties en illustraties maken doe ik al meer dan tien jaar. Ik heb dus al een en ander zien passeren. Saai is het gelukkig nog nooit geworden.",
   },
