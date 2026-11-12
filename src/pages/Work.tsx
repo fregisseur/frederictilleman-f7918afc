@@ -39,7 +39,7 @@ const aanpak = [
   },
   {
     doodle: "/images/scribbles/kroon.png",
-    doodleClass: "w-[135px]",
+    doodleClass: "w-[123px]",
     title: "Met plezier",
     description: "Animaties en illustraties maken doe ik al meer dan tien jaar. Ik heb dus al een en ander zien passeren. Saai is het gelukkig nog nooit geworden.",
   },
