@@ -14,7 +14,7 @@ const usps = [
   },
   {
     doodle: "/images/scribbles/kroon.png",
-    doodleClass: "w-auto",
+    doodleClass: "w-[123px]",
     title: "Professionele begeleiding",
     description:
       "Als meester in het vak weet ik als geen ander hoe ik de groep moet enthousiasmeren en spelenderwijs iets kan bijleren.",
