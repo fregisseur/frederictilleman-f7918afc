@@ -15,7 +15,7 @@ const TargetAudience = () => {
                 src="/images/scribbles/hoofdje.png"
                 alt=""
                 aria-hidden="true"
-                className="pointer-events-none absolute bottom-full left-1/2 ml-[2px] w-[31px] max-w-none translate-y-[10px] -translate-x-1/2 select-none md:w-[37px] md:translate-y-[13px]"
+                className="pointer-events-none absolute bottom-full left-1/2 ml-[3px] w-[31px] max-w-none translate-y-[10px] -translate-x-1/2 select-none md:w-[37px] md:translate-y-[13px]"
               /></span>ren?
             <img
               src="/images/scribbles/streep-3.png"
