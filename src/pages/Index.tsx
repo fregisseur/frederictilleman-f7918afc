@@ -84,7 +84,7 @@ const Index = () => {
       <USPSection />
 
       {/* Workshops */}
-      <section id="workshops" className="py-20 px-6">
+      <section id="workshops" className="relative overflow-x-clip py-20 px-6">
         <div className="max-w-5xl mx-auto space-y-24">
           {/* Workshop 1: Stop-motion */}
           <WorkshopCard
@@ -118,10 +118,19 @@ const Index = () => {
           />
 
           {/* Testimonial 1 */}
-          <Testimonial
-            text="Ik wou je graag laten weten dat Oskar & Klara de stop-motion workshop superleuk vonden! Zeker voor herhaling vatbaar! Je hebt dit ook op een heel kindvriendelijke manier gebracht en nam heel rustig de tijd om alle kindjes te helpen."
-            author="Mama van Oskar & Klara"
-          />
+          <div className="relative mx-auto max-w-3xl">
+            <Testimonial
+              text="Ik wou je graag laten weten dat Oskar & Klara de stop-motion workshop superleuk vonden! Zeker voor herhaling vatbaar! Je hebt dit ook op een heel kindvriendelijke manier gebracht en nam heel rustig de tijd om alle kindjes te helpen."
+              author="Mama van Oskar & Klara"
+            />
+            <img
+              src="/images/scribbles/krul-1.png"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              className="pointer-events-none absolute left-full top-1/2 ml-[96px] hidden w-[362px] max-w-none -translate-y-1/2 -scale-x-100 select-none xl:block"
+            />
+          </div>
 
           {/* Workshop 2: Film */}
           <WorkshopCard
