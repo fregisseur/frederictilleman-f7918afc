@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 const logoGif = "/images/site/frederic_tilleman2.gif";
 
-const BLUE = "#1b45da";
-const YELLOW = "hsl(47 87% 64%)";
+const BLUE = "var(--header-contact-accent)";
+const YELLOW = "hsl(var(--accent))";
 
 const getAccent = (pathname: string) => {
   if (pathname === "/contact") return BLUE;
@@ -21,8 +22,16 @@ const navLinks = [
 
 const SiteHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(() => window.scrollY > 0);
   const location = useLocation();
   const accent = getAccent(location.pathname);
+
+  useEffect(() => {
+    const updateScroll = () => setScrolled(window.scrollY > 0);
+    updateScroll();
+    window.addEventListener("scroll", updateScroll, { passive: true });
+    return () => window.removeEventListener("scroll", updateScroll);
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
@@ -33,18 +42,19 @@ const SiteHeader = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-background">
-        <div className="mx-auto flex h-16 sm:h-24 max-w-7xl items-center justify-between px-6 md:px-10">
-          <Link to="/">
+      <div className="site-header-space" aria-hidden="true" />
+      <header className="site-header fixed inset-x-0 top-0 z-50" data-scrolled={scrolled}>
+        <div className="relative h-full w-full">
+          <Link to="/" className="site-header-logo">
             <img
               src={logoGif}
               alt="Frederic Tilleman"
-              className="h-8 sm:h-11 w-auto"
+              className="h-8 sm:h-11 w-auto max-w-none"
             />
           </Link>
 
           {/* Horizontal nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav aria-label="Hoofdnavigatie" className="site-header-nav hidden md:flex items-center gap-8">
           {navLinks.map((link) => {
             const active = location.pathname === link.href;
             return (
@@ -67,29 +77,40 @@ const SiteHeader = () => {
           </nav>
 
           {/* Hamburger (mobiel) */}
-          <button
-            className="md:hidden text-foreground hover:text-primary transition-colors"
+          <Button
+            variant="ghost"
+            size="icon"
+            className="site-header-menu text-foreground hover:text-primary [&_svg]:size-7"
             onClick={() => setMenuOpen(true)}
             aria-label="Menu openen"
+            aria-expanded={menuOpen}
+            aria-controls="fullscreen-menu"
           >
             <Menu size={32} strokeWidth={2} />
-          </button>
+          </Button>
         </div>
       </header>
 
       {/* Fullscreen overlay menu */}
       <div
+        id="fullscreen-menu"
+        ref={(element) => {
+          if (element) element.inert = !menuOpen;
+        }}
+        aria-hidden={!menuOpen}
         className={`fixed inset-0 z-[100] bg-background flex items-center justify-center transition-all duration-300 ${
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        <button
-          className="absolute top-8 right-6 md:top-10 md:right-10 text-foreground hover:text-primary transition-colors"
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute top-8 right-6 md:top-10 md:right-10 text-foreground hover:text-primary transition-colors [&_svg]:size-8"
           onClick={() => setMenuOpen(false)}
           aria-label="Menu sluiten"
         >
           <X size={32} strokeWidth={2} />
-        </button>
+        </Button>
 
         <nav className="flex flex-col items-center gap-8">
           {navLinks.map((link) => {
