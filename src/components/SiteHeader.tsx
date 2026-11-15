@@ -64,16 +64,17 @@ const SiteHeader = () => {
               </Link>
             );
           })}
-        </nav>
+          </nav>
 
-        {/* Hamburger top-right */}
-        <button
-          className="fixed top-6 right-6 md:absolute md:top-10 md:right-10 z-[60] text-foreground hover:text-primary transition-colors"
-          onClick={() => setMenuOpen(true)}
-          aria-label="Menu openen"
-        >
-          <Menu size={32} strokeWidth={2} />
-        </button>
+          {/* Hamburger (mobiel) */}
+          <button
+            className="md:hidden text-foreground hover:text-primary transition-colors"
+            onClick={() => setMenuOpen(true)}
+            aria-label="Menu openen"
+          >
+            <Menu size={32} strokeWidth={2} />
+          </button>
+        </div>
       </header>
 
       {/* Fullscreen overlay menu */}
