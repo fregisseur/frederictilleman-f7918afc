@@ -1,4 +1,5 @@
 # Roadmap
+- [x] Header bovenaan volgens screenshot; vloeiende overgang naar witte scrollbalk met logo en menu aan de schermranden, ook op brede schermen.
 
 - [x] Hoofdje en streep onder/boven 'creëren?' op de workshoppagina volgens referentie, in public/images/scribbles
 
