@@ -85,7 +85,6 @@ const SiteHeader = () => {
             aria-label="Menu openen"
             aria-expanded={menuOpen}
             aria-controls="fullscreen-menu"
-            tabIndex={scrolled && window.innerWidth >= 768 ? -1 : 0}
           >
             <Menu size={32} strokeWidth={2} />
           </Button>
@@ -95,7 +94,9 @@ const SiteHeader = () => {
       {/* Fullscreen overlay menu */}
       <div
         id="fullscreen-menu"
-        inert={menuOpen ? undefined : ""}
+        ref={(element) => {
+          if (element) element.inert = !menuOpen;
+        }}
         aria-hidden={!menuOpen}
         className={`fixed inset-0 z-[100] bg-background flex items-center justify-center transition-all duration-300 ${
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
