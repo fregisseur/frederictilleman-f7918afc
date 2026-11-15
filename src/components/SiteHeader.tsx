@@ -33,17 +33,18 @@ const SiteHeader = () => {
 
   return (
     <>
-      <header className="relative py-10 flex flex-col items-center">
-        <Link to="/" className="mb-2">
-          <img
-            src={logoGif}
-            alt="Frederic Tilleman"
-            className="h-8 md:h-11 w-auto"
-          />
-        </Link>
+      <header className="sticky top-0 z-50 bg-background">
+        <div className="mx-auto flex h-16 sm:h-24 max-w-7xl items-center justify-between px-6 md:px-10">
+          <Link to="/">
+            <img
+              src={logoGif}
+              alt="Frederic Tilleman"
+              className="h-8 sm:h-11 w-auto"
+            />
+          </Link>
 
-        {/* Horizontal nav */}
-        <nav className="mt-4 hidden md:flex items-center gap-8">
+          {/* Horizontal nav */}
+          <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => {
             const active = location.pathname === link.href;
             return (
