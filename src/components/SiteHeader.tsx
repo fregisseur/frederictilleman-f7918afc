@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const logoGif = "/images/site/frederic_tilleman2.gif";
 
@@ -22,12 +22,20 @@ const navLinks = [
 
 const SiteHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(() => window.scrollY > 0);
+  const headerRef = useRef<HTMLElement>(null);
   const location = useLocation();
   const accent = getAccent(location.pathname);
 
+  useLayoutEffect(() => {
+    window.history.scrollRestoration = "manual";
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    headerRef.current?.style.setProperty("--header-scroll", "0px");
+  }, [location.pathname]);
+
   useEffect(() => {
-    const updateScroll = () => setScrolled(window.scrollY > 0);
+    const updateScroll = () => {
+      headerRef.current?.style.setProperty("--header-scroll", `${Math.max(0, window.scrollY)}px`);
+    };
     updateScroll();
     window.addEventListener("scroll", updateScroll, { passive: true });
     return () => window.removeEventListener("scroll", updateScroll);
@@ -43,7 +51,7 @@ const SiteHeader = () => {
   return (
     <>
       <div className="site-header-space" aria-hidden="true" />
-      <header className="site-header fixed inset-x-0 top-0 z-50" data-scrolled={scrolled}>
+      <header ref={headerRef} className="site-header fixed inset-x-0 top-0 z-50">
         <div className="relative h-full w-full">
           <Link to="/" className="site-header-logo">
             <img
@@ -79,14 +87,13 @@ const SiteHeader = () => {
           {/* Hamburger (mobiel) */}
           <Button
             variant="ghost"
-            size="icon"
-            className="site-header-menu md:hidden text-foreground hover:text-primary [&_svg]:size-7"
+            className="site-header-menu md:hidden h-auto rounded-none p-0 text-sm font-normal tracking-widest text-foreground hover:bg-transparent hover:text-primary"
             onClick={() => setMenuOpen(true)}
             aria-label="Menu openen"
             aria-expanded={menuOpen}
             aria-controls="fullscreen-menu"
           >
-            <Menu size={32} strokeWidth={2} />
+            menu
           </Button>
         </div>
       </header>
