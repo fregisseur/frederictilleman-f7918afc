@@ -80,7 +80,7 @@ const SiteHeader = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="site-header-menu text-foreground hover:text-primary [&_svg]:size-7"
+            className="site-header-menu md:hidden text-foreground hover:text-primary [&_svg]:size-7"
             onClick={() => setMenuOpen(true)}
             aria-label="Menu openen"
             aria-expanded={menuOpen}
