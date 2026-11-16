@@ -231,7 +231,7 @@ const Work = () => {
             {aanpak.map((item) => (
               <div
                 key={item.title}
-                className="group bg-background p-8 text-center border border-border transition-colors duration-300 hover:border-primary/30"
+                className="group bg-background p-8 text-center"
               >
                 <div className="mb-5 flex h-[91px] items-center justify-center">
                   <img
@@ -332,7 +332,7 @@ const Work = () => {
             {reviews.map((r) => (
               <div
                 key={r.name}
-                className="bg-background border border-border p-6 md:p-8 flex flex-col gap-4 transition-colors duration-300 hover:border-primary/30"
+                className="bg-background p-6 md:p-8 flex flex-col gap-4"
               >
                 <div className="flex items-center gap-1 text-primary">
                   {Array.from({ length: 5 }).map((_, i) => (
