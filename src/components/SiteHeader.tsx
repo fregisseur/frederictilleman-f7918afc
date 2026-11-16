@@ -93,7 +93,7 @@ const SiteHeader = () => {
             aria-expanded={menuOpen}
             aria-controls="fullscreen-menu"
           >
-            menu
+            MENU
           </Button>
         </div>
       </header>
@@ -112,7 +112,7 @@ const SiteHeader = () => {
         <Button
           variant="ghost"
           size="icon"
-          className="absolute top-8 right-6 md:top-10 md:right-10 text-foreground hover:text-primary transition-colors [&_svg]:size-8"
+          className="absolute top-8 right-6 md:top-10 md:right-10 text-foreground hover:bg-transparent hover:text-primary transition-colors [&_svg]:size-8"
           onClick={() => setMenuOpen(false)}
           aria-label="Menu sluiten"
         >

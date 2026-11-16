@@ -25,3 +25,4 @@
 - [x] Postduif op de contactpagina vervangen door koffie.png (natural 160×107, gecentreerd boven het formulier)
 - [x] Splash.png rechtsonder op de foto van de workshopkaart 'De magie van film' (112px breed, 16px buiten de rechter- en onderrand, zoals referentie); bestand in public/images/scribbles
 - [x] Krul gespiegeld en geschaald (362px breed) rechts naast het eerste reviewblok op /workshops, zoals referentie van 13 november 2026
+- [x] Sluitkruisje rood bij hover zonder gele achtergrond; "MENU" in caps op smalle schermen; witte vakken zonder omlijning (aanpak, reviews, workshoppagina)

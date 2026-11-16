@@ -32,7 +32,7 @@ const USPSection = () => {
           {usps.map((item) => (
             <div
               key={item.title}
-              className="group bg-background p-8 text-center border border-border transition-colors duration-300 hover:border-primary/30"
+              className="group bg-background p-8 text-center"
             >
               <div className="mb-5 flex h-[91px] items-center justify-center">
                 <img
