@@ -166,17 +166,7 @@ const Work = () => {
       <section className="relative overflow-x-clip py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
-            Misschien klinkt dit{" "}
-            <span className="relative inline-block px-[0.1em] py-[0.06em]">
-              <span className="relative z-10">bekend?</span>
-              <img
-                src="/images/scribbles/cirkel.png"
-                alt=""
-                aria-hidden="true"
-                loading="lazy"
-                className="pointer-events-none absolute left-[-0.164em] top-[-0.343em] z-0 h-[1.913em] w-[5.079em] max-w-none object-fill select-none"
-              />
-            </span>
+            Misschien klinkt dit bekend?
           </h2>
           <div className="relative mx-auto mt-10 max-w-3xl space-y-6">
             {herkenSteps.map((text, i) => (
@@ -210,19 +200,7 @@ const Work = () => {
         />
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-black text-center mb-6" style={{ fontFamily: "'Inria Serif', serif", fontStyle: "italic" }}>
-            <span className="relative inline-block">
-              Hoe pak ik het{" "}
-              <span className="relative">
-                aan?
-                <img
-                  src="/images/scribbles/streep-1.png"
-                  alt=""
-                  aria-hidden="true"
-                  loading="lazy"
-                  className="pointer-events-none absolute bottom-[-8px] left-[-4px] w-[110px] max-w-none select-none"
-                />
-              </span>
-            </span>
+            Hoe pak ik het aan?
           </h2>
           <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 text-base leading-relaxed">
             Ik zet jouw wens of vraag om in een beeld dat helder communiceert en visueel verrast. Ik heb de ervaring en het oog voor detail dat je nodig hebt, precies wanneer je het nodig hebt. Een beeld of video is pas geslaagd als je boodschap meteen duidelijk is.
